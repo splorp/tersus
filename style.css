@@ -1,0 +1,13 @@
+/*
+Theme Name: Starkers
+Theme URI: http://elliotjaystocks.com
+Description: The totally nude Wordpress theme. Phwoar! (Based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a> by <a href="http://binarybonsai.com/">Michael Heilemann</a>)
+Version: 2.8
+Author: Elliot Jay Stocks
+Author URI: http://elliotjaystocks.com
+Tags: starkers, naked, clean, basic
+*/
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";
