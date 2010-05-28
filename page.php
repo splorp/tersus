@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Starkers
+ * @subpackage Simplicity
  */
 
 get_header(); ?>

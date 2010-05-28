@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Starkers
+ * @subpackage Simplicity
  */
 
 // Do not delete these lines
