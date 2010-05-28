@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Starkers
+ * @subpackage Simplicity
  */
 
 automatic_feed_links();
@@ -14,4 +14,16 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h2>',
 	));
 }
+
+
+
+//  Replace default post class verbosity
+
+function simple_post_class() {
+ $c[] = 'hentry';
+    return $c;
+}
+ 
+add_filter( 'post_class', 'simple_post_class' );
+
 ?>
