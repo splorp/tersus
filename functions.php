@@ -26,4 +26,24 @@ function simple_post_class() {
  
 add_filter( 'post_class', 'simple_post_class' );
 
+// Add support for the_post_thumbnail
+if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 600, 9999, true ); // Normal post thumbnails
+	add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
+}
+
+// Adds support for the_post_thumbnail in RSS feeds
+function insertThumbnailRSS($content) {
+   global $post;
+   if ( has_post_thumbnail( $post->ID ) ){
+       $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
+   }
+   return $content;
+}
+
+add_filter('the_excerpt_rss', 'insertThumbnailRSS');  
+add_filter('the_content_feed', 'insertThumbnailRSS'); 
+
+
 ?>
