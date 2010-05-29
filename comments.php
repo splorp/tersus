@@ -23,7 +23,7 @@
 	<?php previous_comments_link() ?> | <?php next_comments_link() ?>
 
 	<ol class="commentlist">
-	<?php wp_list_comments(); ?>
+	    <?php wp_list_comments(array('avatar_size'=>32, 'reply_text'=>'Reply')); ?>
 	</ol>
 
 	<?php previous_comments_link() ?> | <?php next_comments_link() ?>
