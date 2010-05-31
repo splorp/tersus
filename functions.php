@@ -26,7 +26,21 @@ function simple_post_class() {
  
 add_filter( 'post_class', 'simple_post_class' );
 
+
+
+//  Remove list item classes from page listing
+
+function declass($c) {
+	return preg_replace('/<li class=\".+?\">/', '<li>', $c , -1);
+
+}
+
+add_filter('wp_list_pages','declass');
+
+
+
 // Add support for the_post_thumbnail
+
 if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 600, 9999, true ); // Normal post thumbnails
