@@ -4,7 +4,6 @@
  * @subpackage Simplicity
  */
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head profile="http://gmpg.org/xfn/11">
