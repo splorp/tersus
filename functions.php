@@ -28,15 +28,18 @@ add_filter( 'post_class', 'simple_post_class' );
 
 
 
-//  Remove list item classes from page listing
+//  Remove extraneous class attributes from list elements
 
 function declass($c) {
-	return preg_replace('/<li class=\".+?\">/', '<li>', $c , -1);
+	$c_ = preg_replace('/<li class=[\"\'].+?[\"\']>/', '<li>', $c , -1);	// Classes on list items
+	return preg_replace('/<ul class=[\"\'].+?[\"\']>/', '<ul>', $c_ , -1);	// Classes on unordered list elements
 
+	// Need to add handling of classes that occur after id elements
 }
 
 add_filter('wp_list_pages','declass');
-
+add_filter('wp_list_categories','declass');
+add_filter('wp_list_bookmarks','declass');
 
 
 // Add support for the_post_thumbnail
