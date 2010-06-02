@@ -18,7 +18,12 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
-
+	<body>
+		<?php
+			// Removed body_class() call from body element
+			// We may want to revisit this at a later date
+			// and provide a custom function which allows
+			// page-level ids or classes instead
+		?>
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<p><?php bloginfo('description'); ?></p>
