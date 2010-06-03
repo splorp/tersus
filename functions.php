@@ -28,6 +28,16 @@ add_filter( 'post_class', 'simple_post_class' );
 
 
 
+//  Add a proper thousands delimiter to category post counts
+
+function delim($c) {
+	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to @myfonts for the regex tweaks
+}
+
+add_filter('wp_list_categories','delim');
+
+
+
 //  Remove extraneous class attributes from list elements
 
 function declass($c) {
@@ -38,8 +48,9 @@ function declass($c) {
 }
 
 add_filter('wp_list_pages','declass');
-add_filter('wp_list_categories','declass');
 add_filter('wp_list_bookmarks','declass');
+add_filter('wp_list_categories','declass');
+
 
 
 // Add support for the_post_thumbnail
