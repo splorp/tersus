@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="shortcut icon" href="/favicon.ico" />
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		<!--[if IE]>
@@ -26,5 +27,7 @@
 			// and provide a custom function which allows
 			// page-level ids or classes instead
 		?>
-		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<p><?php bloginfo('description'); ?></p>
+		<header>
+			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<p><?php bloginfo('description'); ?></p>
+		</header>
