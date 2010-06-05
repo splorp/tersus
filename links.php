@@ -3,10 +3,6 @@
  * @package WordPress
  * @subpackage Tersus
  */
-
-/*
-Template Name: Links
-*/
 ?>
 
 <?php get_header(); ?>

@@ -1,7 +1,8 @@
 <?php
-/*
-Template Name: Custom
-*/
+/**
+ * @package WordPress
+ * @subpackage Tersus
+ */
 ?>
 
 <?php get_header(); ?>
