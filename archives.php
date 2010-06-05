@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Simplicity
+ * @subpackage Tersus
  */
 /*
 Template Name: Archives
