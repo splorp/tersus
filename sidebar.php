@@ -6,26 +6,21 @@
 ?>
 		<ul>
 			<?php 	/* Widgetized sidebar, if you have the plugin installed. */
-					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 			<li>
 				<?php
 					include ( TEMPLATEPATH . '/searchform.php' );
 					/*
 						get_search_form(); 
 
-						Because I've added searchform.php to the theme, using get_search_form() isn't necessary here,
-						BUT in some cases it may make more sense to use the built-in function:
+						Because I’ve added searchform.php to the theme, using
+						get_search_form() isn't necessary here. But, in some
+						cases it may make more sense to use the built-in function:
 
 						http://codex.wordpress.org/Function_Reference/get_search_form
 					*/
 				?>
 			</li>
-
-			<!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
-			<li><h2>Author</h2>
-			<p>A little something about you, the author. Nothing lengthy, just an overview.</p>
-			</li>
-			-->
 
 			<?php if ( is_404() || is_category() || is_day() || is_month() ||
 						is_year() || is_search() || is_paged() ) {
