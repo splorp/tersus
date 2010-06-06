@@ -14,7 +14,7 @@
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+			<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
 			<p>
