@@ -1,9 +1,19 @@
 
-/* TYPOGRAPHY */
-/* ----------------------------------------- */
+/*
+	Tersus Typography CSS
+*/
 
-h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
-.alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
+strong {
+	font-weight: bold;
+	}
+
+em {
+	font-style: italic;
+	}
+
+a img {
+	border: none;
+	}
 
 
 
