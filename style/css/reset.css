@@ -52,9 +52,15 @@ dfn,
 em,
 strong,
 th,
-var {
-	font-style: normal;
-	font-weight: normal;
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+	}
+
+del,
+ins {
+	text-decoration: none;
 	}
 
 li {
@@ -64,6 +70,16 @@ li {
 caption,
 th {
 	text-align: left;
+	}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
 	}
 
 q:before,
@@ -78,25 +94,44 @@ acronym {
 	}
 
 sup {
-	vertical-align: text-top;
+	vertical-align: baseline;
 	}
 
 sub {
-	vertical-align: text-bottom;
+	vertical-align: baseline;
 	}
 	
 input,
+button,
 textarea,
-select {
+select,
+optgroup,
+option {
 	font-family: inherit;
 	font-size: inherit;
+	font-style: inherit;
 	font-weight: inherit;
-	}
+}
 	
+/*
+	Legend element does not inherit in IE
+*/
+
 legend {
 	color: #000;
 	}
 	
+/*
+	Enable form element resizing in IE
+*/
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
 :focus {
-	outline:0;
+	outline: 0;
 	} 
