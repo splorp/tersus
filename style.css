@@ -9,5 +9,5 @@ Tags: tersus, simple, simplicity, naked, clean, basic, cruftless
 */
 
 @import "style/css/reset.css";
-@import "style/css/typography.css";
+@import "style/css/base.css";
 @import "style/css/layout.css";
