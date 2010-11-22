@@ -46,6 +46,18 @@ licensed under GPL. You may use it for personal or commercial
 projects, as you see fit. Please refer to the license.txt
 file included with the source for more information.
 
+Portions of the stylesheets in this theme are based on the
+YUI CSS Reset and YUI CSS Base tools provided as part of the
+Yahoo! User Interface Library.
+
+Copyright © 2010, Yahoo! Inc.
+All rights reserved.
+
+All of the YUI Library components are provided free of
+charge under a liberal BSD license.
+
+http://developer.yahoo.com/yui/license.html
+
 
 -----------------------------------------------------------
 
@@ -53,6 +65,6 @@ Version History
 
 -----------------------------------------------------------
 
-0.1.0
+0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” release
 
-* The “Getting Our Feet Wet” release
+0.1.0 — The “Getting Our Feet Wet” release
