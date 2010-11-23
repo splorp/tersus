@@ -67,4 +67,10 @@ Version History
 
 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” release
 
++ Fixed the “headers already sent” error in functions.php
++ Reset and base stylesheets are now based on YUI 2.8.2
++ Added artwork for the screenshot and favicon files
++ Updated screenshot.png
++ Updated favicon.ico
+
 0.1.0 — The “Getting Our Feet Wet” release
