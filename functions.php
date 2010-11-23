@@ -3,9 +3,8 @@
  * @package WordPress
  * @subpackage Tersus
  */
-?>
 
-<?php automatic_feed_links();
+automatic_feed_links();
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
@@ -18,7 +17,7 @@ if ( function_exists('register_sidebar') ) {
 
 
 
-//  Replace default post class verbosity
+// Replace default post class verbosity
 
 function simple_post_class() {
  $c[] = 'hentry';
@@ -29,7 +28,7 @@ add_filter( 'post_class', 'simple_post_class' );
 
 
 
-//  Add a proper thousands delimiter to category post counts
+// Add a proper thousands delimiter to category post counts
 
 function delim($c) {
 	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to @myfonts for the regex tweaks
@@ -39,7 +38,7 @@ add_filter('wp_list_categories','delim');
 
 
 
-//  Remove extraneous class attributes from list elements
+// Remove extraneous class attributes from list elements
 
 function declass($c) {
 	$c_ = preg_replace('/<li class=[\"\'].+?[\"\']>/', '<li>', $c , -1);	// Classes on list items
@@ -62,7 +61,10 @@ if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
 }
 
-// Adds support for the_post_thumbnail in RSS feeds
+
+
+// Add support for the_post_thumbnail in RSS feeds
+
 function insertThumbnailRSS($content) {
    global $post;
    if ( has_post_thumbnail( $post->ID ) ){
