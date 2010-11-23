@@ -25,6 +25,7 @@
 
 .wp-caption {
 	border: 1px solid #666;
+	color: inherit;
 	text-align: center;
 	background: #ccc;
 	padding: 10px;
