@@ -13,7 +13,7 @@
 					/*
 						get_search_form(); 
 
-						Because I’ve added searchform.php to the theme, using
+						Because we’ve added searchform.php to the theme, using
 						get_search_form() isn't necessary here. But, in some
 						cases it may make more sense to use the built-in function:
 

@@ -1,26 +1,24 @@
 
 Tersus
 
-A simple, blank-slate WordPress theme without the usual cruft.
+An achingly simple WordPress theme without the usual cruft.
 
 
 -----------------------------------------------------------
 
-What is Tersus?
+About
 
 -----------------------------------------------------------
 
-It’s an exercise in publishing template minimalism, based on
-the nearly perfect Starkers theme by Elliot Jay Stocks, and
-brought to you by Chris Harrison, Grant Hutchinson, Dan
-Rubin, and Andy van der Raadt. Lovely chaps, all. Why create
-yet another theme? Well, as tidy as the Starkers theme is,
-we really wanted to tweak things a little bit more.
+Tersus is an exercise in publishing template minimalism.
 
-Tersus was originally called Simplicity, a name first
-suggested by Dan Rubin prior to discovering that there was
-already a WordPress theme with the same name. After a brief
-discussion amongst the aforementioned collaborators, several
+Why create yet another theme? Well, as nearly close to
+perfect as Elliot Jay Stocks' Starkers theme is, we really
+wanted to tweak things a bit further.
+
+Tersus was originally called Simplicity, a name that was
+suggested prior to the discovery of a WordPress theme
+already using that name. After a brief discussion, several
 latin terms were bandied about as replacements. Tersus
 (which means ‘clean, neat, or cleansed’) seemed to fit the
 bill rather nicely ... and here we are.
@@ -28,11 +26,27 @@ bill rather nicely ... and here we are.
 
 -----------------------------------------------------------
 
-What makes Tersus so damn special?
+Features
 
 -----------------------------------------------------------
 
-Coming soon.
++ HTML5
++ Cruftless
+
+-----------------------------------------------------------
+
+Credits
+
+-----------------------------------------------------------
+
+Tersus is brought to you by the following folks.
+
+Chris Harrison
+Grant Hutchinson
+Dan Rubin
+Andy van der Raadt
+
+Lovely chaps, all of theme.
 
 
 -----------------------------------------------------------
@@ -46,9 +60,9 @@ licensed under GPL. You may use it for personal or commercial
 projects, as you see fit. Please refer to the license.txt
 file included with the source for more information.
 
-Portions of the stylesheets in this theme are based on the
-YUI CSS Reset and YUI CSS Base tools provided as part of the
-Yahoo! User Interface Library.
+Portions of the stylesheets are based on the YUI CSS Reset
+and YUI CSS Base tools provided as part of the Yahoo! User
+Interface Library.
 
 Copyright © 2010, Yahoo! Inc.
 All rights reserved.
