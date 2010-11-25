@@ -1,14 +1,27 @@
 
 /*
 	Tersus Layout CSS
-	
-	Some WordPress presentational classes left over from the Starkers theme.
-	It may be decided to deprecate these entirely, as we’re not convinced
-	that the decrufted code even generates these classes any more.
-	
-	More information: http://codex.wordpress.org/CSS
 */
 
+
+/*
+	Collapses space around subpage sidebar links
+*/
+
+ul li ul li ul {
+	margin: 0;
+	}
+
+
+/*
+	These are WordPress presentational classes left over
+	from the Starkers theme. We may decide to deprecate
+	these entirely, as we haven’t verified whether the
+	decrufted code even generates these classes any more.
+	
+	More information: http://codex.wordpress.org/CSS
+
+*/
 
 .aligncenter {
 	display: block;
