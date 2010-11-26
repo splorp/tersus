@@ -5,11 +5,11 @@
 
 
 /*
-	Collapses space around subpage sidebar links
+	Collapses space above and below subpage sidebar links
 */
 
 ul li ul li ul {
-	margin: 0;
+	margin: 0 inherit;
 	}
 
 
