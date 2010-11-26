@@ -77,4 +77,17 @@ add_filter('the_excerpt_rss', 'insertThumbnailRSS');
 add_filter('the_content_feed', 'insertThumbnailRSS'); 
 
 
+
+// Define theme information constants
+
+$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
+
+define('THEME_URI', $theme_data['URI']);
+define('THEME_NAME', $theme_data['Name']);
+define('THEME_AUTHOR', $theme_data['Author']);
+define('THEME_VERSION', trim($theme_data['Version']));
+define('THEME_DESCRIPTION', trim($theme_data['Description']));
+
+
+
 ?>
