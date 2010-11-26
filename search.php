@@ -18,7 +18,13 @@
 			<div <?php post_class() ?>>
 				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 				<p><?php the_time('l, F jS, Y') ?></p>
-				<p><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+				<p>Tags:</p>
+				<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
+				<p>Categories:</p>
+				<ul>
+					<li><?php the_category('</li><li>') ?></li>
+				</ul>
+				<?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 			</div>
 
 		<?php endwhile; ?>

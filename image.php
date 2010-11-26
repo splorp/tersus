@@ -15,30 +15,31 @@
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 			<?php previous_image_link() ?> | <?php next_image_link() ?>
 
-			<p>
-				This entry was posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>
-				and is filed under <?php the_category(', ') ?>.
-				<?php the_taxonomies(); ?>
-				You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
+			<p>This entry was posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</p>
+			<p>Categories:</p>
+			<ul>
+				<li><?php the_category('</li><li>') ?></li>
+			</ul>
+			<?php the_taxonomies(); ?>
+			<p>You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
 
-				<?php if ( comments_open() && pings_open() ) {
-				// Both Comments and Pings are open ?>
-				You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.
+			<?php if ( comments_open() && pings_open() ) {
+			// Both Comments and Pings are open ?>
+			<p>You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
-				<?php } elseif ( !comments_open() && pings_open() ) {
-				// Only Pings are Open ?>
-				Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.
+			<?php } elseif ( !comments_open() && pings_open() ) {
+			// Only Pings are Open ?>
+			<p>Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.</p>
 
-				<?php } elseif ( comments_open() && !pings_open() ) {
-				// Comments are open, Pings are not ?>
-				You can skip to the end and leave a response. Pinging is currently not allowed.
+			<?php } elseif ( comments_open() && !pings_open() ) {
+			// Comments are open, Pings are not ?>
+			<p>You can skip to the end and leave a response. Pinging is currently not allowed.</p>
 
-				<?php } elseif ( !comments_open() && !pings_open() ) {
-				// Neither Comments, nor Pings are open ?>
-				Both comments and pings are currently closed.
+			<?php } elseif ( !comments_open() && !pings_open() ) {
+			// Neither Comments, nor Pings are open ?>
+			<p>Both comments and pings are currently closed.</p>
 
-				<?php } edit_post_link('Edit this entry.','',''); ?>
-			</p>
+			<p><?php } edit_post_link('Edit this entry.','',''); ?></p>
 			
 		</div>
 
