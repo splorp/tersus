@@ -75,7 +75,7 @@
 						<?php wp_register(); ?>
 						<li><?php wp_loginout(); ?></li>
 						<li>Valid <a href="http://validator.w3.org/check/referer" title="This page validates as HTML5"><abbr title="HyperText Markup Language">HTML5</abbr></a></li>
-						<li>Valid <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo bloginfo('stylesheet_url'); ?>" title="The stylesheet for this page validates as CSS"><abbr title="Cascadign Style Sheets">CSS</abbr></a></li>
+						<li>Valid <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo bloginfo('stylesheet_url'); ?>" title="The stylesheet for this page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></li>
 						<li>Valid <a href="http://validator.w3.org/feed/check.cgi?url=<?php echo bloginfo('rss_url'); ?>" title="The feed for this page validates as RSS"><abbr title="Really Simple Syndication">RSS</abbr></a></li>
 						<li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li>
 						<?php wp_meta(); ?>

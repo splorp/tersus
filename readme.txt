@@ -46,7 +46,7 @@ Grant Hutchinson
 Dan Rubin
 Andy van der Raadt
 
-Lovely chaps, all of theme.
+Lovely chaps, all of them.
 
 
 -----------------------------------------------------------
