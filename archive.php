@@ -40,25 +40,23 @@
 				<p>Categories:</p>
 				<ul>
 					<li><?php the_category('</li><li>') ?></li>
-				<ul>
+				</ul>
 				<?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
             </div>
     
             <?php endwhile; ?>
     
-            <?php if (next_posts_link() || previous_posts_link()): ?>
-                <?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
-            <?php endif ?>
+			<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
             
-    <?php else :
+   <?php else :
     
             if ( is_category() ) { // If this is a category archive
-                printf("<h2>Sorry, but there aren't any posts in the %s category yet.</h2>", single_cat_title('',false));
+                printf("<h2>Sorry, but there aren’t any posts in the %s category yet.</h2>", single_cat_title('',false));
             } else if ( is_date() ) { // If this is a date archive
-                echo("<h2>Sorry, but there aren't any posts with this date.</h2>");
+                echo("<h2>Sorry, but there aren’t any posts with this date.</h2>");
             } else if ( is_author() ) { // If this is a category archive
                 $userdata = get_userdatabylogin(get_query_var('author_name'));
-                printf("<h2>Sorry, but there aren't any posts by %s yet.</h2>", $userdata->display_name);
+                printf("<h2>Sorry, but there aren’t any posts by %s yet.</h2>", $userdata->display_name);
             } else {
                 echo("<h2>No posts found.</h2>");
             }

@@ -26,14 +26,12 @@
 
 	<?php endwhile; ?>
 
-	<?php if (next_posts_link() || previous_posts_link()): ?>
-		<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
-	<?php endif ?>
+	<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
 	
 <?php else : ?>
 
 	<h2>Not Found</h2>
-	<p>Sorry, but you are looking for something that isn't here.</p>
+	<p>Sorry, but you are looking for something that isn’t here.</p>
 	<?php get_search_form(); ?>
 
 <?php endif; ?>
