@@ -47,9 +47,10 @@ function declass($c) {
 	// Need to add handling of classes that occur after id elements
 }
 
-add_filter('wp_list_pages','declass');
 add_filter('wp_list_bookmarks','declass');
 add_filter('wp_list_categories','declass');
+add_filter('wp_list_comments','declass');
+add_filter('wp_list_pages','declass');
 
 
 
