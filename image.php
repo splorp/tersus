@@ -40,7 +40,6 @@
 			<p>Both comments and pings are currently closed.</p>
 
 			<p><?php } edit_post_link('Edit this entry.','',''); ?></p>
-			
 		</div>
 
 	<?php comments_template(); ?>
