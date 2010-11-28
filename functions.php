@@ -44,13 +44,29 @@ function declass($c) {
 	$c_ = preg_replace('/<li class=[\"\'].+?[\"\']>/', '<li>', $c , -1);	// Classes on list items
 	return preg_replace('/<ul class=[\"\'].+?[\"\']>/', '<ul>', $c_ , -1);	// Classes on unordered list elements
 
-	// Need to add handling of classes that occur after id elements
+	// Need to add handling of classes that occur before and after id attributes
+	// Eg: wp_list_comments
 }
 
 add_filter('wp_list_bookmarks','declass');
 add_filter('wp_list_categories','declass');
-add_filter('wp_list_comments','declass');
 add_filter('wp_list_pages','declass');
+
+
+
+// Remove extraneous class attributes from list elements in comments
+// Still needs work, as it does not remove the attribute, only values
+
+function declass_comments( $c ) {
+	foreach( $c as $key => $class ) {
+		if(!strstr($class, "comment")) {
+			unset( $c[$key] );
+			}
+		}
+	return $c;
+}
+		
+add_filter('comment_class','declass_comments');
 
 
 
