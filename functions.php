@@ -20,7 +20,7 @@ if ( function_exists('register_sidebar') ) {
 // Replace default post class verbosity
 
 function simple_post_class() {
- $c[] = 'hentry';
+	$c[] = 'hentry';
     return $c;
 }
  
@@ -57,9 +57,9 @@ add_filter('wp_list_pages','declass');
 // Remove extraneous class attributes from list elements in comments
 // Still needs work, as it does not remove the attribute, only values
 
-function declass_comments( $c ) {
+function declass_comments($c) {
 	foreach( $c as $key => $class ) {
-		if(!strstr($class, "comment")) {
+		if(!strstr($class, "comment")) { // Leaves only the 'comment' class
 			unset( $c[$key] );
 			}
 		}
@@ -72,9 +72,9 @@ add_filter('comment_class','declass_comments');
 
 // Add support for the_post_thumbnail
 
-if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+if ( function_exists( 'add_theme_support' ) ) {    // Added in 2.9
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 600, 9999, true ); // Normal post thumbnails
+	set_post_thumbnail_size( 600, 9999, true );    // Normal post thumbnails
 	add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
 }
 
@@ -107,4 +107,27 @@ define('THEME_DESCRIPTION', trim($theme_data['Description']));
 
 
 
+// Removes the post link delimiter when viewing first or last post
+
+function delim_post_link() {
+
+$prev = get_previous_post();
+$next = get_next_post();
+	if ( $prev && $next ) {
+		echo " | ";
+	}
+}
+
+
+
+// Removes the comment link delimiter when viewing first or last comment
+
+function delim_comment_link() {
+
+$prev = get_previous_comments_link();
+$next = get_next_comments_link();
+	if ( $prev && $next ) {
+		echo " | ";
+	}
+}
 ?>

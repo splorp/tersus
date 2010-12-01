@@ -9,7 +9,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php previous_post_link('&laquo; %link') ?> | <?php next_post_link('%link &raquo;') ?>
+		<?php previous_post_link('&laquo; %link'); delim_post_link(); next_post_link('%link &raquo;') ?>
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
@@ -42,7 +42,7 @@
 			// Neither Comments, nor Pings are open ?>
 			<p>Both comments and pings are currently closed.</p>
 
-			<p><?php } edit_post_link('Edit this entry','','.'); ?></p>
+			<?php } edit_post_link('Edit','<p>','</p>'); ?>
 		</div>
 
 	<?php comments_template(); ?>
