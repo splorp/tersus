@@ -107,7 +107,7 @@ define('THEME_DESCRIPTION', trim($theme_data['Description']));
 
 
 
-// Removes the post link delimiter when viewing first or last post
+// Removes the link delimiter when viewing first or last post
 
 function delim_post_link() {
 
@@ -119,8 +119,19 @@ $next = get_next_post();
 }
 
 
+// Removes the link delimiter when viewing first or last archive page
 
-// Removes the comment link delimiter when viewing first or last comment
+function delim_posts_link() {
+
+$prev = get_previous_posts_link();
+$next = get_next_posts_link();
+	if ( $prev && $next ) {
+		echo " | ";
+	}
+}
+
+
+// Removes the link delimiter when viewing first or last comment
 
 function delim_comment_link() {
 
@@ -130,4 +141,6 @@ $next = get_next_comments_link();
 		echo " | ";
 	}
 }
+
+
 ?>
