@@ -12,9 +12,9 @@ About
 
 Tersus is an exercise in publishing template minimalism.
 
-Why create yet another theme? Well, as nearly close to
-perfect as Elliot Jay Stocks' Starkers theme is, we really
-wanted to tweak things a bit further.
+Why create yet another theme? As clean looking and stripped
+down as some themes are, we honestly wanted to take things
+quite a bit further.
 
 Tersus was originally called Simplicity, a name that was
 suggested prior to the discovery of a WordPress theme
@@ -31,7 +31,9 @@ Features
 -----------------------------------------------------------
 
 + HTML5
-+ Cruftless
++ Uses reset and base stylesheets for a clean start
++ No superfluous WordPress classes gumming up the works
+
 
 -----------------------------------------------------------
 
@@ -47,6 +49,11 @@ Dan Rubin
 Andy van der Raadt
 
 Lovely chaps, all of them.
+
+The groundwork for Tersus was based on the Starkers theme
+created by the affable Elliot Jay Stocks.
+
+http://starkerstheme.com/
 
 
 -----------------------------------------------------------
@@ -79,12 +86,24 @@ Version History
 
 -----------------------------------------------------------
 
-0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” release
+0.1.2 — The “Dustbunnies” Release
 
-+ Fixed the “headers already sent” error in functions.php
++ Added theme information constants
++ Added contextual delimiters to next and previous links
++ Updated sidebar formatting and default ‘meta’ links
++ Tags and categories are now formatted as unordered lists
++ Paging links are now consistent top and bottom of pages
++ Edit links are now consistent
++ Removed superfluous list formatting around search text
++ Removed duplicate search form from 404 page
++ Removed crufty classes from comment lists
+
+0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
+
++ Fixed the “headers already sent” error
 + Reset and base stylesheets are now based on YUI 2.8.2
 + Added artwork for the screenshot and favicon files
 + Updated screenshot.png
 + Updated favicon.ico
 
-0.1.0 — The “Getting Our Feet Wet” release
+0.1.0 — The “Getting Our Feet Wet” Release
