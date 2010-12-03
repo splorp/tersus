@@ -26,7 +26,7 @@
 
 	<?php endwhile; ?>
 
-	<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
+	<?php next_posts_link('&laquo; Older Entries'); delim_posts_link(); previous_posts_link('Newer Entries &raquo;') ?>
 	
 <?php else : ?>
 
