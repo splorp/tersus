@@ -31,8 +31,8 @@ Features
 -----------------------------------------------------------
 
 + HTML5
-+ Uses reset and base stylesheets for a clean start
-+ No superfluous WordPress classes gumming up the works
++ Reset and base stylesheets provide a clean start
++ Non-semantic, presentational classes have been removed
 
 
 -----------------------------------------------------------
