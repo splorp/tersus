@@ -9,7 +9,8 @@
 */
 
 ul li ul li ul {
-	margin: 0 inherit;
+	margin-top: 0;
+	margin-bottom: 0;
 	}
 
 
@@ -42,5 +43,5 @@ ul li ul li ul {
 	text-align: center;
 	background: #ccc;
 	padding: 10px;
-	margin:10px;
+	margin: 10px;
 	}
