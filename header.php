@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <?php
 /**
  * @package WordPress
  * @subpackage Tersus
  */
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
