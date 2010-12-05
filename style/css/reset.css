@@ -114,25 +114,6 @@ option {
 	font-weight: inherit;
 }
 	
-/*
-	Legend element does not inherit in IE
-*/
-
-legend {
-	color: #000;
-	}
-	
-/*
-	Enable form element resizing in IE
-*/
-
-input,
-button,
-textarea,
-select {
-	*font-size: 100%;
-}
-
 :focus {
 	outline: 0;
 	} 
