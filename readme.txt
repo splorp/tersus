@@ -12,9 +12,8 @@ About
 
 Tersus is an exercise in publishing template minimalism.
 
-Why create yet another theme? As clean looking and stripped
-down as some themes are, we honestly wanted to take things
-quite a bit further.
+Why create yet another theme? As clean and stripped down as
+some themes are, we wanted to prune things a bit further.
 
 Tersus was originally called Simplicity, a name that was
 suggested prior to the discovery of a WordPress theme
@@ -22,6 +21,14 @@ already using that name. After a brief discussion, several
 latin terms were bandied about as replacements. Tersus
 (which means ‘clean, neat, or cleansed’) seemed to fit the
 bill rather nicely ... and here we are.
+
+A version of Tersus is also being developed for Tumblr.
+
+http://github.com/splorp/tersus-tumblr/
+
+Keep track of Tersus development on Twitter.
+
+http://twitter.com/tersustheme
 
 
 -----------------------------------------------------------
@@ -33,6 +40,7 @@ Features
 + HTML5
 + Reset and base stylesheets provide a clean start
 + Non-semantic, presentational classes have been removed
++ This damn code will validate, even if it kills us
 
 
 -----------------------------------------------------------
