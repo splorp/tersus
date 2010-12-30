@@ -25,7 +25,7 @@
 
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
-	<ol class="commentlist">
+	<ol>
 	    <?php wp_list_comments(array('avatar_size'=>32, 'reply_text'=>'Reply')); ?>
 	</ol>
 
@@ -38,7 +38,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
+		<p>Comments are closed.</p>
 
 	<?php endif; ?>
 <?php endif; ?>
@@ -50,7 +50,7 @@
 
 	<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
 
-	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
+	<p><?php cancel_comment_reply_link(); ?></p>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 	<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>

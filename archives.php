@@ -21,7 +21,7 @@
 */ ?>
 
 <h2>Archives by Month</h3>
-<ul class="archives">
+<ul>
 <?php
 	$years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC");
 	foreach($years as $year) :
