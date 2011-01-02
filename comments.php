@@ -43,7 +43,6 @@
 	<?php endif; ?>
 <?php endif; ?>
 
-
 <?php if ( comments_open() ) : ?>
 
 <div id="respond">
@@ -75,9 +74,10 @@
 
 		<?php endif; ?>
 
-		<!--<p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
+		<textarea name="comment" id="comment" cols="40" rows="10" tabindex="4"></textarea>
 
-		<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+		<p><strong>You may use the following tags to format your comment:</strong></p>
+		<p><code><?php echo allowed_tags(); ?></code></p>
 
 		<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 		<?php comment_id_fields(); ?>
