@@ -30,8 +30,8 @@
 	
 <?php else : ?>
 
-	<h2>Not Found</h2>
-	<p>Sorry, but you are looking for something that isn’t here.</p>
+	<h2>Not found.</h2>
+	<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
 	<?php get_search_form(); ?>
 
 <?php endif; ?>
