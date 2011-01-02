@@ -9,18 +9,18 @@
 <?php get_search_form(); ?>
 
 <?php /*
-<h2>Archives by Month:</h2>
+<h2>Archives</h2>
 <ul>
 	<?php wp_get_archives('type=monthly'); ?>
 </ul>
 
-<h2>Archives by Subject:</h2>
+<h2>Categories</h2>
 <ul>
 	 <?php wp_list_categories(); ?>
 </ul>
 */ ?>
 
-<h2>Archives by Month</h3>
+<h2>Archives</h2>
 <ul>
 <?php
 	$years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC");
@@ -45,10 +45,10 @@
 <?php endforeach; ?>
 </ul>
 
-<h3>Most Common Tags:</h3>
+<h2>Tags</h2>
 <?php wp_tag_cloud(''); ?>
 
-<h3>Archives by Subject:</h3>
+<h2>Categories</h2>
 <ul>
 	<?php wp_list_categories('style=list&title_li='); ?>
 </ul>
