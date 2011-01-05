@@ -14,8 +14,8 @@
 						get_search_form(); 
 
 						Because we’ve added searchform.php to the theme, using
-						get_search_form() isn’t necessary here. But, in some
-						cases it may make more sense to use the built-in function:
+						the built-in function isn’t necessary. We’ve left the 
+						syntax in place in case you prefer to use it instead.
 
 						http://codex.wordpress.org/Function_Reference/get_search_form
 					*/

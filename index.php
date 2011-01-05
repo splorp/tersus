@@ -32,7 +32,6 @@
 
 	<h2>Not found.</h2>
 	<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
-	<?php get_search_form(); ?>
 
 <?php endif; ?>
 

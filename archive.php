@@ -58,9 +58,8 @@
                 $userdata = get_userdatabylogin(get_query_var('author_name'));
                 printf("<h2>Sorry, but there aren’t any posts by %s yet.</h2>", $userdata->display_name);
             } else {
-                echo("<h2>No posts found.</h2>");
+                echo("<h2>Sorry, no posts found.</h2>");
             }
-            get_search_form();
 
 	endif;
 ?>
