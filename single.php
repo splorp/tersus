@@ -12,7 +12,7 @@
 		<?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?>
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<h2><?php the_title(); ?></h2>
+			<h2><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
 			<?php the_content('<p>Read the rest of this entry</p>'); ?>
 			<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<p>This entry was posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</p>
