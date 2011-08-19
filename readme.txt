@@ -94,13 +94,23 @@ Version History
 
 -----------------------------------------------------------
 
-0.1.3 - The "About Time This Thing Was Updated Again" Release
+0.1.3 - The “About Time This Thing Was Updated Again” Release
 
-+ Added Theme Options for switching stylesheets
-+ Advanced and Super Ginormous alternate styles added
-+ Added support for Post Formats
-+ Continued conversion to HTML5
-+ Updated simple_post_class to support a Format-type classname, if applicable
++ Added theme options for switching between stylesheets
++ Added ‘Advanced’ and ‘Super Ginormous’ alternate stylesheets
++ Added support for post formats
++ Added missing get_sidebar() function to applicable templates
++ Added fallback for the_title for untitled pages and posts
++ Changed base font stack to sans serif
++ Updated simple_post_class to support a format-type classname, if applicable
++ Replaced static class declarations with post_class function
++ Standardized ‘not found’ messaging
++ Standardized and simplified header text and formatting
++ Simplified ‘older’ and ‘newer’ link text
++ Fixed invalid textarea attributes
++ Removed non-valid, IE-specific CSS selectors
++ Removed get_search_form() function from everywhere except the sidebar
++ Continued HTML5 conversion 
 
 0.1.2 — The “Dustbunnies” Release
 
@@ -116,7 +126,7 @@ Version History
 
 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
 
-+ Fixed the “headers already sent” error
++ Fixed the ‘headers already sent’ error
 + Reset and base stylesheets are now based on YUI 2.8.2
 + Added artwork for the screenshot and favicon files
 + Updated screenshot.png
