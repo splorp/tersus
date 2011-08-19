@@ -94,6 +94,14 @@ Version History
 
 -----------------------------------------------------------
 
+0.1.3 - The "About Time This Thing Was Updated Again" Release
+
++ Added Theme Options for switching stylesheets
++ Advanced and Super Ginormous alternate styles added
++ Added support for Post Formats
++ Continued conversion to HTML5
++ Updated simple_post_class to support a Format-type classname, if applicable
+
 0.1.2 — The “Dustbunnies” Release
 
 + Added theme information constants
