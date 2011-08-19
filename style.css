@@ -8,6 +8,5 @@ Author URI:
 Tags: tersus, simple, simplicity, naked, clean, basic, cruftless
 */
 
-@import "style/css/reset.css";
+@import "style/css/reset.css";	
 @import "style/css/base.css";
-@import "style/css/layout.css";
