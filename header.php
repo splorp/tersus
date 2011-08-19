@@ -19,7 +19,7 @@
 		?>			
 		<?php switch ($tersus_style_sheet) {
 			case "Default": ?>
-				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style/css/layout.css>" media="screen" />
+				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style/css/layout.css" media="screen" />
 			<?php break; ?>	
 			<?php case "Super Ginormous":?>
 				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style/css/custom-sg.css" media="screen" />
