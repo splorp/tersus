@@ -7,7 +7,7 @@
 
 // Tersus Theme Options
 
-	$themename = "Tersus";
+	$themename = $theme_data['Name'];
 	$shortname = "tersus";
 	$options = array (
 	array( "name" => "Flavor",
