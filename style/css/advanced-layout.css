@@ -118,8 +118,52 @@ a { text-decoration:none; }
 		padding:5% 0;
 	}
 	
+
+	/* iPad-ish Styles */
+	@media screen and (max-device-width:1024px) {
+		body {
+			padding:2.5%;
+			-webkit-text-size-adjust:100%;
+		}
+		
+		header,
+		footer {
+			float:none;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:auto;
+		}
+		section#content {
+			float:left;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:65%;
+		}
+		section.sidebar {
+			float:right;
+			clear:right;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:25%;
+		}
+		
+		section#content article img,
+		section#content article img.alignleft,
+		section#content article img.alignright {
+			display:block;
+			float:none;
+			margin:0 auto 5%;
+			max-width:100%;
+		}
+		
+		textarea {
+			max-width:100%;
+		}
+		
+	}
 	
 	
+	/* Small-Screen Styles */
 	@media screen and (max-device-width:480px) {
 		body {
 			padding:5% 7.5%;
