@@ -9,7 +9,7 @@
 
 				<ul>
 					<?php 	/* Widgetized sidebar, if you have the plugin installed. */
-						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar1' ) ) :
+						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar2' ) ) :
 					?>
 						<li>
 							<h2>Search the Site</h2>
@@ -98,7 +98,7 @@
 			<section class="sidebar" id="sidebar2">
 				<ul>
 					<?php 	/* Widgetized sidebar, if you have the plugin installed. */
-						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar2' ) ) :
+						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar1' ) ) :
 					?>
 						<?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
 						<li><h2>Archives</h2>
