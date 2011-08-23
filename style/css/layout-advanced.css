@@ -1,0 +1,196 @@
+
+/*
+	Tersus Advanced Layout CSS
+	This is an optional stylesheet that provides some initial layout/structure.
+*/
+
+
+/*
+	Collapses space above and below subpage sidebar links
+*/
+
+body {
+	color:#333;
+	font:normal 100%/1.4 sans-serif;
+	margin:0;
+	padding:1.5%;
+}
+a { text-decoration:none; }
+
+
+	input[type=text]#s {
+		background:#e6e6e6;
+		border:1px solid transparent;
+		border-radius:20px;
+		font:normal .8em sans-serif;
+		padding:2.5%;
+		width:95%;
+	}
+	input[type=submit]#searchsubmit { display:none; }
+
+/* ++ Header +++++ */
+	header {
+		border-bottom:1px solid #aaa;
+		margin:0 0 1.5%;
+		padding:2.5%;
+	}
+	header h1 {
+		font-size:300%;
+		letter-spacing:-2px;
+		line-height:1;
+		margin:0;
+		padding:0;
+	}
+	header h1 a {
+		color:#999;
+	}
+	header p {
+		color:#aaa;
+		font:normal .9em georgia,times,serif;
+		font-style:italic;
+		margin:0;
+	}
+	
+	section#content {
+		float:left;
+		padding:2.5%;
+		width:49%;
+	}
+	section#content article.hentry {}
+	section#content article {
+		border-bottom:1px dotted #e6e6e6;
+		margin:0 0 5%;
+		padding:5% 0;
+	}
+	section#content article.post-image img.alignnone {
+		display:block;
+		margin:0 auto 5%;
+		max-width:100%;
+	}
+	
+	section.sidebar {
+		float:right;
+		margin:0 0 0 2%;
+		padding:1.25%;
+		width:18.75%;
+	}
+	section#sidebar1.sidebar {}
+	section#sidebar2.sidebar {}
+	section.sidebar ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+		text-indent:0;
+	}
+	section.sidebar ul li {
+		list-style:none !important;
+	}
+	section.sidebar ul li form {
+		margin:0 0 10%;
+	}
+	section.sidebar ul li ul {
+		margin:0 0 10%;
+	}
+	section.sidebar ul li ul li {
+		font-weight:bold;
+		margin:0;
+	}
+	section.sidebar ul li ul li a {
+	}
+	section.sidebar ul li ul li ul {
+		margin:0 0 0 10%;
+	}
+	section.sidebar ul li ul li ul li {
+		font-weight:normal;
+	}
+	section.sidebar ul li ul li ul li a {
+	}
+	section.sidebar h2 {
+		border-bottom:1px dotted #999;
+		font-size:.8em;
+		margin:0 0 5%;
+		padding:0 0 2%;
+		text-transform:uppercase;
+	}
+
+	footer {
+		clear:both;
+		padding:5% 0;
+	}
+	
+
+	/* iPad-ish Styles */
+	@media screen and (max-device-width:1024px) {
+		body {
+			padding:2.5%;
+			-webkit-text-size-adjust:100%;
+		}
+		
+		header,
+		footer {
+			float:none;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:auto;
+		}
+		section#content {
+			float:left;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:65%;
+		}
+		section.sidebar {
+			float:right;
+			clear:right;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:25%;
+		}
+		
+		section#content article img,
+		section#content article img.alignleft,
+		section#content article img.alignright {
+			display:block;
+			float:none;
+			margin:0 auto 5%;
+			max-width:100%;
+		}
+		
+		textarea {
+			max-width:100%;
+		}
+		
+	}
+	
+	
+	/* Small-Screen Styles */
+	@media screen and (max-device-width:480px) {
+		body {
+			padding:5% 7.5%;
+			-webkit-text-size-adjust:100%;
+		}
+		
+		header,
+		section#content,
+		section.sidebar,
+		footer {
+			float:none;
+			margin:0 auto 2.5%;
+			padding:0 2.5% 2.5%;
+			width:auto;
+		}
+		
+		section#content article img,
+		section#content article img.alignleft,
+		section#content article img.alignright {
+			display:block;
+			float:none;
+			margin:0 auto 5%;
+			max-width:100%;
+		}
+		
+		textarea {
+			max-width:100%;
+		}
+		
+	}
