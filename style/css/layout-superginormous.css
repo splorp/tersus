@@ -2,10 +2,7 @@
 /*
 	Tersus Super Ginormous Layout CSS
 	This is an optional stylesheet that provides some initial layout/structure.
-*/
 
-
-/*
 	Collapses space above and below subpage sidebar links
 */
 
@@ -18,9 +15,8 @@ body {
 	}
 
 a {
-	text-decoration:none;
+	text-decoration: none;
 	}
-
 
 input[type=text]#s {
 	background: #fff;
@@ -32,7 +28,7 @@ input[type=text]#s {
 	}
 
 input[type=submit]#searchsubmit {
-	display:none;
+	display: none;
 	}
 
 section#admin {
@@ -41,20 +37,19 @@ section#admin {
 	margin: 0 0 1%;
 	padding: 1%;
 	text-shadow: #fff 0 1px 0;
-}
+	}
 
 section#admin h3 {
 	font-size: .9em;
 	margin: 0;
 	padding: 0;
-}
+	}
 
 section#admin p {
 	font-size: .7em;
 	margin: 0;
 	padding: 0;
-}
-
+	}
 
 header {
 	background: #00afee;
@@ -84,7 +79,6 @@ header p {
 	margin: 0;
 	}
 	
-
 section#content {
 	background: #fff;
 	-moz-border-radius: 5px;
@@ -180,7 +174,7 @@ section.sidebar ul li ul {
 	}
 
 section.sidebar ul li ul li {
-	font-weight:bold;
+	font-weight: bold;
 	margin: 0;
 	}
 
@@ -222,7 +216,6 @@ section.sidebar h2:before {
 	position: absolute; bottom:-10px; left:0;
 	width: 0;
 	}
-
 
 footer {
 	clear: both;
