@@ -7,7 +7,7 @@
 
 // Tersus Theme Options
 
-	$themename = $theme_data['Name'];
+	$themename = "Tersus";
 	$shortname = "tersus";
 	$options = array (
 	array( "name" => "Flavor",
@@ -20,7 +20,7 @@
 	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
 	
 	define('THEME_URI', $theme_data['URI']);
-	define('THEME_NAME', $theme_data['Name']);
+	define('THEME_NAME', $themename);
 	define('THEME_AUTHOR', $theme_data['Author']);
 	define('THEME_VERSION', trim($theme_data['Version']));
 	define('THEME_DESCRIPTION', trim($theme_data['Description']));
@@ -77,7 +77,7 @@
  
 	?>
 			<div class="wrap">
-				<h2><?php echo $themename; ?> Settings</h2>
+				<h2><?php echo $themename; ?> Options</h2>
  
 				<form method="post">
  
