@@ -77,32 +77,32 @@ dl dd {
 th, td {
 	border: 1px solid #000;
 	padding: .5em;
-}
+	}
 
 th {
 	font-weight: bold;
 	text-align: center;
-}
+	}
 
 caption {
 	margin-bottom: .5em;
 	text-align: center;
-}
+	}
 
 sup {
 	vertical-align: super;
-}
+	}
 
 sub {
 	vertical-align: sub;
-}
+	}
 
 p,
 fieldset,
 table,
 pre {
 	margin-bottom: 1em;
-}
+	}
 
 /*
 	Opera requires 1px of passing to render with contemporary native chrome
