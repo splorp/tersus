@@ -40,11 +40,6 @@
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
-		<!-- My Stuff -->
-		
-		<meta name="y_key" content="fd82a55aff309824" />
-		<script src="/mint/?js" type="text/javascript"></script>
-		
 	</head>
 
 	<body>
