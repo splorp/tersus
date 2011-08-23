@@ -60,7 +60,19 @@ a { text-decoration:none; }
 	section#content article {
 		border-bottom:1px dotted #e6e6e6;
 		margin:0 0 5%;
-		padding:5% 0;
+		padding:0 0 5%;
+	}
+	section#content article h2 {
+		font-size:3em;
+		margin:0;
+		padding:0;
+	}
+	section#content article h2 a {
+		color:#333;
+	}
+	section#content article h2 + p {
+		color:#aaa;
+		margin:0 0 1%;
 	}
 	section#content article.post-image img.alignnone {
 		display:block;
@@ -120,7 +132,7 @@ a { text-decoration:none; }
 	
 
 	/* iPad-ish Styles */
-	@media screen and (max-device-width:1024px) {
+	@media screen and  (min-width : 768px) and (max-width : 1024px) {
 		body {
 			padding:2.5%;
 			-webkit-text-size-adjust:100%;
@@ -164,7 +176,7 @@ a { text-decoration:none; }
 	
 	
 	/* Small-Screen Styles */
-	@media screen and (max-device-width:480px) {
+	@media screen and  (min-width : 320px) and (max-width : 480px) {
 		body {
 			padding:5% 7.5%;
 			-webkit-text-size-adjust:100%;
