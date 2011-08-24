@@ -11,7 +11,7 @@
 	$shortname = "tersus";
 	$options = array (
 	array( "name" => "Flavor",
-		"desc" => "&larr; Select which flavor of Tersus you'd like to run.",
+		"desc" => "&larr; Select which flavor of Tersus you’d like to use.",
 		"id" => $shortname."_style_sheet",
 		"type" => "select",
 		"options" => array( "Default", "Advanced", "Super Ginormous" ), 

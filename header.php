@@ -51,8 +51,7 @@
 		?>
 		<section id="admin">
 			<h3><strong>What the heck is going on, you ask?</strong> Say hello to <a href="http://github.com/splorp/tersus/">Tersus</a>.</h3>
-			<p>Out of the box, Tersus provides only basic styling. Soon, it'll contain a few starter stylesheets (flavors?)
-			to assist in theme development.</p>
+			<p>Out of the box, Tersus provides only basic styling. Soon, it’ll contain a few starter stylesheet flavors to assist in theme development.</p>
 		</section>
 		
 		<header>
