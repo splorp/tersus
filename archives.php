@@ -7,6 +7,7 @@
 
 <?php get_header(); ?>
 
+<section id="content">
 <?php /*
 <h2>Archives</h2>
 <ul>
@@ -51,5 +52,7 @@
 <ul>
 	<?php wp_list_categories('style=list&title_li='); ?>
 </ul>
+
+</section>
 
 <?php get_footer(); ?>
