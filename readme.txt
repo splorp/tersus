@@ -37,10 +37,11 @@ Features
 
 -----------------------------------------------------------
 
-+ HTML5
-+ Reset and base stylesheets provide a clean start
-+ Non-semantic, presentational classes have been removed
-+ This damn code will validate, even if it kills us
++ HTML5 compliant
++ CSS that has been reset and built from the ground up 
++ Non-semantic, presentational markup has been dispatched
++ A selection of style “flavours” and theme options
++ Clean, valid, and awesome
 
 
 -----------------------------------------------------------
@@ -94,6 +95,13 @@ Version History
 
 -----------------------------------------------------------
 
+0.1.4 - The “Wrap It!” Release
+
++ Added current theme style to footer
++ Updated markup to use section and article elements
++ Advanced layout styles are now more responsive
+
+
 0.1.3 - The “About Time This Thing Was Updated Again” Release
 
 + Added theme options for switching between stylesheets
@@ -112,6 +120,7 @@ Version History
 + Removed get_search_form() function from everywhere except the sidebar
 + Continued HTML5 conversion 
 
+
 0.1.2 — The “Dustbunnies” Release
 
 + Added theme information constants
@@ -124,6 +133,7 @@ Version History
 + Removed duplicate search form from 404 page
 + Removed crufty classes from comment lists
 
+
 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
 
 + Fixed the ‘headers already sent’ error
@@ -132,4 +142,7 @@ Version History
 + Updated screenshot.png
 + Updated favicon.ico
 
+
 0.1.0 — The “Getting Our Feet Wet” Release
+
++ Initial tinkering
