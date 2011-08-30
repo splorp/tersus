@@ -37,7 +37,7 @@ input[type=submit]#searchsubmit {
 header {
 	border-bottom: 1px solid #aaa;
 	margin: 0 0 1.5%;
-	padding: 2.5%;
+	padding: 2.5% 0;
 	}
 
 header h1 {
@@ -61,7 +61,7 @@ header p {
 	
 section#content {
 	float: left;
-	padding: 2.5%;
+	padding: 0;
 	width: 49%;
 	}
 
@@ -71,7 +71,7 @@ section#content article.hentry {
 section#content article {
 	border-bottom: 1px dotted #e6e6e6;
 	margin: 0 0 5%;
-	padding: 5% 0;
+	padding: 0 0 5% 0;
 	}
 
 section#content article.post-image img.alignnone {
