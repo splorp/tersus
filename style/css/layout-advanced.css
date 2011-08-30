@@ -21,7 +21,7 @@ a {
 	}
 
 input[type=text]#s {
-	background: #e6e6e6;
+	background: #DDD;
 	border: 1px solid transparent;
 	border-radius: 20px;
 	font: normal .8em sans-serif;
@@ -35,28 +35,29 @@ input[type=submit]#searchsubmit {
 
 
 header {
-	border-bottom: 1px solid #aaa;
-	margin: 0 0 1.5%;
+	border-bottom: 1px solid #AAA;
+	margin: 0 0 2.5% 0;
 	padding: 2.5% 0;
 	}
 
-header h1 {
+header h1,
+article h2 {
 	font-size: 300%;
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	line-height: 1;
-	margin: 0;
+	margin: 0 0 .25em 0;
 	padding: 0;
 	}
 
-header h1 a {
+header h1 a,
+article h2 a {
 	color: #999;
 	}
 
 header p {
-	color: #aaa;
-	font: normal .9em georgia,times,serif;
-	font-style: italic;
+	color: #AAA;
 	margin: 0;
+	padding: 0;
 	}
 	
 section#content {
@@ -69,9 +70,9 @@ section#content article.hentry {
 	}
 
 section#content article {
-	border-bottom: 1px dotted #e6e6e6;
-	margin: 0 0 5%;
-	padding: 0 0 5% 0;
+	border-bottom: 1px dotted #AAA;
+	margin: 0 0 2.5%;
+	padding: 0 0 2.5%;
 	}
 
 section#content article.post-image img.alignnone {
@@ -85,12 +86,6 @@ section.sidebar {
 	margin: 0 0 0 2%;
 	padding: 1.25%;
 	width: 18.75%;
-	}
-
-section#sidebar1.sidebar {
-	}
-
-section#sidebar2.sidebar {
 	}
 
 section.sidebar ul {
@@ -195,7 +190,8 @@ footer {
 	Small-Screen Styles
 */
 
-@media screen and (max-device-width: 480px) {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 800px) {
+
 	body {
 		padding: 5% 7.5%;
 		-webkit-text-size-adjust: 100%;
@@ -207,7 +203,6 @@ footer {
 	footer {
 		float: none;
 		margin: 0 auto 2.5%;
-		padding: 0 2.5% 2.5%;
 		width: auto;
 	}
 	
