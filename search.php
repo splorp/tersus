@@ -12,7 +12,7 @@
 
 	<h2>Search Results</h2>
 
-	<?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Entries') ?>
+	<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
 
 	<?php while (have_posts()) : the_post(); ?>
 
@@ -30,7 +30,7 @@
 
 	<?php endwhile; ?>
 
-	<?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Entries') ?>
+	<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
 	
 <?php else : ?>
 
