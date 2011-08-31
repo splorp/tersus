@@ -21,7 +21,7 @@
 		<footer>
 			<p>Powered by <a href="http://wordpress.org/" title="Code is poetry." rel="generator">WordPress <?php bloginfo('version'); ?></a></p>
 			<p>Themed by <a href="<?php echo THEME_URI; ?>" title="<?php echo THEME_DESCRIPTION; ?>" rel="generator"><?php echo THEME_NAME . ' ' . THEME_VERSION; ?></a> using the &#8220;<?php echo ($tersus_style_sheet); ?>&#8221; style</p>
-			<p>Subscribe to <a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a> or <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a></p>
+			<p>Subscribe to <a href="<?php bloginfo('rss2_url'); ?>">Posts (RSS)</a> or <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a></p>
 			<?php wp_footer(); ?>
 		</footer>
 	</body>
