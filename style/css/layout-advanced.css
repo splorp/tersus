@@ -10,14 +10,14 @@
 */
 
 body {
-	color: #FFFFFF;
+	color: #333;
 	line-height: 1.4;
 	margin: 0;
 	padding: 2em;
 }
 
 a, a:visited {
-	color: #600;
+	color: #960;
 	text-decoration: none;
 	}
 
