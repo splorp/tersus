@@ -55,13 +55,19 @@ input[type=submit]:active {
 	background: #960;
 	}
 
+textarea,
+input[type=text] {
+	color: #333;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+	font-size: .8em;
+	padding: .5em;
+	}
+
 input[type=text]#s {
 	background: #DDD;
 	color: #333;
 	border: 1px solid transparent;
-	border-radius: 3px;
-	font-size: .8em;
-	padding: .5em;
 	width: 95%;
 	}
 
