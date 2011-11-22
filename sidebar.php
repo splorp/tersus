@@ -33,23 +33,23 @@
 
 				<?php } elseif (is_category()) { /* If this is a category archive */ ?>
 	
-					<p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>
+					<p>You are currently browsing the archives for the <strong>“<?php single_cat_title(''); ?>”</strong> category.</p>
 
 				<?php } elseif (is_day()) { /* If this is a yearly archive */ ?>
 					
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for the day <?php the_time('l, F jS, Y'); ?>.</p>
+					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <strong><?php the_time('l, F jS, Y'); ?></strong>.</p>
 
 				<?php } elseif (is_month()) { /* If this is a monthly archive */ ?>
 
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <?php the_time('F, Y'); ?>.</p>
+					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <strong><?php the_time('F, Y'); ?></strong>.</p>
 
 				<?php } elseif (is_year()) { /* If this is a yearly archive */ ?>
 
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for the year <?php the_time('Y'); ?>.</p>
+					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <strong><?php the_time('Y'); ?></strong>.</p>
 
 				<?php } elseif (is_search()) { /* If this is a monthly archive */ ?>
 					
-					<p>You have searched the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <strong>“<?php the_search_query(); ?>”</strong>. If you are unable to find anything in these search results, you can try one of these links.</p>
+					<p>You have searched the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archives for <strong>“<?php the_search_query(); ?>”</strong>.</p>
 
 				<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { /* Everything else */ ?>
 					
