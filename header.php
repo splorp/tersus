@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<title><?php wp_title(' &mdash; ', true, 'right'); ?><?php bloginfo('name'); ?></title>
+		<title><?php wp_title('&mdash;', true, 'right'); ?><?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		
 		<?php
