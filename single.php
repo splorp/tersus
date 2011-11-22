@@ -26,19 +26,19 @@
 			<li><?php the_category('</li><li>') ?></li>
 		</ul>
 
-		<p>You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
+		<p>You can follow comments on this entry via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
 
 		<?php if ( comments_open() && pings_open() ) {
 		// Both Comments and Pings are open ?>
-		<p>You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
+		<p>You can <a href="#comment">leave a comment</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) {
 		// Only Pings are Open ?>
-		<p>Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.</p>
+		<p>Comments are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) {
 		// Comments are open, Pings are not ?>
-		<p>You can skip to the end and leave a response. Pinging is currently not allowed.</p>
+		<p>You can skip to the end and leave a comment. Pinging is currently not allowed.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) {
 		// Neither Comments, nor Pings are open ?>

@@ -21,7 +21,7 @@
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments"><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
@@ -45,7 +45,7 @@
 
 <?php if ( comments_open() ) : ?>
 
-<div id="respond">
+<div id="comment">
 
 	<h3><?php comment_form_title( 'Leave a comment …', 'Reply to %s …' ); ?></h3>
 
@@ -67,7 +67,7 @@
 		<label for="author">Name <?php if ($req) echo "(required)"; ?></label></p>
 
 		<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label></p>
+		<label for="email">Mail (<?php if ($req) echo "required, but "; ?>will not be published)</label></p>
 
 		<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 		<label for="url">Website</label></p>
