@@ -32,11 +32,35 @@ code {
 	padding: 0.3em 0.5em;
 	}
 
+input[type=reset],
+input[type=submit] {
+	border: none;
+	background: #AAA;
+	color: #FFF;
+	font-size: .8em;
+	cursor: pointer;
+	padding: 5px 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	}
+
+input[type=reset]:hover,
+input[type=submit]:hover {
+	background: #333;
+	}
+
+input[type=reset]:active,
+input[type=submit]:active {
+	background: #960;
+	}
+
 input[type=text]#s {
 	background: #DDD;
+	color: #333;
 	border: 1px solid transparent;
-	border-radius: 20px;
-	font: normal .8em sans-serif;
+	border-radius: 3px;
+	font-size: .8em;
 	padding: .5em;
 	width: 95%;
 	}
