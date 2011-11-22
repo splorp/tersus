@@ -17,6 +17,7 @@ body {
 }
 
 a, a:visited {
+	background: #FFF;
 	color: #960;
 	text-decoration: none;
 	}
@@ -60,7 +61,9 @@ article h2 {
 	}
 
 header h1 a,
-article h2 a {
+header h1 a:visited,
+article h2 a,
+article h2 a:visited {
 	color: #999;
 	}
 
