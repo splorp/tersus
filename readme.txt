@@ -37,7 +37,7 @@ Features
 
 -----------------------------------------------------------
 
-+ HTML5 compliant
++ HTML5 structure and compliance
 + CSS that has been reset and built from the ground up 
 + Non-semantic, presentational markup has been dispatched
 + A selection of style “flavours” and theme options
@@ -97,9 +97,12 @@ Version History
 
 0.1.4 - The “Wrap It!” Release
 
-+ Added current theme style to footer
 + Updated markup to use section and article elements
++ Removed a schwack of empty selectors
 + Advanced layout styles are now more responsive
++ Adjusted typography and color flavours
++ Standardized stylesheet naming conventions
++ Added current theme style to footer
 
 
 0.1.3 - The “About Time This Thing Was Updated Again” Release
