@@ -100,7 +100,7 @@ Version History
 + Updated markup to use section and article elements
 + Removed a schwack of empty selectors
 + Advanced layout styles are now more responsive
-+ Adjusted typography and color flavours
++ Adjusted advanced layout typography and colours
 + Standardized stylesheet naming conventions
 + Added current theme style to footer
 
