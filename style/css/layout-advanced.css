@@ -10,13 +10,14 @@
 */
 
 body {
-	color: #333;
+	color: #FFFFFF;
 	line-height: 1.4;
 	margin: 0;
 	padding: 2em;
 }
 
-a {
+a, a:visited {
+	color: #600;
 	text-decoration: none;
 	}
 
@@ -72,7 +73,7 @@ header p {
 section#content {
 	float: left;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 1em 0;
 	width: 49%;
 	}
 
@@ -82,9 +83,9 @@ section#content article {
 	padding: 0 0 1em 0;
 	}
 
-section#content article.post-image img.alignnone {
+section#content article img {
 	display: block;
-	margin: 0 auto 5%;
+	margin: 2em 0;
 	max-width: 100%;
 	}
 	
@@ -128,7 +129,7 @@ section.sidebar ul li ul li ul li {
 	}
 
 section.sidebar h2 {
-	border-bottom: 1px dotted #999;
+	border-bottom: 1px solid #AAA;
 	font-size: 1em;
 	margin: 0 0 1em 0;
 	padding: 0 0 .5em 0;
@@ -137,7 +138,8 @@ section.sidebar h2 {
 
 footer {
 	clear: both;
-	padding-bottom: 2em;
+	padding: 2em 0;
+	border-top: 1px solid #AAA;
 	}
 	
 
@@ -171,13 +173,8 @@ footer {
 		width: 25%;
 	}
 	
-	section#content article img,
-	section#content article img.alignleft,
-	section#content article img.alignright {
-		display: block;
+	section#content article img {
 		float: none;
-		margin: 0 0 5% 0;
-		max-width: 100%;
 	}
 	
 	textarea {
@@ -208,14 +205,8 @@ footer {
 		padding: 0;
 	}
 
-	section#content article img,
-	section#content article img.alignleft,
-	section#content article img.alignright {
-		display: block;
+	section#content article img {
 		float: none;
-		margin: 0 0 5% 0;
-		max-width: 100%;
-	}
 	
 	textarea {
 		max-width: 100%;
