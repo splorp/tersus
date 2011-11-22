@@ -47,7 +47,7 @@
 
 <div id="respond">
 
-	<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
+	<h3><?php comment_form_title( 'Leave a comment …', 'Reply to %s …' ); ?></h3>
 
 	<p><?php cancel_comment_reply_link(); ?></p>
 
@@ -59,7 +59,7 @@
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-		<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out</a></p>
+		<p>You are logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php" title="View and edit your profile"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out</a></p>
 
 		<?php else : ?>
 
