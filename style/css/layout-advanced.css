@@ -60,13 +60,6 @@ article h2 {
 	padding: 0;
 	}
 
-header h1 a,
-header h1 a:visited,
-article h2 a,
-article h2 a:visited {
-	color: #999;
-	}
-
 header p {
 	color: #AAA;
 	margin: 0;
