@@ -18,7 +18,8 @@
 		<?php the_content('<p>Read the rest of this entry</p>'); ?>
 		<p><?php previous_image_link() ?> | <?php next_image_link() ?></p>
 
-		<p>This entry was posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</p>
+		<p>This item was posted by <span class="vcard author"><a class="url fn" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('full_name'); ?></a></span> on <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></a>.</p>
+
 		<p>Categories:</p>
 		<ul>
 			<li><?php the_category('</li><li>') ?></li>

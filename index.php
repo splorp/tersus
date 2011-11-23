@@ -22,8 +22,7 @@
 			<?php the_content('Read the rest of this entry'); ?>
 			
 			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
-				<p>Tags:</p>
-				<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
+				<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 				<p>Categories:</p>
 				<ul>
 					<li><?php the_category('</li><li>') ?></li>
