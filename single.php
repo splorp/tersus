@@ -29,20 +29,20 @@
 		<p>You can follow comments on this entry via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
 
 		<?php if ( comments_open() && pings_open() ) {
-		// Both Comments and Pings are open ?>
-		<p>You can <a href="#comment">leave a comment</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
+		// Comments and trackbacks are open ?>
+		<p>Feel free to <a href="#comment">leave a comment</a> below or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) {
-		// Only Pings are Open ?>
-		<p>Comments are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.</p>
+		// Only trackbacks are open ?>
+		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) {
-		// Comments are open, Pings are not ?>
-		<p>You can skip to the end and leave a comment. Pinging is currently not allowed.</p>
+		// Only comments are open ?>
+		<p>Feel free to <a href="#comment">Leave a comment</a> below.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) {
-		// Neither Comments, nor Pings are open ?>
-		<p>Both comments and pings are currently closed.</p>
+		// Comments and trackbacks are closed ?>
+		<p>Comments are closed.</p>
 
 		<?php } edit_post_link('Edit','<p>','</p>'); ?>
 

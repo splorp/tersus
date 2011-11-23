@@ -9,12 +9,14 @@
 
 <section id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
+	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
 		<h2><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> : <?php the_title(); ?></h2>
 		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
 		<?php if ( !empty($post->post_excerpt) ) the_excerpt(); // this is the "caption" ?>
 		<?php the_content('<p>Read the rest of this entry</p>'); ?>
-		<?php previous_image_link() ?> | <?php next_image_link() ?>
+		<p><?php previous_image_link() ?> | <?php next_image_link() ?></p>
 
 		<p>This entry was posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</p>
 		<p>Categories:</p>
@@ -22,33 +24,33 @@
 			<li><?php the_category('</li><li>') ?></li>
 		</ul>
 		<?php the_taxonomies(); ?>
+
 		<p>You can follow comments on this entry via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
 
 		<?php if ( comments_open() && pings_open() ) {
-		// Both Comments and Pings are open ?>
-		<p>You can <a href="#comment">leave a comment</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
+		// Comments and trackbacks are open ?>
+		<p>Feel free to <a href="#comment">leave a comment</a> below or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) {
-		// Only Pings are Open ?>
-		<p>Comments are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.</p>
+		// Only trackbacks are open ?>
+		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) {
-		// Comments are open, Pings are not ?>
-		<p>You can skip to the end and leave a comment. Pinging is currently not allowed.</p>
+		// Only comments are open ?>
+		<p>Feel free to <a href="#comment">Leave a comment</a> below.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) {
-		// Neither Comments, nor Pings are open ?>
-		<p>Both comments and pings are currently closed.</p>
+		// Comments and trackbacks are closed ?>
+		<p>Comments are closed.</p>
 
 		<?php } edit_post_link('Edit','<p>','</p>'); ?>
-	</div>
+
+	</article>
 
 <?php comments_template(); ?>
 
 <?php endwhile; else: ?>
-
 	<p>Sorry, no attachments matched your criteria.</p>
-
 <?php endif; ?>
 </section>
 
