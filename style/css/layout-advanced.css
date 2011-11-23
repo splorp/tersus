@@ -82,7 +82,8 @@ header {
 	}
 
 header h1,
-article h2 {
+article h2,
+section#content h2 {
 	font-size: 300%;
 	letter-spacing: -1px;
 	line-height: 1;
