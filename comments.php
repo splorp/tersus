@@ -36,7 +36,7 @@
 	<?php if ( comments_open() ) : ?>
 		<!-- If comments are open, but there are no comments. -->
 
-	 <?php else : // comments are closed ?>
+	 <?php else : ?>
 		<!-- If comments are closed. -->
 		<p>Comments are closed.</p>
 
