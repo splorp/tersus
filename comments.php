@@ -21,7 +21,7 @@
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-	<h3 id="comments"><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
@@ -55,7 +55,7 @@
 	<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
 	<?php else : ?>
 
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 		<?php if ( is_user_logged_in() ) : ?>
 
@@ -63,23 +63,23 @@
 
 		<?php else : ?>
 
-		<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+		<p><input type="text" name="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 		<label for="author">Name <?php if ($req) echo "(required)"; ?></label></p>
 
-		<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+		<p><input type="text" name="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 		<label for="email">Mail (<?php if ($req) echo "required, but "; ?>will not be published)</label></p>
 
-		<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+		<p><input type="text" name="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 		<label for="url">Website</label></p>
 
 		<?php endif; ?>
 
-		<textarea name="comment" id="comment" cols="40" rows="10" tabindex="4"></textarea>
+		<textarea name="comment" cols="40" rows="10" tabindex="4"></textarea>
 
 		<p><strong>You may use the following tags to format your comment:</strong></p>
 		<p><code><?php echo allowed_tags(); ?></code></p>
 
-		<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+		<input name="submit" type="submit" tabindex="5" value="Submit Comment" />
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 
