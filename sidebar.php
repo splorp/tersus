@@ -87,23 +87,23 @@
 <section class="sidebar" id="sidebar2">
 	<ul>
 	<?php
-		// Widgetized sidebar, if you have the plugin installed.
+		// Used widgetized sidebar, if the plugin is installed
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar1' ) ) :
-			wp_list_pages('title_li=<h2>Pages</h2>' );
-	?>
 
+		// Display a list of pages
+		wp_list_pages('title_li=<h2>Pages</h2>' );
+
+		// Display a list of categories
+		wp_list_categories('show_count=1&title_li=<h2>Categories</h2>');
+		endif;
+	?>
 		<li><h2>Archives</h2>
 			<ul>
 				<?php
-					// Displays a list of monthly archives.
+					// Display a list of monthly archives
 					wp_get_archives('type=monthly');
 				?>
 			</ul>
 		</li>
-	<?php
-		// Displays a list of current blog categories.
-		wp_list_categories('show_count=1&title_li=<h2>Categories</h2>');
-		endif;
-	?>
 	</ul>
 </section>
