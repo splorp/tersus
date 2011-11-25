@@ -16,7 +16,7 @@
 		
 			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				<p><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></p>
+				<p>This item was posted by <span class="vcard author"><a class="url fn" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('full_name'); ?></a></span> on <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></a>.</p>
 			<?php } ?>
 			
 			<?php the_content('Read the rest of this entry'); ?>
