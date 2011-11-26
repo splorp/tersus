@@ -63,13 +63,13 @@
 
 		<?php else : ?>
 
-		<p><input type="text" name="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+		<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 		<label for="author">Name <?php if ($req) echo "(required)"; ?></label></p>
 
-		<p><input type="text" name="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+		<p><input type="email" name="email" id="email" placeholder="you@example.com" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 		<label for="email">Mail (<?php if ($req) echo "required, but "; ?>will not be published)</label></p>
 
-		<p><input type="text" name="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+		<p><input type="url" name="url" id="url" placeholder="http://" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 		<label for="url">Website</label></p>
 
 		<?php endif; ?>
