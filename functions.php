@@ -153,6 +153,10 @@
 
 	automatic_feed_links();
 	
+// Remove nonvalidating parent post link from header
+
+	remove_action('wp_head', 'parent_post_rel_link');
+	
 // Sidebar Support. Let's have two, shall we?
 
 	if ( function_exists('register_sidebar') ) {
