@@ -1,7 +1,7 @@
 
 Tersus
 
-An achingly simple WordPress theme without the usual cruft.
+An achingly simple WordPress theme without all the usual cruft.
 
 
 -----------------------------------------------------------
