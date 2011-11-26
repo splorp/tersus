@@ -195,6 +195,14 @@
 
 	add_filter( 'post_class', 'simple_post_class' );
  
+// Remove nonvalidating rel attributes from category links
+
+	function relfix($c) {
+		return preg_replace('rel="category tag"','rel="tag"',$c);
+	}
+
+	add_filter('the_category','relfix');
+
 // Add a proper thousands delimiter to category post counts
 
 	function delim($c) {
