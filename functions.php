@@ -153,11 +153,11 @@
 
 	automatic_feed_links();
 	
-// Remove nonvalidating parent post link from header
+// Remove non-validating parent post link from header
 
 	remove_action('wp_head', 'parent_post_rel_link');
 	
-// Sidebar Support. Let's have two, shall we?
+// Sidebar support. Let's have two, shall we?
 
 	if ( function_exists('register_sidebar') ) {
 		register_sidebar(array('name'=>'Sidebar1',
@@ -199,7 +199,7 @@
 
 	add_filter( 'post_class', 'simple_post_class' );
  
-// Remove nonvalidating rel attributes from category links
+// Remove non-validating rel attributes from category links
 
 	function relfix($c) {
 		return preg_replace('rel="category tag"','rel="tag"',$c);
