@@ -90,40 +90,34 @@
 			case 'text':
 		?>
 	 
-		<p>
-			<strong><?php echo $value['name']; ?></strong> <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
-		</p>
 		<p><?php echo $value['desc']; ?></p>
+		<p><?php echo $value['name']; ?> <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" /></p>
  
 		<?php
 			break;
 			case 'textarea':
 		?>
  
-		<p>
-			<strong><?php echo $value['name']; ?></strong> <textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea>
-		</p>
 		<p><?php echo $value['desc']; ?></p>
+		<p><?php echo $value['name']; ?> <textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea></p>
   
 		<?php
 			break;
 			case 'select':
 		?>
 
-		<p>
-			<strong><?php echo $value['name']; ?></strong> <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
 		</p>
 		<p><?php echo $value['desc']; ?></p>
+		<p><?php echo $value['name']; ?> <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select></p>
 
 		<?php
 			break;
 			case "checkbox":
 		?>
 
-		<p
-			<strong><?php echo $value['name']; ?></strong> <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
 		</p>
 		<p><?php echo $value['desc']; ?></p>
+		<p><?php echo $value['name']; ?></strong> <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /></p>
 
 		<?php break;
 				}
