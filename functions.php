@@ -16,7 +16,13 @@
 		"type" => "select",
 		"options" => array( "Default", "Advanced", "Super Ginormous" ), 
 		"std" => "default"),
+	array( "name" => "Admin Notice",
+		"desc" => "Enter the text to appear in the admin notice area. HTML is allowed.",
+		"id" => $shortname."_admin",
+		"type" => "textarea",
+		"std" => "<p>This text will appear in the admin notice area.</p>"),
 	);
+
 	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
 	
 	define('THEME_URI', $theme_data['URI']);
@@ -106,7 +112,6 @@
 			case 'select':
 		?>
 
-		</p>
 		<p><?php echo $value['desc']; ?></p>
 		<p><?php echo $value['name']; ?> <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select></p>
 
@@ -115,7 +120,6 @@
 			case "checkbox":
 		?>
 
-		</p>
 		<p><?php echo $value['desc']; ?></p>
 		<p><?php echo $value['name']; ?></strong> <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /></p>
 

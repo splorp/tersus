@@ -50,8 +50,7 @@
 			// page-level ids or classes instead
 		?>
 		<section id="admin">
-			<h3><strong>What the heck is going on, you ask?</strong> Say hello to <a href="http://github.com/splorp/tersus/" title="Available on GitHub">Tersus</a>.</h3>
-			<p>Bare bones? You got it. Tersus is an achingly simple WordPress theme without all the usual cruft.</p>
+			<?php echo($tersus_admin); ?>
 		</section>
 		
 		<header>
