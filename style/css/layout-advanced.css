@@ -17,7 +17,7 @@ body {
 }
 
 a, a:visited {
-	background: #FFF;
+	background: transparent;
 	color: #960;
 	text-decoration: none;
 	}
@@ -84,6 +84,7 @@ header {
 header h1,
 article h2,
 section#content h2 {
+	background: transparent;
 	font-size: 300%;
 	letter-spacing: -1px;
 	line-height: 1;
