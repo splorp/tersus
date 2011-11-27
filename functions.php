@@ -202,7 +202,7 @@
 // Remove non-validating rel attributes from category links
 
 	function relfix($c) {
-		return preg_replace('rel="category tag"','rel="tag"',$c);
+		return preg_replace('/rel=\"category tag\"/','rel=\"tag\"',$c);
 	}
 
 	add_filter('the_category','relfix');
