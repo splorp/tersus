@@ -16,8 +16,8 @@
 		"type" => "select",
 		"options" => array( "Default", "Advanced", "Super Ginormous" ), 
 		"std" => "default"),
-	array( "name" => "Display Announcement",
-		"desc" => "Inserts a common announcement area on every page.",
+	array( "name" => "Announcement",
+		"desc" => "Display an announcement on every page.",
 		"id" => $shortname."_announcement_display",
 		"type" => "checkbox",
 		"std" => "off"),
@@ -105,8 +105,7 @@
 	 
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_settings($value['id']) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" /><br />
-			<em><?php echo $value['desc']; ?></em></td>
+			<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_settings($value['id']) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" /> <?php echo $value['desc']; ?></td>
 		</tr>
  
 		<?php
@@ -116,8 +115,8 @@
  
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_settings($value['id']) != "") { echo stripslashes(get_settings( $value['id'] )); } else { echo $value['std']; } ?></textarea><br />
-			<em><?php echo $value['desc']; ?></em></td>
+			<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_settings($value['id']) != "") { echo stripslashes(get_settings( $value['id'] )); } else { echo $value['std']; } ?></textarea>
+			<p><?php echo $value['desc']; ?></p></td>
 		</tr>
   
 		<?php
@@ -127,8 +126,7 @@
 
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_settings($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><br />
-			<em><?php echo $value['desc']; ?></em></td>
+			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_settings($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select> <?php echo $value['desc']; ?></td>
 		</tr>
 		
 		<?php
@@ -138,8 +136,7 @@
 
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /><br />
-			<em><?php echo $value['desc']; ?></em></td>
+			<td><?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /> <?php echo $value['desc']; ?></td>
 		</tr>
 
 		<?php break;
