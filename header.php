@@ -49,9 +49,12 @@
 			// and provide a custom function which allows
 			// page-level ids or classes instead
 		?>
-			<?php echo($tersus_admin); ?>
+
+		<?php if ($tersus_announcement_display == "true"): ?>
 		<section id="announcement">
+			<?php echo($tersus_announcement); ?>
 		</section>
+		<?php endif; ?>
 		
 		<header>
 			<h1><a href="<?php echo get_option('home'); ?>/" title="This will take you home"><?php bloginfo('name'); ?></a></h1>

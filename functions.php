@@ -16,11 +16,16 @@
 		"type" => "select",
 		"options" => array( "Default", "Advanced", "Super Ginormous" ), 
 		"std" => "default"),
-	array( "name" => "Admin Notice",
-		"desc" => "Enter the text to appear in the admin notice area. HTML is allowed.",
-		"id" => $shortname."_admin",
+	array( "name" => "Display Announcement",
+		"desc" => "Inserts a common announcement area on every page.",
+		"id" => $shortname."_announcement_display",
+		"type" => "checkbox",
+		"std" => "off"),
+	array( "name" => "Announcement Text",
+		"desc" => "Enter the text to appear in the announcement area. HTML is allowed.",
+		"id" => $shortname."_announcement",
 		"type" => "textarea",
-		"std" => "<p>This text will appear in the admin notice area.</p>"),
+		"std" => "<p>This text will appear in the announcement area.</p>"),
 	);
 
 	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
@@ -122,7 +127,7 @@
 
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><br />
+			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_settings($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><br />
 			<em><?php echo $value['desc']; ?></em></td>
 		</tr>
 		
