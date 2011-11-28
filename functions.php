@@ -89,6 +89,8 @@
 
 		<form method="post">
 
+		<table class="form-table">
+		
 		<?php
 			foreach ($options as $value) {
 				switch ( $value['type'] ) {
@@ -96,47 +98,60 @@
 			case 'text':
 		?>
 	 
-		<p><?php echo $value['desc']; ?></p>
-		<p><?php echo $value['name']; ?> <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" /></p>
+		<tr>
+			<th><strong><?php echo $value['name']; ?></strong></th>
+			<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_settings($value['id']) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" /><br />
+			<em><?php echo $value['desc']; ?></em></td>
+		</tr>
  
 		<?php
 			break;
 			case 'textarea':
 		?>
  
-		<p><?php echo $value['desc']; ?></p>
-		<p><?php echo $value['name']; ?> <textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea></p>
+		<tr>
+			<th><strong><?php echo $value['name']; ?></strong></th>
+			<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_settings($value['id']) != "") { echo stripslashes(get_settings( $value['id'] )); } else { echo $value['std']; } ?></textarea><br />
+			<em><?php echo $value['desc']; ?></em></td>
+		</tr>
   
 		<?php
 			break;
 			case 'select':
 		?>
 
-		<p><?php echo $value['desc']; ?></p>
-		<p><?php echo $value['name']; ?> <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select></p>
-
+		<tr>
+			<th><strong><?php echo $value['name']; ?></strong></th>
+			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><br />
+			<em><?php echo $value['desc']; ?></em></td>
+		</tr>
+		
 		<?php
 			break;
 			case "checkbox":
 		?>
 
-		<p><?php echo $value['desc']; ?></p>
-		<p><?php echo $value['name']; ?></strong> <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /></p>
+		<tr>
+			<th><strong><?php echo $value['name']; ?></strong></th>
+			<td><?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /><br />
+			<em><?php echo $value['desc']; ?></em></td>
+		</tr>
 
 		<?php break;
 				}
 			}
 		?>
- 
+
+		</table>
 		<p class="submit">
-			<input name="save" type="submit" value="Save changes" />
+			<input name="save" type="submit" value="Save Changes" />
 			<input type="hidden" name="action" value="save" />
 		</p>
 	</form>
 
 	<form method="post">
 		<p class="submit">
-			<input name="reset" type="submit" value="Reset" />
+			<input name="reset" type="submit" value="Reset Options" />
 			<input type="hidden" name="action" value="reset" />
 		</p>
 	</form>
