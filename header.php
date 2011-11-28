@@ -49,8 +49,8 @@
 			// and provide a custom function which allows
 			// page-level ids or classes instead
 		?>
-		<section id="admin">
 			<?php echo($tersus_admin); ?>
+		<section id="announcement">
 		</section>
 		
 		<header>
