@@ -15,7 +15,7 @@
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 		<h2><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
-		<?php the_content('<p>Read the rest of this entry</p>'); ?>
+		<?php the_content('<p>Read the rest of this item</p>'); ?>
 		<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 		<p>This item was posted by <span class="vcard author"><a class="url fn" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('full_name'); ?></a></span> on <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></a>.</p>
 
@@ -26,7 +26,7 @@
 			<li><?php the_category('</li><li>') ?></li>
 		</ul>
 
-		<p>You can follow comments on this entry via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
+		<p>You can follow comments on this item via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
 
 		<?php if ( comments_open() && pings_open() ) {
 		// Comments and trackbacks are open ?>
