@@ -52,7 +52,7 @@
 
 		<?php if ($tersus_announcement_display == "true"): ?>
 		<section id="announcement">
-			<?php echo($tersus_announcement); ?>
+			<?php echo (stripslashes($tersus_announcement)); ?>
 		</section>
 		<?php endif; ?>
 		
