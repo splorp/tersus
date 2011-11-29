@@ -97,12 +97,17 @@ Version History
 
 0.1.4 - The “Wrap It!” Release
 
-+ Updated markup to use section and article elements
-+ Removed a schwack of empty selectors
++ Updated markup to use HTML5 section and article elements
++ Added new theme options for a site-wide ‘announcement’ banner
 + Advanced layout styles are now more responsive
-+ Adjusted advanced layout typography and colours
-+ Standardized stylesheet naming conventions
++ Advanced layout typography and colours have been adjusted
++ Form elements now have some consistent stylee
++ Tags lists now only appear if there are tags present
++ All ‘rel’ attributes now validate
 + Added current theme style to footer
++ Removed a schwack of empty CSS selectors
++ Tweaked text and nomenclature for consistency
++ Standardized stylesheet naming conventions
 
 
 0.1.3 - The “About Time This Thing Was Updated Again” Release
