@@ -24,7 +24,7 @@
 		<ul>
 			<li><?php the_category('</li><li>') ?></li>
 		</ul>
-		<p><?php edit_post_link('Edit', '', ' | '); ?><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
+		<p><?php edit_post_link('Edit', '', ' | '); ?><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
 	</article>
 
 	<?php endwhile; ?>
