@@ -4,7 +4,6 @@
  * @subpackage Tersus
  */
 
-
 // Define Theme Constants
 
 	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
@@ -40,20 +39,15 @@
 	);
 
 
-// Tersus Options Admin
+// Tersus Theme Options Admin
 
 	function tersus_add_admin() {
- 
 		global $themename, $shortname, $options;
- 
 		if ( $_GET['page'] == basename(__FILE__) ) {
- 
 			if ( 'save' == $_REQUEST['action'] ) {
- 
 				foreach ($options as $value) {
 					update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 				}
- 
 				foreach ($options as $value) {
 					if( isset( $_REQUEST[ $value['id'] ] ) ) {
 						update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
@@ -61,31 +55,21 @@
 						delete_option( $value['id'] );
 					}
 				}
- 
 				header("Location: themes.php?page=functions.php&saved=true");
-
 				die;
- 
 			} else if( 'reset' == $_REQUEST['action'] ) {
- 
 				foreach ($options as $value) {
 					delete_option( $value['id'] );
 				}
- 
 				header("Location: themes.php?page=functions.php&reset=true");
 				die;
- 
 			}
 		}
- 
 		add_theme_page($themename." Options", "".$themename." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
- 
 	}
  
 	function tersus_admin() {
- 
 		global $themename, $shortname, $options;
- 
 		if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
 		if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been reset to their default settings.</strong></p></div>';
  
@@ -94,15 +78,12 @@
 	<div class="wrap">
 		<div id="icon-themes" class="icon32"><br /></div>
 		<h2><?php echo $themename; ?> Options</h2>
-
 		<form method="post">
-
 		<table class="form-table">
 		
 		<?php
 			foreach ($options as $value) {
 				switch ( $value['type'] ) {
-
 			case 'text':
 		?>
 	 
@@ -162,7 +143,6 @@
 	</form>
  
 	<?php
-
 	}
 
 	add_action('admin_menu', 'tersus_add_admin');
