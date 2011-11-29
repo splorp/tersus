@@ -217,6 +217,14 @@
 
 	add_filter( 'post_class', 'simple_post_class' );
  
+// Change comment link anchors
+
+	function commentfix($c) {
+		return preg_replace('#respond','#comment',$c);
+	}
+
+	add_filter('comments_popup_link','commentfix');
+
 // Remove non-validating rel attributes from category links
 
 	function relfix($c) {
