@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="sidebar" id="sidebar1">
+<aside id="sidebar-1">
 	<ul>
 	<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar2' ) ) :
@@ -82,9 +82,9 @@
 				endif;
 		?>
 	</ul>
-</section>
+</aside>
 			
-<section class="sidebar" id="sidebar2">
+<aside id="sidebar-2">
 	<ul>
 	<?php
 		// Used widgetized sidebar, if the plugin is installed
@@ -106,4 +106,4 @@
 			</ul>
 		</li>
 	</ul>
-</section>
+</aside>

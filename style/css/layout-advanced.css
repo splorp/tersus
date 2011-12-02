@@ -117,46 +117,46 @@ section#content article img {
 	max-width: 100%;
 	}
 	
-section.sidebar {
+aside {
 	float: right;
 	margin: 0;
 	padding: 0 0 1em 2em;
 	width: 20%;
 	}
 
-section.sidebar ul {
+aside ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-indent: 0;
 	}
 
-section.sidebar ul li {
+aside ul li {
 	list-style: none !important;
 	}
 
-section.sidebar ul li form {
+aside ul li form {
 	margin: 0 0 2em 0;
 	}
 
-section.sidebar ul li ul {
+aside ul li ul {
 	margin: 0 0 2em 0;
 	}
 
-section.sidebar ul li ul li {
+aside ul li ul li {
 	font-weight: bold;
 	margin: 0;
 	}
 
-section.sidebar ul li ul li ul {
+aside ul li ul li ul {
 	margin: 0 0 0 1em;
 	}
 
-section.sidebar ul li ul li ul li {
+aside ul li ul li ul li {
 	font-weight: normal;
 	}
 
-section.sidebar h2 {
+aside h2 {
 	border-bottom: 1px solid #AAA;
 	font-size: 1em;
 	margin: 0 0 1em 0;
@@ -193,7 +193,7 @@ footer {
 		padding: 0 0 2.5% 0;
 		width: 65%;
 	}
-	section.sidebar {
+	aside {
 		float: right;
 		clear: right;
 		margin: 0 0 2.5% 0;
@@ -223,13 +223,13 @@ footer {
 	
 	header,
 	section#content,
-	section.sidebar,
+	aside,
 	footer {
 		float: none;
 		width: 95%;
 	}
 	
-	section.sidebar {
+	aside {
 		padding: 0;
 	}
 

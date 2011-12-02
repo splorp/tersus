@@ -120,7 +120,7 @@ section#content article.hentry img {
 	padding: 0;
 	}
 	
-section.sidebar {
+aside {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -130,15 +130,15 @@ section.sidebar {
 	width: 18.5%;
 	}
 
-section#sidebar1.sidebar {
+aside#sidebar-1 {
 	background: #009cd4;
 	}
 
-section#sidebar2.sidebar {
+aside#sidebar-2 {
 	background: #08beff;
 	}
 
-section.sidebar select {
+aside select {
 	background: #fff;
 	border: 3px solid rgba(255,255,255,.2);
 	-webkit-border-radius: 2px;
@@ -149,52 +149,52 @@ section.sidebar select {
 	width: 94%;
 	}
 	
-section.sidebar ul {
+aside ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-indent: 0;
 	}
 
-section.sidebar ul li {
+aside ul li {
 	list-style: none !important;
 	}
 
-section.sidebar ul li form,
-section.sidebar ul li select {
+aside ul li form,
+aside ul li select {
 	margin: 0 0 10%;
 	}
 
-section.sidebar ul li form select {
+aside ul li form select {
 	margin: 0;
 	}
 
-section.sidebar ul li ul {
+aside ul li ul {
 	margin: 0 0 10%;
 	}
 
-section.sidebar ul li ul li {
+aside ul li ul li {
 	font-weight: bold;
 	margin: 0;
 	}
 
-section.sidebar ul li ul li a {
+aside ul li ul li a {
 	color: #fff;
 	}
 
-section.sidebar ul li ul li ul {
+aside ul li ul li ul {
 	margin: 0 0 0 5%;
 	}
 
-section.sidebar ul li ul li ul li {
+aside ul li ul li ul li {
 	font-weight: normal;
 	}
 
-section.sidebar ul li ul li ul li a {
+aside ul li ul li ul li a {
 	color: #fff;
 	}
 
-section.sidebar h2 {
+aside h2 {
 	background: #fff;
 	box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
 	color: #999;
@@ -206,7 +206,7 @@ section.sidebar h2 {
 	width: 100%;
 	}
 
-section.sidebar h2:before {
+aside h2:before {
 	content: "";
 	border-color: #999 #999 transparent transparent;
 	border-style: solid;
