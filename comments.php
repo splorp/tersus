@@ -21,7 +21,7 @@
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-	<h3><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to “<?php the_title(); ?>”</h3>
 
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 

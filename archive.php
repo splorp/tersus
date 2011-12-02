@@ -12,9 +12,9 @@
 
 	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 	<?php /* If this is a category archive */ if (is_category()) { ?>
-		<h2>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; category</h2>
+		<h2>Archive for the “<?php single_cat_title(); ?>” category</h2>
 	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<h2>Posts tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
+		<h2>Posts tagged “<?php single_tag_title(); ?>”</h2>
 	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
 		<h2>Archive for <?php the_time('F jS, Y'); ?></h2>
 	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
