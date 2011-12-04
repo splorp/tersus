@@ -237,9 +237,15 @@
 				}
 			}
 		return $c;
+// Remove extraneous class attributes from comment links
+
+	function declass_comment_links($str) {
+		return preg_replace('/ class=[\"\'].+?[\"\']/', '', $str);
 	}
 		
 	add_filter('comment_class','declass_comments');
+	add_filter ('edit_comment_link','declass_comment_links');
+	add_filter ('comment_reply_link','declass_comment_links');
 
 // Add support for the_post_thumbnail
 
