@@ -26,7 +26,7 @@
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
 	<ol>
-	    <?php wp_list_comments(array('avatar_size'=>32, 'reply_text'=>'Reply')); ?>
+	    <?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
 	</ol>
 
 	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>

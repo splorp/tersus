@@ -227,25 +227,37 @@
 	add_filter('wp_list_categories','declass');
 	add_filter('wp_list_pages','declass');
 
-// Remove extraneous class attributes from list elements in comments
-// Still needs work, as it does not remove the attribute, only values
 
-	function declass_comments($c) {
-		foreach( $c as $key => $class ) {
-			if(!strstr($class, "comment")) { // Leaves only the 'comment' class
-				unset( $c[$key] );
-				}
-			}
-		return $c;
 // Remove extraneous class attributes from comment links
 
 	function declass_comment_links($str) {
 		return preg_replace('/ class=[\"\'].+?[\"\']/', '', $str);
 	}
-		
-	add_filter('comment_class','declass_comments');
+	
 	add_filter ('edit_comment_link','declass_comment_links');
 	add_filter ('comment_reply_link','declass_comment_links');
+
+
+
+// Replacement comment callback function
+// Removes default class and ID verbosity
+
+function tersus_comment($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment; ?>
+	<li id="comment-<?php comment_ID() ?>">
+		<p>Posted by <span class="vcard author"><?php echo get_avatar( $comment->comment_author_email, 48 ); ?> <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?></span> on <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark" title="<?php comment_time('c') ?>"><?php comment_time('l, F jS, Y') ?></a>.</p>
+
+	<?php if ($comment->comment_approved == '0') : ?>
+		<p><em><?php _e('Your comment is awaiting moderation.') ?></em></p>
+	<?php endif; ?>
+
+	<?php comment_text() ?>
+
+	<p><?php edit_comment_link(__('Edit'),'',' | ') ?><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></p>
+<?php
+	}
+
+        
 
 // Add support for the_post_thumbnail
 
