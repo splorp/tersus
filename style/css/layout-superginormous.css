@@ -18,7 +18,7 @@ a {
 	text-decoration: none;
 	}
 
-input[type=text]#s {
+form#searchform input[type=text] {
 	background: #fff;
 	border: 1px solid transparent;
 	border-radius: 20px;
@@ -27,7 +27,7 @@ input[type=text]#s {
 	width: 95%;
 	}
 
-input[type=submit]#searchsubmit {
+form#searchform input[type=submit] {
 	display: none;
 	}
 

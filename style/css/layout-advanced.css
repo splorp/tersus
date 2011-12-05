@@ -76,14 +76,14 @@ input[type=url] {
 	padding: .5em;
 	}
 
-input[type=text]#s {
+form#searchform input[type=text] {
 	background: #DDD;
 	color: #333;
 	border: 1px solid transparent;
 	width: 95%;
 	}
 
-input[type=submit]#searchsubmit {
+form#searchform input[type=submit] {
 	display: none;
 	}
 
