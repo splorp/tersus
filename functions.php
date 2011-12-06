@@ -238,6 +238,14 @@
 	add_filter ('comment_reply_link','declass_comment_links');
 
 
+// Remove extraneous class attributes from avatars
+
+	function declass_avatars($str) {
+		return preg_replace('/ class=[\"\'].+?[\"\']/', ' class="photo"', $str);
+	}
+	
+	add_filter ('get_avatar','declass_avatars');
+
 
 // Replacement comment callback function
 // Removes default class and ID verbosity
