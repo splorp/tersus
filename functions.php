@@ -265,6 +265,14 @@ function tersus_comment($comment, $args, $depth) {
 <?php
 	}
 
+
+// Update comment reply link anchors 
+
+	function comment_reply_anchor($str) {
+		return preg_replace('/respond/', 'comment', $str);
+	}
+	
+	add_filter ('comment_reply_link','comment_reply_anchor');
         
 
 // Add support for the_post_thumbnail
