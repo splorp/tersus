@@ -1,13 +1,9 @@
 
 /*
 	Tersus Advanced Layout CSS
-	This is an optional stylesheet that provides some initial layout/structure.
+	This is an optional stylesheet that provides some initial layout and structure.
 */
 
-
-/*
-	Collapses space above and below subpage sidebar links
-*/
 
 body {
 	color: #333;
@@ -184,7 +180,7 @@ footer {
 	
 
 /*
-	iPad- Styles
+	iPad Styles
 */
 
 @media screen and (max-device-width: 1024px) {
@@ -224,7 +220,7 @@ footer {
 	
 	
 /*
-	Small-Screen Styles
+	Small Screen Styles
 */
 
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 800px) {
