@@ -196,7 +196,7 @@ footer {
 	footer {
 		float: none;
 		margin: 0 0 2.5% 0;
-		padding: 0 0 2.5%; 0
+		padding: 0 0 2.5% 0;
 		width: auto;
 	}
 	section#content {
@@ -247,6 +247,7 @@ footer {
 
 	section#content article img {
 		float: none;
+	}
 	
 	textarea {
 		max-width: 100%;
