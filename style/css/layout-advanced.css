@@ -46,9 +46,9 @@ input[type=submit] {
 	font-size: .8em;
 	cursor: pointer;
 	padding: 5px 10px;
-	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	}
 
 input[type=reset]:hover,
@@ -72,14 +72,14 @@ input[type=url] {
 	padding: .5em;
 	}
 
-form#searchform input[type=text] {
+#searchform input[type=text] {
 	background: #DDD;
 	color: #333;
 	border: 1px solid transparent;
 	width: 95%;
 	}
 
-form#searchform input[type=submit] {
+#searchform input[type=submit] {
 	display: none;
 	}
 
@@ -91,7 +91,7 @@ header {
 
 header h1,
 article h2,
-section#content h2 {
+#content h2 {
 	background: transparent;
 	font-size: 300%;
 	letter-spacing: -1px;
@@ -106,20 +106,20 @@ header p {
 	padding: 0;
 	}
 	
-section#content {
+#content {
 	float: left;
 	margin: 0;
 	padding: 0 0 1em 0;
 	width: 49%;
 	}
 
-section#content article {
+#content article {
 	border-bottom: 1px solid #AAA;
 	margin: 0 0 2em 0;
 	padding: 0 0 1em 0;
 	}
 
-section#content article img {
+#content article img {
 	display: block;
 	margin: 2em 0;
 	max-width: 100%;
@@ -195,7 +195,7 @@ footer {
 		padding: 0 0 2.5% 0;
 		width: auto;
 	}
-	section#content {
+	#content {
 		float: left;
 		margin: 0 0 2.5% 0;
 		padding: 0 0 2.5% 0;
@@ -209,7 +209,7 @@ footer {
 		width: 25%;
 	}
 	
-	section#content article img {
+	#content article img {
 		float: none;
 	}
 	
@@ -230,7 +230,7 @@ footer {
 	}
 	
 	header,
-	section#content,
+	#content,
 	aside,
 	footer {
 		float: none;
@@ -241,7 +241,7 @@ footer {
 		padding: 0;
 	}
 
-	section#content article img {
+	#content article img {
 		float: none;
 	}
 	

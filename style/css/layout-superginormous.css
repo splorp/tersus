@@ -16,7 +16,7 @@ a {
 	text-decoration: none;
 	}
 
-form#searchform input[type=text] {
+#searchform input[type=text] {
 	background: #fff;
 	border: 1px solid transparent;
 	border-radius: 20px;
@@ -25,11 +25,11 @@ form#searchform input[type=text] {
 	width: 95%;
 	}
 
-form#searchform input[type=submit] {
+#searchform input[type=submit] {
 	display: none;
 	}
 
-section#announcement {
+#announcement {
 	background: #ffe100;
 	color: #333;
 	margin: 0 0 1%;
@@ -37,13 +37,13 @@ section#announcement {
 	text-shadow: #fff 0 1px 0;
 	}
 
-section#announcement h3 {
+#announcement h3 {
 	font-size: .9em;
 	margin: 0;
 	padding: 0;
 	}
 
-section#announcement p {
+#announcement p {
 	font-size: .7em;
 	margin: 0;
 	padding: 0;
@@ -77,7 +77,7 @@ header p {
 	margin: 0;
 	}
 	
-section#content {
+#content {
 	background: #fff;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -87,24 +87,24 @@ section#content {
 	width: 49%;
 	}
 
-section#content article {
+#content article {
 	margin: 0 0 10%;
 	}
 
-section#content article.post-aside {
+#content .post-aside {
 	background: #e6e6e6;
 	padding: 5%;
 	}
 	
-section#content article h2 {
+#content article h2 {
 	font-size: 2.25em;
 	}
 
-section#content article h2 a {
+#content article h2 a {
 	color: #333;
 	}
 	
-section#content article.post-image img {
+#content .post-image img {
 	background: #f7f7f7;
 	border: 1px solid #e6e6e6;
 	display: block;
@@ -112,12 +112,20 @@ section#content article.post-image img {
 	max-width: 98%;
 	}
 	
-section#content article.hentry img {
+#content .hentry img {
 	border: 0;
 	max-width: 100%;
 	padding: 0;
 	}
 	
+#sidebar-1 {
+	background: #009cd4;
+	}
+
+#sidebar-2 {
+	background: #08beff;
+	}
+
 aside {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -126,14 +134,6 @@ aside {
 	margin: 0 0 0 2%;
 	padding: 1.25%;
 	width: 18.5%;
-	}
-
-aside#sidebar-1 {
-	background: #009cd4;
-	}
-
-aside#sidebar-2 {
-	background: #08beff;
 	}
 
 aside select {
