@@ -163,16 +163,13 @@ aside ul li {
 	}
 
 aside ul li form,
-aside ul li select {
-	margin: 0 0 10%;
+aside ul li select,
+aside ul li ul {
+	margin: 0 0 10% 0;
 	}
 
 aside ul li form select {
 	margin: 0;
-	}
-
-aside ul li ul {
-	margin: 0 0 10%;
 	}
 
 aside ul li ul li {
