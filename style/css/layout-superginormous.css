@@ -16,6 +16,10 @@ a {
 	text-decoration: none;
 	}
 
+a:hover {
+	color: #000;
+	}
+
 #searchform input[type=text] {
 	background: #fff;
 	border: 1px solid transparent;
