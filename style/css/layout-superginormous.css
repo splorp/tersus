@@ -219,3 +219,104 @@ aside h2:before {
 footer {
 	clear: both;
 	}
+	
+
+/*
+	iPad Styles
+*/
+
+@media screen and (max-device-width: 1024px) {
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+	
+	header,
+	footer {
+		float: none;
+		margin: 0 0 2.5% 0;
+		padding: 0 0 2.5% 0;
+		width: auto;
+	}
+	#content {
+		float: left;
+		margin: 0 0 2.5% 0;
+		padding: 0 0 2.5% 0;
+		width: 65%;
+	}
+	aside {
+		float: right;
+		clear: right;
+		margin: 0 0 2.5% 0;
+		padding: 0 0 2.5% 0;
+		width: 25%;
+	}
+	
+	#content article img {
+		float: none;
+	}
+	
+	textarea {
+		max-width: 100%;
+	}
+}
+	
+	
+/*
+	Small Screen Styles
+*/
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 800px) {
+
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+	
+	header,
+	#content,
+	footer {
+		float: none;
+		width: 95%;
+	}
+	
+	aside {
+		float: none;
+		margin: 1em 0 0 0;
+		padding: 2.5%;
+		width: 95%;
+	}
+
+	aside ul li form,
+	aside ul li select,
+	aside ul li ul {
+		margin: 0 0 1.5em 0;
+	}
+
+	aside h2 {
+		background: transparent;
+		box-shadow: none;
+		font-size: 1.5em;
+		color: #fff;
+		padding: 0;
+		margin: 0 0 .5em 0;
+		position: none;
+		left: 0;
+		width: 95%;
+	}
+
+	aside h2:before {
+		content: "";
+		border: none;
+		display: block;
+		height: 0;
+		position: none;
+		width: 0;
+	}
+
+	#content article img {
+		float: none;
+	}
+	
+	textarea {
+		max-width: 100%;
+	}
+}
