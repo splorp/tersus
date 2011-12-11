@@ -33,27 +33,27 @@
 
 				<?php } elseif (is_category()) { /* If this is a category archive */ ?>
 	
-					<p>You are currently browsing the archive for the <strong>“<?php single_cat_title(''); ?>”</strong> category.</p>
+					<p>You are browsing the <strong>“<?php single_cat_title(''); ?>”</strong> category archive.</p>
 
-				<?php } elseif (is_day()) { /* If this is a yearly archive */ ?>
+				<?php } elseif (is_day()) { /* If this is a daily archive */ ?>
 					
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archive for <strong><?php the_time('l, F jS, Y'); ?></strong>.</p>
+					<p>You are browsing the <strong><?php the_time('l, F jS, Y'); ?></strong> archive.</p>
 
 				<?php } elseif (is_month()) { /* If this is a monthly archive */ ?>
 
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archive for <strong><?php the_time('F, Y'); ?></strong>.</p>
+					<p>You are browsing the <strong><?php the_time('F, Y'); ?></strong> archive.</p>
 
 				<?php } elseif (is_year()) { /* If this is a yearly archive */ ?>
 
-					<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archive for <strong><?php the_time('Y'); ?></strong>.</p>
+					<p>You are browsing the <strong><?php the_time('Y'); ?></strong> archive.</p>
 
-				<?php } elseif (is_search()) { /* If this is a monthly archive */ ?>
+				<?php } elseif (is_search()) { /* If this is search result */ ?>
 					
-					<p>You have searched the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archive for <strong>“<?php the_search_query(); ?>”</strong>.</p>
+					<p>You are browsing the search results for <strong>“<?php the_search_query(); ?>”</strong>.</p>
 
 				<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { /* Everything else */ ?>
 					
-					<p>You are currently browsing the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> archive.</p>
+					<p>You are browsing the archive.</p>
 
 				<?php } ?>
 			</li>
