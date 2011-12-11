@@ -10,7 +10,7 @@
 <section id="content">
 <?php if (have_posts()) : ?>
 
-	<h2>Search Results</h2>
+	<h2>Search results for “<?php the_search_query(); ?>”</h2>
 
 	<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
 
@@ -19,6 +19,7 @@
 	<article <?php post_class() ?>>
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
 		<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
+		<p><?php the_excerpt(); ?></p>
 	</article>
 
 	<?php endwhile; ?>
