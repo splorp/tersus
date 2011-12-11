@@ -17,14 +17,8 @@
 	<?php while (have_posts()) : the_post(); ?>
 
 	<article <?php post_class() ?>>
-		<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
-		<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
-		<p>Categories:</p>
-		<ul>
-			<li><?php the_category('</li><li>') ?></li>
-		</ul>
-		<p><?php edit_post_link('Edit', '', ' | '); ?><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+		<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
 	</article>
 
 	<?php endwhile; ?>
