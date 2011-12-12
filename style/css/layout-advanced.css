@@ -38,6 +38,8 @@ code {
 	padding: 0.3em 0.5em;
 	}
 
+.post-edit-link,
+.post-edit-link:visited,
 input[type=reset],
 input[type=submit] {
 	border: none;
@@ -51,11 +53,13 @@ input[type=submit] {
 	border-radius: 3px;
 	}
 
+.post-edit-link:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
 	background: #333;
+	color: #FFF;
 	}
-
+	
 input[type=reset]:active,
 input[type=submit]:active {
 	background: #960;
