@@ -228,17 +228,13 @@
 	add_filter('comment_reply_link','decruft');
 
 
+// Remove crufty class attributes from avatars
 
+	function decruft_avatars($str) {
+		return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$str);
 	}
 	
-
-// Remove extraneous class attributes from avatars
-
-	function declass_avatars($str) {
-		return preg_replace('/ class=[\"\'].+?[\"\']/', ' class="photo"', $str);
-	}
-	
-	add_filter ('get_avatar','declass_avatars');
+	add_filter ('get_avatar','decruft_avatars');
 
 
 // Replacement comment callback function
