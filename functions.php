@@ -213,30 +213,24 @@
 
 	add_filter('wp_list_categories','delim');
 
-// Remove extraneous class attributes from list elements
 
-	function declass($c) {
-		$c_ = preg_replace('/<li class=[\"\'].+?[\"\']>/', '<li>', $c , -1);	// Classes on list items
-		return preg_replace('/<ul class=[\"\'].+?[\"\']>/', '<ul>', $c_ , -1);	// Classes on unordered list elements
+// Remove crufty class and ID attributes from list elements
 
-		// Need to add handling of classes that occur before and after id attributes
-		// Eg: wp_list_comments
+	function decruft($c) {
+		$c_ = preg_replace('/ class=[\"\'].+?[\"\']/','',$c);
+		return preg_replace('/ id=[\"\'].+?[\"\']/','',$c_);
 	}
 
-	add_filter('wp_list_bookmarks','declass');
-	add_filter('wp_list_categories','declass');
-	add_filter('wp_list_pages','declass');
+	add_filter('wp_list_bookmarks','decruft');
+	add_filter('wp_list_categories','decruft');
+	add_filter('wp_list_pages','decruft');
+	add_filter('edit_comment_link','decruft');
+	add_filter('comment_reply_link','decruft');
 
 
-// Remove extraneous class attributes from comment links
 
-	function declass_comment_links($str) {
-		return preg_replace('/ class=[\"\'].+?[\"\']/', '', $str);
 	}
 	
-	add_filter ('edit_comment_link','declass_comment_links');
-	add_filter ('comment_reply_link','declass_comment_links');
-
 
 // Remove extraneous class attributes from avatars
 
