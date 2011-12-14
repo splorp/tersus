@@ -144,19 +144,15 @@ aside ul {
 	}
 
 aside ul li {
-	list-style: none !important;
+	list-style: none;
 	}
 
-aside ul li form {
-	margin: 0 0 2em 0;
-	}
-
+aside ul li form,
 aside ul li ul {
 	margin: 0 0 2em 0;
 	}
 
 aside ul li ul li {
-	font-weight: bold;
 	margin: 0;
 	}
 
@@ -164,16 +160,11 @@ aside ul li ul li ul {
 	margin: 0 0 0 1em;
 	}
 
-aside ul li ul li ul li {
-	font-weight: normal;
-	}
-
 aside h2 {
 	border-bottom: 1px solid #AAA;
 	font-size: 1em;
 	margin: 0 0 1em 0;
 	padding: 0 0 .5em 0;
-	text-transform: uppercase;
 	}
 
 footer {
