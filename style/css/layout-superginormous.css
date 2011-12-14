@@ -35,9 +35,12 @@ a:hover {
 
 #announcement {
 	background: #ffe100;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	color: #333;
-	margin: 0 0 1%;
-	padding: 1%;
+	margin: 0 0 1.5% 0;
+	padding: 2.5%;
 	text-shadow: #fff 0 1px 0;
 	}
 
@@ -59,7 +62,7 @@ header {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	color: #fff;
-	margin: 0 0 1.5%;
+	margin: 0 0 1.5% 0;
 	padding: 2.5%;
 	}
 
@@ -237,12 +240,14 @@ footer {
 		padding: 0 0 2.5% 0;
 		width: auto;
 	}
+
 	#content {
 		float: left;
 		margin: 0 0 2.5% 0;
 		padding: 0 0 2.5% 0;
 		width: 65%;
 	}
+
 	aside {
 		float: right;
 		clear: right;
@@ -272,17 +277,17 @@ footer {
 	}
 	
 	header,
+	#announcement,
 	#content,
-	footer {
+	footer,
+	aside {
 		float: none;
+		padding: 2.5%;
 		width: 95%;
 	}
 	
 	aside {
-		float: none;
 		margin: 1em 0 0 0;
-		padding: 2.5%;
-		width: 95%;
 	}
 
 	aside ul li form,
