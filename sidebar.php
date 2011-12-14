@@ -90,11 +90,20 @@
 		// Used widgetized sidebar, if the plugin is installed
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar1' ) ) :
 
-		// Display a list of pages
-		wp_list_pages('title_li=<h2>Pages</h2>' );
+			global $options;
+			foreach ($options as $value) {
+				if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] );
+				}
+			}
+					
+			// Display a list of pages
+			if ($tersus_page_depth == "1") $depth = '0'; else $depth = '1';
+			wp_list_pages('depth=' . $depth . '&title_li=<h2>Pages</h2>' );
+	
+			// Display a list of categories
+			if ($tersus_category_count == "1") $count = '1'; else $count = '0';
+			wp_list_categories('show_count=' . $count . '&title_li=<h2>Categories</h2>');
 
-		// Display a list of categories
-		wp_list_categories('show_count=1&title_li=<h2>Categories</h2>');
 		endif;
 	?>
 		<li><h2>Archives</h2>

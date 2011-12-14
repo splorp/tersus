@@ -26,6 +26,16 @@
 		"type" => "select",
 		"options" => array( "Default", "Advanced", "Super Ginormous" ), 
 		"std" => "default"),
+	array( "name" => "Sidebar",
+		"desc" => "Show subpages in page list",
+		"id" => $shortname."_page_depth",
+		"type" => "checkbox",
+		"std" => "true"),
+	array( "name" => "",
+		"desc" => "Show the number of posts beside each category",
+		"id" => $shortname."_category_count",
+		"type" => "checkbox",
+		"std" => "true"),
 	array( "name" => "Announcement",
 		"desc" => "Display the following text on every page",
 		"id" => $shortname."_announcement_display",
@@ -120,7 +130,7 @@
 
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
-			<td><?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /> <?php echo $value['desc']; ?></td>
+			<td><input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="1" <?php checked(true, get_option( $value['id'] )); ?> /> <?php echo $value['desc']; ?></td>
 		</tr>
 
 		<?php break;

@@ -50,7 +50,7 @@
 			// page-level ids or classes instead
 		?>
 
-		<?php if ($tersus_announcement_display == "true"): ?>
+		<?php if ($tersus_announcement_display == "1"): ?>
 		<section id="announcement">
 			<?php echo (stripslashes($tersus_announcement)); ?>
 		</section>
