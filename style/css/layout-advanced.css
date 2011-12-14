@@ -181,26 +181,21 @@ footer {
 @media screen and (max-device-width: 1024px) {
 	body {
 		-webkit-text-size-adjust: 100%;
+		padding: 1em;
 	}
 	
 	header,
 	footer {
 		float: none;
-		margin: 0 0 2.5% 0;
-		padding: 0 0 2.5% 0;
 		width: auto;
 	}
 	#content {
 		float: left;
-		margin: 0 0 2.5% 0;
-		padding: 0 0 2.5% 0;
 		width: 65%;
 	}
 	aside {
 		float: right;
 		clear: right;
-		margin: 0 0 2.5% 0;
-		padding: 0 0 2.5% 0;
 		width: 25%;
 	}
 	
@@ -222,6 +217,7 @@ footer {
 
 	body {
 		-webkit-text-size-adjust: 100%;
+		padding: 1em;
 	}
 	
 	header,
