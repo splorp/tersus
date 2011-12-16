@@ -40,7 +40,8 @@
 			<ul>
 				<li><?php the_category('</li><li>') ?></li>
 			</ul>
-			<p><?php edit_post_link('Edit', '', ' | '); ?><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+			<p><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+			<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 		</article>
 
 		<?php endwhile; ?>
