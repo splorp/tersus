@@ -101,14 +101,15 @@
 		wp_list_pages('depth=' . $depth . '&title_li=<h2>Pages</h2>' );
 
 		// Display a list of categories
-		if ($tersus_category_count == "1") $count = '1'; else $count = '0';
-		wp_list_categories('show_count=' . $count . '&title_li=<h2>Categories</h2>');
+		if ($tersus_category_count == "1") $category_count = '1'; else $category_count = '0';
+		wp_list_categories('show_count=' . $category_count . '&title_li=<h2>Categories</h2>');
 	?>
 		<li><h2>Archives</h2>
 			<ul>
 			<?php
 				// Display a list of monthly archives
-				wp_get_archives('type=monthly');
+				if ($tersus_archive_count == "1") $archive_count = '1'; else $archive_count = '0';
+				wp_get_archives('show_post_count=' . $archive_count . '&type=monthly');
 			?>
 			</ul>
 		</li>
