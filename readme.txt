@@ -38,9 +38,10 @@ Features
 -----------------------------------------------------------
 
 + HTML5 structure and compliance
-+ CSS that has been reset and built from the ground up 
++ CSS that has been reset and built from the ground up
 + Non-semantic, presentational markup has been dispatched
-+ A selection of style “flavours” and theme options
++ Built-in style “flavours” and theme options
++ Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
 
 
@@ -63,6 +64,19 @@ The groundwork for Tersus was based on the Starkers theme
 created by the affable Elliot Jay Stocks.
 
 http://starkerstheme.com/
+
+We’d also like to give some props to the fine individuals and
+handy resources which have made the development of Tersus much
+more enjoyable.
+
+Grettir Asmundarson
+Beau Calvez
+David Kendal
+BBEdit
+CSS Lint
+GitHub for Mac
+
+Cheers.
 
 
 -----------------------------------------------------------
@@ -95,19 +109,36 @@ Version History
 
 -----------------------------------------------------------
 
+0.1.5 - The “Good, Bad & Less Ugly” Release
+
++ New theme options for non-widget’d page, category, and archive lists
++ Sidebar markup changed to <aside> elements
++ Wrapped author names in <cite> elements
++ Added basic stylee for <blockquote>
++ Super Ginormous layout style is more responsive
++ Fixed collapsing margins when using advanced layout on small screens
++ Fixed display of archives when widgets are active
++ Comment lists now use custom callback function
++ Further decrufting of comments and comment forms
++ Removed crufty classes from avatars
++ Consolidated decrufting functions
++ Fixed stylesheet parsing errors uncovered by CSS Lint
++ Tidied up the display of search results
+
+
 0.1.4 - The “Wrap It!” Release
 
-+ Updated markup to use HTML5 section and article elements
-+ Added new theme options for a site-wide ‘announcement’ banner
-+ Advanced layout styles are now more responsive
++ Updated markup to use <section> and <article> elements
++ New theme option to display site-wide ‘announcement’ banner
++ Advanced layout style is more responsive
 + Advanced layout typography and colours have been adjusted
-+ Form elements now have some consistent stylee
-+ Tags lists now only appear if there are tags present
++ Form elements now have more consistent stylee
++ Tag lists now only appear if there are tags present
 + All ‘rel’ attributes now validate
 + Added current theme style to footer
 + Removed a schwack of empty CSS selectors
-+ Tweaked text and nomenclature for consistency
 + Standardized stylesheet naming conventions
++ Lots of text consistency tweakage
 
 
 0.1.3 - The “About Time This Thing Was Updated Again” Release
