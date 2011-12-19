@@ -29,7 +29,7 @@ blockquote {
 	padding: 1em;
 	}
 
-blockquote > p {
+blockquote > p:last-child {
 	margin-bottom: 0;
 	}
 
