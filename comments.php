@@ -8,39 +8,31 @@
 <?php
 
 // Do not delete these lines
-	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ('Please do not load this page directly. Thanks!');
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+	die ('Please do not load this page directly. Thanks!');
 
-	if ( post_password_required() ) { ?>
-		<p class="alert">This post is password protected. Enter the password to view comments.</p>
-	<?php
-		return;
-	}
-?>
+if ( post_password_required() ) { ?>
+	<p class="alert">This post is password protected. Enter the password to view comments.</p>
+<?php
+	return;
+}
 
-<!-- You can start editing here. -->
-
-<?php if ( have_comments() ) : ?>
+if ( have_comments() ) : ?>
 	<h3><?php comments_number('No Comments', 'One comment', '% comments' );?> on “<?php the_title(); ?>”</h3>
 
-	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
-
+<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 	<ol>
-	    <?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
+		<?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
 	</ol>
 
-	<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
+<?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
-<?php else : // this is displayed if there are no comments so far ?>
-
-	<?php if ( comments_open() ) : ?>
-		<!-- If comments are open, but there are no comments. -->
-
-	 <?php else : ?>
-		<!-- If comments are closed. -->
+<?php else : // this is displayed if there are no comments so far
+	if ( comments_open() ) : // If comments are open, but there are no comments
+	else : /* If comments are closed */ ?>
 		<p>Comments are closed.</p>
-
 	<?php endif; ?>
+
 <?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
@@ -85,8 +77,8 @@
 
 	</form>
 
-	<?php endif; // If registration required and not logged in ?>
+	<?php endif; /* If registration required and not logged in */ ?>
 
 </div>
 
-<?php endif; // if you delete this the sky will fall on your head ?>
+<?php endif; /* if you delete this the sky will fall on your head */ ?>
