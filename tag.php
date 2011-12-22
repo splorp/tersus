@@ -24,7 +24,7 @@
 		
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-				<h2><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
+				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h2>
 				<?php the_excerpt('<p>Read the rest of this item</p>'); ?>
 				<p class="meta">This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('display_name'); ?></a></cite></span> on <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></a>.</p>
 
