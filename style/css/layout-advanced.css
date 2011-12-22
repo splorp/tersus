@@ -134,6 +134,7 @@ header p {
 	margin: 0 0 2em 0;
 	padding: 0 0 1em 0;
 	}
+	.post-aside p + p { display:none; }
 
 #content article img {
 	display: block;
