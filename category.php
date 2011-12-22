@@ -19,6 +19,7 @@
 				if ( ! empty( $category_description ) )
 					echo apply_filters( 'category_archive_meta', '' . $category_description . '' );
 			?>
+			
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		
@@ -29,13 +30,26 @@
 				<p class="meta">This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('display_name'); ?></a></cite></span> on <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></a>.</p>
 
 				<?php edit_post_link('Edit','<p>','</p>'); ?>
+				
+				
+			
+			<?php
+				$cat_ID = get_query_var('cat');
+				$children=  get_categories('child_of='.$cat_ID) ;
+				if ( $children && $children != 'No Children.' ) {
+					echo '<h5>Or see if one of these sub-categories has what you\'re looking for:</h5>';
+					echo '<ul>';
+						wp_list_categories('title_li&hide_empty=0&child_of='.$cat_ID);
+					echo '</ul>';
+				}
+			?>
 
 			</article>			
 					
 		<?php endwhile; ?>
 
 	<?php else : ?>
-
+		
 		<article <?php post_class( 'no-results' ) ?> id="post-0">
 			<h3><?php _e( 'Nothing Found' ); ?></h3>
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.' ); ?></p>
