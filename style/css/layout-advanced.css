@@ -158,6 +158,7 @@ aside ul {
 
 aside ul li {
 	list-style: none;
+	margin:0 0 1.5em;
 	}
 
 aside ul li form,
@@ -176,7 +177,7 @@ aside ul li ul li ul {
 aside h2 {
 	border-bottom: 1px solid #AAA;
 	font-size: 1em;
-	margin: 0 0 1em 0;
+	margin: 0 0 .5em 0;
 	padding: 0 0 .5em 0;
 	}
 
