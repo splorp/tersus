@@ -116,7 +116,19 @@ header p {
 	padding: 0 0 1em 0;
 	width: 49%;
 	}
-
+#content > h1 {
+	color: #960;
+	font-weight: normal;
+	font-size: 2em;
+	line-height: 1;
+	margin: 0 0 .5em;
+}
+#content > h1 + p {
+	color: #AAA;
+	font: normal 1em sans-serif;
+	font-style: italic;
+	margin: 0 0 2em;
+}
 #content article {
 	border-bottom: 1px solid #AAA;
 	margin: 0 0 2em 0;
