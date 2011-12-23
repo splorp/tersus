@@ -134,13 +134,45 @@ header p {
 	margin: 0 0 2em 0;
 	padding: 0 0 1em 0;
 	}
-	.post-aside p + p { display:none; }
 
 #content article img {
 	display: block;
 	margin: 2em 0;
 	max-width: 100%;
 	}
+
+/* Post Format Styles */
+	/* --- Aside */
+	.post-aside p + p { display:none; }
+	/* --- Quote */
+		.post-quote {}
+		.post-quote h2,
+		.post-quote h2 + p {
+			display:none;
+		}  
+		.post-quote blockquote {
+			margin:0 0 5%;
+			padding:5%;
+		}
+		.post-quote blockquote p {
+			font: normal 1.4em/1.4 georgia,times,serif;
+			margin:0 0 .2em;
+		}
+		.post-quote p cite {
+			display: block;
+			font: bold 60% sans-serif;
+			text-align: right;
+		}
+		.post-quote blockquote + p,
+		.post-quote blockquote + p + p,
+		.post-quote blockquote + p + ul,
+		.post-quote blockquote + p + ul + p,
+		.post-quote blockquote + p + p + ul {
+			display:none;
+		}
+		
+
+
 	
 aside {
 	float: right;
