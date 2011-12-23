@@ -20,6 +20,17 @@
 					echo apply_filters( 'category_archive_meta', '' . $category_description . '' );
 			?>
 			
+			<?php
+				$cat_ID = get_query_var('cat');
+				$children=  get_categories('child_of='.$cat_ID) ;
+				if ( $children && $children != 'No Children.' ) {
+					echo '<ul class="cat-children">';
+					echo '<li><strong>Sub-Categories:</strong></li>';
+						wp_list_categories('title_li&hide_empty=0&child_of='.$cat_ID);
+					echo '</ul>';
+				}
+			?>
+			
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		
@@ -31,19 +42,6 @@
 
 				<?php edit_post_link('Edit','<p>','</p>'); ?>
 				
-				
-			
-			<?php
-				$cat_ID = get_query_var('cat');
-				$children=  get_categories('child_of='.$cat_ID) ;
-				if ( $children && $children != 'No Children.' ) {
-					echo '<h5>Or see if one of these sub-categories has what you\'re looking for:</h5>';
-					echo '<ul>';
-						wp_list_categories('title_li&hide_empty=0&child_of='.$cat_ID);
-					echo '</ul>';
-				}
-			?>
-
 			</article>			
 					
 		<?php endwhile; ?>
