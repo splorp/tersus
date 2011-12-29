@@ -35,10 +35,9 @@
 
 	<?php else : ?>
 
-		<article <?php post_class( 'no-results' ) ?> id="post-0">
-			<h3><?php _e( 'Nothing Found' ); ?></h3>
-			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.' ); ?></p>
-			<?php get_search_form(); ?>
+		<article>
+			<h2>Not found.</h2>
+			<p>Sorry, there are no posts in the selective archive.</p>
 		</article>
 
 	<?php endif; ?>
