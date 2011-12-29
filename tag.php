@@ -10,6 +10,9 @@
 <section id="content">
 	<?php if (have_posts()) : ?>
 		<h2><?php printf( __( 'Tag Archives: %s' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h2>
+
+		<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
+
 		<?php
 			$tag_description = tag_description();
 			if ( ! empty( $tag_description ) )
