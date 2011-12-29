@@ -45,7 +45,7 @@
 		
 		<article>
 			<h2>Not found.</h2>
-			<p>Sorry, there are no posts in the selective archive.</p>
+			<p>Sorry, there are no posts in the selected archive.</p>
 		</article>
 
 	<?php endif; ?>
