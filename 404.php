@@ -14,6 +14,11 @@
 			<ul>
 				<?php wp_list_categories('style=list&title_li='); ?>
 			</ul>
+			
+			<h2>Browse All Tags</h2>
+			<ul>
+				<?php wp_tag_cloud(); ?>
+			</ul>
 		</section>
 	
 	<?php } else { ?>
