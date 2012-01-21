@@ -33,7 +33,6 @@
 			
 		<article <?php post_class() ?>>
 			<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
-			<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h2>
 			<?php the_content() ?>
 			<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 			<p>Categories:</p>
@@ -41,6 +40,7 @@
 				<li><?php the_category('</li><li>') ?></li>
 			</ul>
 			<p><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+			<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
 			<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 		</article>
 
