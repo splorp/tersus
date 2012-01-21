@@ -33,14 +33,9 @@
 			
 		<article <?php post_class() ?>>
 			<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
-			<?php the_content() ?>
-			<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
-			<p>Categories:</p>
-			<ul>
-				<li><?php the_category('</li><li>') ?></li>
-			</ul>
-			<p><a href="<?php the_permalink(); ?>#comment"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
 			<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
+			<?php the_excerpt('<p>Read the rest of this item</p>'); ?>
+			<p class="meta">This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 			<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 		</article>
 
