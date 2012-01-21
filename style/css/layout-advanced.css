@@ -129,6 +129,11 @@ header p {
 	font-style: italic;
 	margin: 0 0 2%;
 }
+#content > h2 {
+    border-bottom: 1px solid #AAA;
+    padding: 0 0 .75em 0;
+    margin: 0 0 .5em 0;
+    }
 #content ul.cat-children {
 	background: #f7f7f7;
 	line-height: 1;
