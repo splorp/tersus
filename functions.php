@@ -332,4 +332,13 @@ function tersus_comment($comment, $args, $depth) {
 		}
 	}
 
+// Custom excerpt links
+
+	function new_excerpt_more($more) {
+		   global $post;
+		return '<a href="'. get_permalink($post->ID) . '">View the entire item</a>';
+	}
+
+	add_filter('excerpt_more', 'new_excerpt_more');
+
 ?>
