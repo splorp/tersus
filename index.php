@@ -19,7 +19,7 @@
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
 
 			<?php }
-				the_content('Read the rest of this item');
+				the_content();
 				if(!has_post_format('aside') && !has_post_format('image')) {
 			?>
 

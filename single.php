@@ -16,7 +16,7 @@
 
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
 		<h2><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
-		<?php the_content('<p>Read the rest of this item</p>'); ?>
+		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 		<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 
