@@ -10,7 +10,7 @@
 <section id="content">
 <?php if (have_posts()) : ?>
 
-	<h2>Search results for “<?php the_search_query(); ?>”</h2>
+	<h2>Search: “<span><?php the_search_query(); ?></span>”</h2>
 
 	<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
 

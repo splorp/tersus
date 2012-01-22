@@ -12,17 +12,17 @@
 
 	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 	<?php /* If this is a category archive */ if (is_category()) { ?>
-		<h2>Archive for the “<?php single_cat_title(); ?>” category</h2>
+		<h2>Category: “<?php single_cat_title(); ?>” category</h2>
 	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<h2>Posts tagged “<?php single_tag_title(); ?>”</h2>
+		<h2>Tag: “<?php single_tag_title(); ?>”</h2>
 	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-		<h2>Archive for <?php the_time('F jS, Y'); ?></h2>
+		<h2>Archive: <?php the_time('F jS, Y'); ?></h2>
 	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-		<h2>Archive for <?php the_time('F, Y'); ?></h2>
+		<h2>Archive: <?php the_time('F, Y'); ?></h2>
 	<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-		<h2>Archive for <?php the_time('Y'); ?></h2>
+		<h2>Archive: <?php the_time('Y'); ?></h2>
 	<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-		<h2>Author Archive</h2>
+		<h2>Author:</h2>
 	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h2>Archives</h2>
 	<?php } ?>
