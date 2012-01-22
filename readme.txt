@@ -109,6 +109,17 @@ Version History
 
 -----------------------------------------------------------
 
+0.1.6 - The “Nice Consistency” Release
+
++ Added support for category archives
++ Added support for tag archives
++ Added support for basic post format styles
++ Fixed intra-blockquote margins
++ Fixed widget spacing on advanced layouts
++ Post formatting is more consistent in archives and search results
++ Fixed and tuned up non-functional the_excerpt links
+
+
 0.1.5 - The “Good, Bad & Less Ugly” Release
 
 + New theme options for non-widget’d page, category, and archive lists
