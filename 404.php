@@ -7,28 +7,51 @@
 
 <?php get_header(); ?>
 
-	<?php if ( dirname("/' . $category_base . '/") ) { ?>
-		
-		<section id="content">
-			<h2>Browse All Categories</h2>
-			<ul>
-				<?php wp_list_categories('style=list&title_li='); ?>
-			</ul>
-			
-			<h2>Browse All Tags</h2>
-			<ul>
-				<?php wp_tag_cloud(); ?>
-			</ul>
-		</section>
+<?php
+
+/*
+ * Note: The category_base and tag_base values are null by default and only return
+ * a value if they’ve been set by the user. See: Settings > Permalinks > Optional
+*/
+
+	$c == get_option('category_base');
+	if ($c == '') {
+		$category_base = "/category/";
+	} else {
+		$category_base = "/" . $c . "/";
+	}
+
+	$t == get_option('tag_base');
+	if ($t == '') {
+		$tag_base = "/tag/";
+	} else {
+		$tag_base = "/" . $t . "/";
+	}
+?>
+
+	<section id="content">
+
+	<?php if ($_SERVER['REQUEST_URI'] == $category_base) { ?>
+		<h2>Available Categories</h2>
+		<ul>
+			<?php wp_list_categories('style=list&title_li='); ?>
+		</ul>
+
+	<?php } elseif ($_SERVER['REQUEST_URI'] == $tag_base) { ?>
+
+		<h2>Available Tags</h2>
+		<ul>
+			<?php wp_tag_cloud(); ?>
+		</ul>
 	
 	<?php } else { ?>
 		
-		<section id="content">
-			<h2>Not found.</h2>
-			<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
-		</section>
+		<h2>Not found.</h2>
+		<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
 
 	<?php } ?> 
+
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
