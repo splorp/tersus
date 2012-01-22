@@ -116,24 +116,28 @@ header p {
 	padding: 0 0 1em 0;
 	width: 49%;
 	}
+
 #content > h1 {
 	color: #960;
 	font-weight: normal;
 	font-size: 2em;
 	line-height: 1;
 	margin: 0 0 1%;
-}
+	}
+
 #content > h1 + p {
 	color: #AAA;
 	font: normal 1em sans-serif;
 	font-style: italic;
 	margin: 0 0 2%;
-}
+	}
+
 #content > h2 {
     border-bottom: 1px solid #AAA;
     padding: 0 0 .75em 0;
     margin: 0 0 .5em 0;
     }
+
 #content ul.cat-children {
 	background: #f7f7f7;
 	line-height: 1;
@@ -142,21 +146,25 @@ header p {
 	overflow: auto;
 	padding: 3%;
 	text-indent: 0;
-}
+	}
+
 #content ul.cat-children li {
 	list-style:none;
 	margin:0 1em 0 0;
 	padding: 0;
-}
+	}
+
 #content ul.cat-children li + li {
 	float: left;
-}
+	}
+
 #content ul.cat-children li strong {
 	color: #999;
 	font-size: 50%;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-}
+	}
+
 #content article {
 	border-bottom: 1px solid #AAA;
 	margin: 0 0 2em 0;
