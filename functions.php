@@ -332,6 +332,17 @@ function tersus_comment($comment, $args, $depth) {
 		}
 	}
 
+// Removes the link delimiter when viewing first or last image
+
+	function delim_image_link() {
+
+	$prev = get_previous_image_link();
+	$next = get_next_image_link();
+		if ( $prev && $next ) {
+			echo " | ";
+		}
+	}
+
 // Custom excerpt links
 
 	function new_excerpt_more($more) {

@@ -10,6 +10,8 @@
 <section id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+	<p><?php previous_image_link('%link'); delim_image_link(); next_image_link('%link') ?></p>
+
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
@@ -19,7 +21,6 @@
 			// this is the "caption"
 			the_content();
 		?>
-		<p><?php previous_image_link() ?> | <?php next_image_link() ?></p>
 
 		<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 
