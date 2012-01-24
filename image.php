@@ -10,7 +10,7 @@
 <section id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<p><?php previous_image_link('%link'); delim_image_link(); next_image_link('%link') ?></p>
+	<p><?php previous_image_link(0,'Previous Image'); delim_image_link(); next_image_link(0,'Next Image'); ?></p>
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 

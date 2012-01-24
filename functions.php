@@ -336,8 +336,16 @@ function tersus_comment($comment, $args, $depth) {
 
 	function delim_image_link() {
 
-	$prev = get_previous_image_link();
-	$next = get_next_image_link();
+	ob_start();
+	previous_image_link();
+	$prev = ob_get_contents();
+	ob_end_clean();
+
+	ob_start();
+	next_image_link();
+	$next = ob_get_contents();
+	ob_end_clean();
+
 		if ( $prev && $next ) {
 			echo " | ";
 		}
