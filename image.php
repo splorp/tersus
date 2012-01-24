@@ -15,10 +15,12 @@
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
-		<h2><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a> : <?php the_title(); ?></h2>
+		<h2><?php the_title(); ?></h2>
 		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
-		<?php if ( !empty($post->post_excerpt) ) the_excerpt();
-			// this is the caption
+		<?php
+			// Display the caption
+			if ( !empty($post->post_excerpt) ) the_excerpt();
+			// Display the description
 			the_content();
 		?>
 
