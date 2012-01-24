@@ -31,15 +31,15 @@
 
 		<?php if ( comments_open() && pings_open() ) {
 		// Comments and trackbacks are open ?>
-		<p>Feel free to <a href="#comment">leave a comment</a> below or <a href="<?php trackback_url(); ?>">trackback</a> from your own site.</p>
+		<p>Feel free to <a href="#comment" title="Contribute to the discussion">leave a comment</a> below or <a href="<?php trackback_url(); ?>" title="Send a notification when you refer to this entry">trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) {
 		// Only trackbacks are open ?>
-		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>">trackback</a> from your own site.</p>
+		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" title="Send a notification when you refer to this entry">trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) {
 		// Only comments are open ?>
-		<p>Feel free to <a href="#comment">Leave a comment</a> below.</p>
+		<p>Feel free to <a href="#comment" title="Contribute to the discussion">Leave a comment</a> below.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) {
 		// Comments and trackbacks are closed ?>

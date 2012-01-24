@@ -44,7 +44,7 @@ if ( have_comments() ) : ?>
 	<p><?php cancel_comment_reply_link(); ?></p>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-	<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
+	<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Log into your account">logged in</a> to post a comment.</p>
 	<?php else : ?>
 
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">

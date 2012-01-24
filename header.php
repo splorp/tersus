@@ -57,6 +57,6 @@
 		<?php endif; ?>
 		
 		<header>
-			<h1><a href="<?php echo get_option('home'); ?>/" title="This will take you home"><?php bloginfo('name'); ?></a></h1>
+			<h1><a href="<?php echo get_option('home'); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
