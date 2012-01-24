@@ -15,7 +15,7 @@
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
-		<h2><a href="<?php echo get_permalink($post->post_parent); ?>" rel="attachment"><?php echo get_the_title($post->post_parent); ?></a> : <?php the_title(); ?></h2>
+		<h2><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a> : <?php the_title(); ?></h2>
 		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
 		<?php if ( !empty($post->post_excerpt) ) the_excerpt();
 			// this is the caption
@@ -24,10 +24,6 @@
 
 		<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 
-		<p>Categories:</p>
-		<ul>
-			<li><?php the_category('</li><li>') ?></li>
-		</ul>
 		<?php the_taxonomies(); ?>
 
 		<p>You can follow comments on this item via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
