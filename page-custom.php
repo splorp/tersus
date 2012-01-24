@@ -8,6 +8,8 @@
 <?php get_header(); ?>
 
 <section id="content">
+	<article>
+	</article>
 </section>
 
 <?php get_sidebar(); ?>
