@@ -33,24 +33,24 @@
 		<?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
 			<li>
 
-			<?php if (is_404()) { /* If this is a 404 page */ ?>
+			<?php if (is_404()) { ?>
 
-			<?php } elseif (is_category()) { /* If this is a category archive */ ?>
+			<?php } elseif (is_category()) { ?>
 				<p>You are browsing the <strong>“<?php single_cat_title(''); ?>”</strong> category archive.</p>
 
-			<?php } elseif (is_day()) { /* If this is a daily archive */ ?>
+			<?php } elseif (is_day()) { ?>
 				<p>You are browsing the <strong><?php the_time('l, F jS, Y'); ?></strong> archive.</p>
 
-			<?php } elseif (is_month()) { /* If this is a monthly archive */ ?>
+			<?php } elseif (is_month()) { ?>
 				<p>You are browsing the <strong><?php the_time('F, Y'); ?></strong> archive.</p>
 
-			<?php } elseif (is_year()) { /* If this is a yearly archive */ ?>
+			<?php } elseif (is_year()) { ?>
 				<p>You are browsing the <strong><?php the_time('Y'); ?></strong> archive.</p>
 
-			<?php } elseif (is_search()) { /* If this is search result */ ?>
+			<?php } elseif (is_search()) { ?>
 				<p>You are browsing the search results for <strong>“<?php the_search_query(); ?>”</strong>.</p>
 
-			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { /* Everything else */ ?>
+			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 				<p>You are browsing the archive.</p>
 
 			<?php } ?>
@@ -58,7 +58,7 @@
 		<?php
 			}
 			
-			if ( is_home() || is_page() ) { /* If this is the front page */
+			if ( is_home() || is_page() ) {
 				wp_list_bookmarks();
 		?>
 			<li>
