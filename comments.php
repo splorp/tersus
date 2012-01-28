@@ -27,10 +27,11 @@ if ( have_comments() ) : ?>
 
 <?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
-<?php else : // this is displayed if there are no comments so far
-	if ( comments_open() ) : // If comments are open, but there are no comments
-	else : /* If comments are closed */ ?>
-		<p>Comments are closed.</p>
+<?php else :					// No comments posted
+	if ( comments_open() ) :	// Comments are open, but no comments posted
+	else :						// Comments are closed
+	?>
+	<p>Comments are closed.</p>
 	<?php endif; ?>
 
 <?php endif; ?>
@@ -77,8 +78,8 @@ if ( have_comments() ) : ?>
 
 	</form>
 
-	<?php endif; /* If registration required and not logged in */ ?>
+	<?php endif; ?>
 
 </div>
 
-<?php endif; /* if you delete this the sky will fall on your head */ ?>
+<?php endif; ?>
