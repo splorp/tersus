@@ -15,7 +15,7 @@
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 		
 			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
-				<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
+				<p title="<?php the_time('c') ?>"><?php the_date() ?></p>
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
 
 			<?php }

@@ -14,7 +14,7 @@
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-		<p title="<?php the_time('c') ?>"><?php the_time('l, F jS, Y') ?></p>
+		<p title="<?php the_time('c') ?>"><?php the_date() ?></p>
 		<h2><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
