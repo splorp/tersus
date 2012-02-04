@@ -10,7 +10,7 @@ Tersus is an exercise in publishing template minimalism.
 
 Why create yet another theme? As clean and stripped down as some themes are, we wanted to prune things a bit further.
 
-Tersus was originally called Simplicity, a name that was suggested prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that name. After a brief discussion, several latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely ... and here we are.
+Tersus was originally called Simplicity, a name that was suggested prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that name. After a brief discussion, several latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely … and here we are.
 
 A version of Tersus is also being developed for [Tumblr](http://tersustheme.tumblr.com/) and is [available on GitHub](http://github.com/splorp/tersus-tumblr/).
 
@@ -44,15 +44,12 @@ Cheers.
 
 The Tersus theme is absolutely free and conveniently licensed under GPL. You may use it for personal or commercial projects, as you see fit. Please refer to the [license.txt](https://github.com/splorp/tersus/blob/master/license.txt) file included with the source for more information.
 
-Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.yahoo.com/yui/reset/) and [YUI CSS Base](http://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](http://developer.yahoo.com/yui/). All of the [YUI Library](http://developer.yahoo.com/yui/) components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/).
-
-Copyright © 2012 Yahoo! Inc.
-All rights reserved.
+Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.yahoo.com/yui/reset/) and [YUI CSS Base](http://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](http://developer.yahoo.com/yui/). All of the [YUI Library](http://developer.yahoo.com/yui/) components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/). Copyright © 2012 Yahoo! Inc. All rights reserved.
 
 
 ## Version History
 
-**0.1.6** - The “Nice Consistency” Release
+### 0.1.6 - The “Nice Consistency” Release
 
 + Added support for category archives
 + Added support for tag archives
@@ -64,9 +61,10 @@ All rights reserved.
 + Added smarter handling of parent pages for categories and tags
 + Replaced the default gallery with a decrufted version
 + Tidied up the display of attached images
++ Date stamps are now based on the Date Format setting
 
 
-**0.1.5** - The “Good, Bad & Less Ugly” Release
+### 0.1.5 - The “Good, Bad & Less Ugly” Release
 
 + New theme options for non-widget’d page, category, and archive lists
 + Sidebar markup changed to `<aside>` elements
@@ -83,7 +81,7 @@ All rights reserved.
 + Tidied up the display of search results
 
 
-**0.1.4** — The “Wrap It!” Release
+### 0.1.4 — The “Wrap It!” Release
 
 + Updated markup to use `<section>` and `<article>` elements
 + New theme option to display site-wide ‘announcement’ banner
@@ -98,7 +96,7 @@ All rights reserved.
 + Lots of text consistency tweakage
 
 
-**0.1.3** - The “About Time This Thing Was Updated Again” Release
+### 0.1.3 - The “About Time This Thing Was Updated Again” Release
 
 + Added theme options for switching between stylesheets
 + Added ‘Advanced’ and ‘Super Ginormous’ alternate stylesheets
@@ -117,7 +115,7 @@ All rights reserved.
 + Continued HTML5 conversion 
 
 
-**0.1.2** — The “Dustbunnies” Release
+### 0.1.2 — The “Dustbunnies” Release
 
 + Added theme information constants
 + Added contextual delimiters to next and previous links
@@ -130,7 +128,7 @@ All rights reserved.
 + Removed crufty classes from comment lists
 
 
-**0.1.1** — The “We Don’t Need No Stinkin’ Stylesheet” Release
+### 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
 
 + Fixed the ‘headers already sent’ error
 + Reset and base stylesheets are now based on YUI 2.8.2
@@ -139,6 +137,6 @@ All rights reserved.
 + Updated favicon.ico
 
 
-**0.1.0** — The “Getting Our Feet Wet” Release
+### 0.1.0 — The “Getting Our Feet Wet” Release
 
 + Initial tinkering
