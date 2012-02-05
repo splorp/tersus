@@ -24,7 +24,6 @@ if ( have_comments() ) : ?>
 	<ol>
 		<?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
 	</ol>
-
 <?php previous_comments_link(); delim_comment_link(); next_comments_link() ?>
 
 <?php else :					// No comments posted
