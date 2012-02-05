@@ -33,9 +33,9 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 			
-		<article <?php post_class() ?>>
 			<p title="<?php the_time('c') ?>"><?php the_date() ?></p>
 			<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<?php the_excerpt(); ?>
 			<p class="meta">This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 			<?php edit_post_link('Edit', '<p>', '</p>'); ?>
