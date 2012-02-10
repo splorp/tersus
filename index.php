@@ -13,25 +13,27 @@
 	<?php while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		
-			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
-				<p class="published" title="<?php the_time('c') ?>"><?php the_date() ?></p>
-				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
+			<p class="published" title="<?php the_time('c') ?>"><?php the_date() ?></p>
 
-			<?php }
-				the_content();
-				if(!has_post_format('aside') && !has_post_format('image')) {
-			?>
+		<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
+			<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
 
-				<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
-				<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
-				<p>Categories:</p>
-				<ul>
-					<li><?php the_category('</li><li>') ?></li>
-				</ul>
-			<?php } ?>
-			
+		<?php }
+			the_content();
+			if(!has_post_format('aside') && !has_post_format('image')) {
+		?>
+
+			<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
+			<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
+			<p>Categories:</p>
+			<ul>
+				<li><?php the_category('</li><li>') ?></li>
+			</ul>
+
 			<p><a href="<?php the_permalink(); ?>#comment" title="View or contribute to the discussion"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+
+		<?php } ?>
+			
 			<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 		</article>
 
