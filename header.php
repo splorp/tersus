@@ -50,13 +50,13 @@
 			// page-level ids or classes instead
 		?>
 
-		<?php if ($tersus_announcement_display == "1"): ?>
-		<section id="announcement">
-			<?php echo (stripslashes($tersus_announcement)); ?>
-		</section>
-		<?php endif; ?>
-		
 		<header>
+		<?php if ($tersus_announcement_display == "1"): ?>
+			<section id="announcement">
+				<?php echo (stripslashes($tersus_announcement)); ?>
+			</section>
+		<?php endif; ?>
+
 			<h1><a href="<?php echo get_option('home'); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
