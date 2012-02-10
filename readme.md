@@ -10,7 +10,7 @@ Tersus is an exercise in publishing template minimalism.
 
 Why create yet another theme? As clean and stripped down as some themes are, we wanted to prune things a bit further.
 
-Tersus was originally called Simplicity, a name that was suggested prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that name. After a brief discussion, several latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely … and here we are.
+Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that very name. After a brief discussion, several latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely … and here we are.
 
 A version of Tersus is also being developed for [Tumblr](http://tersustheme.tumblr.com/) and is [available on GitHub](http://github.com/splorp/tersus-tumblr/).
 
@@ -35,7 +35,7 @@ Lovely chaps, all of them.
 
 The groundwork for Tersus was based on the [Starkers](http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](http://elliotjaystocks.com/).
 
-We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. On the currently guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), and [GitHub for Mac](http://mac.github.com/).
+We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. On the currently guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), and Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets).
 
 Cheers.
 
@@ -58,10 +58,12 @@ Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.ya
 + Fixed widget spacing on advanced layouts
 + Post formatting is more consistent in archives and search results
 + Fixed and tuned up non-functional `the_excerpt` links
++ Fixed viewport wonkiness on non-desktop screens
++ Fleshed out hAtom microformats markup
 + Added smarter handling of parent pages for categories and tags
 + Replaced the default gallery with a decrufted version
 + Tidied up the display of attached images
-+ Date stamps are now based on the Date Format setting
++ Date stamps are now based on the WordPress Date Format setting
 
 
 ### 0.1.5 - The “Good, Bad & Less Ugly” Release
