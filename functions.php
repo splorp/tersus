@@ -332,9 +332,7 @@ function tersus_gallery($attr) {
 		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
 
 		if ($itemtag) {
-			$output .= '<'.$itemtag;
-		  if( $columns > 0 && $i % $columns == 0 ) $output .= " last";
-		  $output .= '">';
+			$output .= "<" .$itemtag. ">";
 		}
 		if ($icontag) $output .= "\n\t<" .$icontag. ">\t";
 		$output .=  "\n\t".$link;
