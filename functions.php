@@ -324,7 +324,7 @@ function tersus_gallery($attr) {
 
 	$selector = "gallery-{$instance}";
 
-	$output = "<div id='$selector'>\n";
+	$output = "<div id=\"$selector\">\n";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
@@ -338,14 +338,14 @@ function tersus_gallery($attr) {
 		}
 		if ($icontag) $output .= "\n\t<" .$icontag. ">\t";
 		$output .=  "\n\t".$link;
-		if ($icontag) $output .= "\n\t</".$icontag.">";
+		if ($icontag) $output .= "\n\t</" .$icontag. ">";
 		// if the attachment has a caption set
 		if ( trim($attachment->post_excerpt) ) {
 		  if ($captiontag) $output .= "\n<" .$captiontag. ">\n\t";
 		  $output .= wptexturize($attachment->post_excerpt);
 		  if ($captiontag) $output .= "\n</" .$captiontag. ">" . "\n";
 		}
-		if ($itemtag) $output .= "\n</".$itemtag .">\n";
+		if ($itemtag) $output .= "\n</" .$itemtag. ">\n";
 		if ( $columns > 0 && $i % $columns == 0 ) $output .= "\n";
 	}
 
