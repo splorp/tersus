@@ -29,7 +29,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 
 ## Credits
 
-Tersus is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.com/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
+The Tersus project is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.me/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
 
 Lovely chaps, all of them.
 
