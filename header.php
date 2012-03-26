@@ -43,13 +43,6 @@
 	</head>
 
 	<body>
-		<?php
-			// Removed body_class() call from body element
-			// We may want to revisit this at a later date
-			// and provide a custom function which allows
-			// page-level ids or classes instead
-		?>
-
 		<header>
 		<?php if ($tersus_announcement_display == "1"): ?>
 			<section id="announcement">
