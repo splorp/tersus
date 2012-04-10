@@ -20,12 +20,6 @@
 	$themename = "Tersus";
 	$shortname = "tersus";
 	$options = array (
-	array( "name" => "Flavor",
-		"desc" => "Select which theme style you’d like to use.",
-		"id" => $shortname."_style_sheet",
-		"type" => "select",
-		"options" => array( "Default", "Advanced", "Super Ginormous" ), 
-		"std" => "default"),
 	array( "name" => "Sidebar",
 		"desc" => "Show subpages in page list",
 		"id" => $shortname."_page_depth",
