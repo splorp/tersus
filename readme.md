@@ -22,7 +22,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + HTML5 structure and compliance
 + CSS that has been reset and built from the ground up
 + Non-semantic, presentational markup has been dispatched
-+ Built-in style “flavours” and theme options
++ Built-in theme layout, sidebar, and announcement options
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
 
@@ -48,6 +48,14 @@ Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.ya
 
 
 ## Version History
+
+### 0.1.7 - The “Flavourless” Release
+
++ Removed theme style ‘flavours’
++ Theme styles are now supported via child themes
++ Fixed improperly generated gallery description lists
++ Theme now uses both parent and child theme favicons
+
 
 ### 0.1.6 - The “Nice Consistency” Release
 
