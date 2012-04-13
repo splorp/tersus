@@ -27,6 +27,14 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + Clean, valid, and awesome
 
 
+## Child Themes
+
+By removing the majority of the presentational markup from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
+
++ [Splorp](http://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
++ [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
+
+
 ## Credits
 
 The Tersus project is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.me/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
