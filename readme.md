@@ -10,9 +10,9 @@ Tersus is an exercise in publishing template minimalism.
 
 Why create yet another theme? As clean and stripped down as some themes are, we wanted to prune things a bit further.
 
-Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that very name. After a brief discussion, several latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely … and here we are.
+Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that very name. After a brief discussion, several Latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely — and here we are.
 
-A version of Tersus is also being developed for [Tumblr](http://tersustheme.tumblr.com/) and is [available on GitHub](http://github.com/splorp/tersus-tumblr/).
+A version of Tersus is also being developed for [Tumblr](http://tersustheme.tumblr.com/) and is also [available on GitHub](http://github.com/splorp/tersus-tumblr/).
 
 Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 
