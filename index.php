@@ -22,31 +22,26 @@
 				the_content();
 				if(!has_post_format('aside') && !has_post_format('image')) {
 			?>
-				<ul class="post-meta">
-					<li>
-						<h6>Author:</h6>
-						<p class="vcard author">
-							<cite class="fn">
-								<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site">
-									<?php the_author_meta('display_name'); ?>
-								</a>
-							</cite>
-						</p>
-					</li>
+				<dl class="post-meta">
+					<dt>Author:</dt>
+					<dd class="vcard author">
+						<cite class="fn">
+							<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site">
+								<?php the_author_meta('display_name'); ?>
+							</a>
+						</cite>
+					</dd>
 					<?php if (has_tag()) { ?>
-					<li>
-						<h6>Tags:</h6>
-						<?php the_tags( '<ul><li>' , '</li><li>' , '</li></ul>' ) ?>
-					</li>
+						<dt>Tags:</dt>
+						<dd><?php the_tags( '<ul><li>' , '</li><li>' , '</li></ul>' ) ?></dd>
 					<?php } ?>
-				
-					<li>
-						<h6>Categories:</h6>
+					<dt>Categories:</dt>
+					<dd>
 						<ul>
-							<li><?php the_category('</li><li>') ?></li>
+							<?php the_category('</li><li>') ?>
 						</ul>
-					</li>
-				</ul>
+					</dd>
+				</dl>
 			<?php } ?>
 			
 			<p><a href="<?php the_permalink(); ?>#comment" title="View or contribute to the discussion"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
