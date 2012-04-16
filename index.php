@@ -32,7 +32,7 @@
 				</p>
 				<?php if (has_tag()) { ?>
 					<h6>Tags:</h6>
-					<p><?php the_tags( ', ' ) ?></p>
+					<p><?php the_tags( '', ', ', '' ) ?></p>
 				<?php } ?>
 				<h6>Categories:</h6>
 				<p><?php the_category( ', ' ) ?></p>
