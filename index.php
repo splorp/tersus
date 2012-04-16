@@ -32,12 +32,10 @@
 				</p>
 				<?php if (has_tag()) { ?>
 					<h6>Tags:</h6>
-					<?php the_tags( '<ul><li>' , '</li><li>' , '</li></ul>' ) ?>
+					<p><?php the_tags( ', ' ) ?></p>
 				<?php } ?>
 				<h6>Categories:</h6>
-				<ul>
-						<?php the_category('</li><li>') ?>
-				</ul>
+				<p><?php the_category( ', ' ) ?></p>
 			<?php } ?>
 			
 			<p><a href="<?php the_permalink(); ?>#comment" title="View or contribute to the discussion"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
