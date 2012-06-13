@@ -7,7 +7,7 @@
 // Define Theme Constants
 
 	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
-	
+
 	define('THEME_URI', $theme_data['URI']);
 	define('THEME_NAME', $theme_data['Name']);
 	define('THEME_AUTHOR', $theme_data['Author']);
@@ -76,12 +76,12 @@
 		}
 		add_theme_page($themename." Options", "".$themename." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
 	}
- 
+
 	function tersus_admin() {
 		global $themename, $shortname, $options;
 		if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
 		if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been reset to their default settings.</strong></p></div>';
- 
+
 	?>
 
 	<div class="wrap">
@@ -89,29 +89,29 @@
 		<h2><?php echo $themename; ?> Options</h2>
 		<form method="post">
 		<table class="form-table">
-		
+
 		<?php
 			foreach ($options as $value) {
 				switch ( $value['type'] ) {
 			case 'text':
 		?>
-	 
+
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
 			<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_settings($value['id']) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" /> <?php echo $value['desc']; ?></td>
 		</tr>
- 
+
 		<?php
 			break;
 			case 'textarea':
 		?>
- 
+
 		<tr>
 			<th><strong><?php echo $value['name']; ?></strong></th>
 			<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_settings($value['id']) != "") { echo stripslashes(get_settings( $value['id'] )); } else { echo $value['std']; } ?></textarea>
 			<p><?php echo $value['desc']; ?></p></td>
 		</tr>
-  
+
 		<?php
 			break;
 			case 'select':
@@ -121,7 +121,7 @@
 			<th><strong><?php echo $value['name']; ?></strong></th>
 			<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_settings($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select> <?php echo $value['desc']; ?></td>
 		</tr>
-		
+
 		<?php
 			break;
 			case "checkbox":
@@ -150,7 +150,7 @@
 			<input type="hidden" name="action" value="reset" />
 		</p>
 	</form>
- 
+
 	<?php
 	}
 
@@ -160,10 +160,19 @@
 
 	automatic_feed_links();
 	
+// Add Support for Page Menus
+
+	function register_my_menus() {
+		register_nav_menus(
+			array( 'header-menu' => __( 'Header Menu' ) )
+		);
+	}
+	add_action( 'init', 'register_my_menus' );
+
 // Remove non-validating parent post link from header
 
 	remove_action('wp_head', 'parent_post_rel_link');
-	
+
 // Sidebar support. Let's have two, shall we?
 
 	if ( function_exists('register_sidebar') ) {
@@ -182,30 +191,30 @@
 	}
 
 // Adds support for Post Formats -- http://codex.wordpress.org/Post_Formats
-	
+
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 
 // Replace default post class verbosity
-	
+
 	function simple_post_class() {
-	    $post = get_post($post_id);
+		$post = get_post($post_id);
 		$c = array();
-	
+
 		// hentry for hAtom compliance
 		$c[] = 'hentry';
-		
+
 		// Determine Post Format
 		$post_format = get_post_format( $post->ID );
 		if ( $post_format && !is_wp_error($post_format) ) $c[] = $post->post_type . '-' . sanitize_html_class( $post_format );
-	
+
 		// Is it Sticky?
 		if ( is_sticky($post->ID) && is_home() && !is_paged() ) $c[] = 'sticky';
-	
+
 		return $c;
 	}
 
 	add_filter( 'post_class', 'simple_post_class' );
- 
+
 // Remove non-validating rel attributes from category links
 
 	function relfix($c) {
@@ -242,7 +251,7 @@
 	function decruft_avatars($str) {
 		return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$str);
 	}
-	
+
 	add_filter ('get_avatar','decruft_avatars');
 
 
@@ -369,9 +378,9 @@ function tersus_comment($comment, $args, $depth) {
 	function comment_reply_anchor($str) {
 		return preg_replace('/respond/', 'comment', $str);
 	}
-	
+
 	add_filter ('comment_reply_link','comment_reply_anchor');
-        
+
 
 // Add support for the_post_thumbnail
 
@@ -386,7 +395,7 @@ function tersus_comment($comment, $args, $depth) {
 	function insertThumbnailRSS($content) {
 	   global $post;
 	   if ( has_post_thumbnail( $post->ID ) ){
-	       $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
+		   $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
 	   }
 	   return $content;
 	}
