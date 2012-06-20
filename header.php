@@ -26,7 +26,7 @@
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		<!--[if IE]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="<?php bloginfo('stylesheet_directory'); ?>/html5.js"></script>
 		<![endif]-->
 		
 	</head>
@@ -49,3 +49,15 @@
 			<h1><a href="<?php echo get_option('home'); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
+		
+		<nav role="navigation">
+			<?php
+				$menuParameters = array(
+				  'container'       => false,
+				  'echo'            => false,
+				  'items_wrap'      => '%3$s',
+				  'depth'           => 0,
+				);				
+				echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+			?>
+		</nav>
