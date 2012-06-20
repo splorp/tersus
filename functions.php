@@ -316,7 +316,7 @@ function tersus_gallery($attr) {
 	if ($icontag) $icontag = tag_escape($icontag);
 	$columns = intval($columns);
 
-	$output = "<div class=\"gallery\">\n";
+	$output = "<div class=\"gallery " .$size. "\">\n";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
