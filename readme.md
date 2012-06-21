@@ -43,7 +43,7 @@ Lovely chaps, all of them.
 
 The groundwork for Tersus was based on the [Starkers](http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](http://elliotjaystocks.com/).
 
-We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. On the currently guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), and Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets).
+We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. On the currently guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets), and [HTML5 Shiv](https://github.com/aFarkas/html5shiv).
 
 Cheers.
 
@@ -54,15 +54,18 @@ The Tersus theme is absolutely free and conveniently licensed under GPL. You may
 
 Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.yahoo.com/yui/reset/) and [YUI CSS Base](http://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](http://developer.yahoo.com/yui/). All of the [YUI Library](http://developer.yahoo.com/yui/) components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/). Copyright © 2012 Yahoo! Inc. All rights reserved.
 
+The [HTML5 Shiv](https://github.com/aFarkas/html5shiv) is licensed under MIT/GPL2.
+
 
 ## Version History
 
 ### 0.1.7 - The “Flavourless” Release
 
-+ Removed theme style ‘flavours’
++ Removed theme ‘flavours’ and the related switching option
 + Theme styles are now supported via child themes
-+ Fixed improperly generated gallery description lists
 + Theme now uses both parent and child theme favicons
++ Fixed improperly generated gallery description lists
++ Replaced the external HTML5 Shiv with a local, minified version
 
 
 ### 0.1.6 - The “Nice Consistency” Release
