@@ -50,6 +50,7 @@
 			<p><?php bloginfo('description'); ?></p>
 		</header>
 		
+		<?php if ($tersus_navigation_display == "1"): ?>
 		<nav role="navigation">
 			<?php
 				$menuParameters = array(
@@ -61,3 +62,4 @@
 				echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
 			?>
 		</nav>
+		<?php endif; ?>
