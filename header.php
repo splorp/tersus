@@ -26,7 +26,7 @@
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		<!--[if IE]>
-			<script src="<?php bloginfo('stylesheet_directory'); ?>/html5.js"></script>
+			<script src="<?php bloginfo('stylesheet_directory'); ?>/style/js/html5.js"></script>
 		<![endif]-->
 		
 	</head>
