@@ -59,7 +59,7 @@ The [HTML5 Shiv](https://github.com/aFarkas/html5shiv) script is licensed under 
 
 ## Version History
 
-### 0.1.7 - The “Flavourless” Release
+### 0.2.0 - The “Flavourless” Release
 
 + Removed theme ‘flavours’ and the related switching option
 + Theme styles are now supported via child themes
