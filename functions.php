@@ -6,7 +6,7 @@
 
 // Define Theme Constants
 
-	$theme_data = get_theme_data(TEMPLATEPATH.'/style.css');
+	$theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
 
 	define('THEME_URI', $theme_data['URI']);
 	define('THEME_NAME', $theme_data['Name']);
