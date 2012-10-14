@@ -9,7 +9,6 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title('&mdash;', true, 'right'); ?><?php bloginfo('name'); ?></title>
-		
 		<?php
 			global $options;
 			foreach ($options as $value) {
@@ -17,7 +16,6 @@
 			}
 		?>
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
-		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
