@@ -54,7 +54,7 @@ The Tersus theme is absolutely free and conveniently licensed under GPL. You may
 
 Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.yahoo.com/yui/reset/) and [YUI CSS Base](http://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](http://developer.yahoo.com/yui/). All of the [YUI Library](http://developer.yahoo.com/yui/ "Copyright © Yahoo! Inc. All rights reserved") components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/).
 
-The [HTML5 Shiv](https://github.com/aFarkas/html5shiv) script is licensed under MIT/GPL2.
+The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under MIT/GPL2.
 
 
 ## Version History
@@ -69,6 +69,7 @@ The [HTML5 Shiv](https://github.com/aFarkas/html5shiv) script is licensed under 
 + Added support for page menu navigation
 + Added theme option to display page menu navigation
 + The theme version is displayed in the footer again
++ The name and version of the child theme will also be displayed in the footer
 + Embiggened theme screenshot
 
 

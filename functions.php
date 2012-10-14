@@ -4,6 +4,7 @@
  * @subpackage Tersus
  */
 
+
 // Define Theme Constants
 
 	$theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
@@ -161,10 +162,12 @@
 
 	add_action('admin_menu', 'tersus_add_admin');
 
+
 // Automatic Feed Links
 
 	automatic_feed_links();
 	
+
 // Add Support for Page Menus
 
 	function register_my_menus() {
@@ -174,9 +177,11 @@
 	}
 	add_action( 'init', 'register_my_menus' );
 
+
 // Remove non-validating parent post link from header
 
 	remove_action('wp_head', 'parent_post_rel_link');
+
 
 // Sidebar support. Let's have two, shall we?
 
@@ -195,9 +200,12 @@
 		));
 	}
 
-// Adds support for Post Formats -- http://codex.wordpress.org/Post_Formats
+
+// Adds support for Post Formats
+// http://codex.wordpress.org/Post_Formats
 
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+
 
 // Replace default post class verbosity
 
@@ -220,6 +228,7 @@
 
 	add_filter( 'post_class', 'simple_post_class' );
 
+
 // Remove non-validating rel attributes from category links
 
 	function relfix($c) {
@@ -227,6 +236,7 @@
 	}
 
 	add_filter('the_category','relfix');
+
 
 // Add a proper thousands delimiter to category post counts
 
@@ -395,6 +405,7 @@ function tersus_comment($comment, $args, $depth) {
 		add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
 	}
 
+
 // Add support for the_post_thumbnail in RSS feeds
 
 	function insertThumbnailRSS($content) {
@@ -408,6 +419,7 @@ function tersus_comment($comment, $args, $depth) {
 	add_filter('the_excerpt_rss', 'insertThumbnailRSS');  
 	add_filter('the_content_feed', 'insertThumbnailRSS'); 
 
+
 // Removes the link delimiter when viewing first or last post
 
 	function delim_post_link() {
@@ -417,6 +429,7 @@ function tersus_comment($comment, $args, $depth) {
 			echo " | ";
 		}
 	}
+
 
 // Removes the link delimiter when viewing first or last archive page
 
@@ -428,6 +441,7 @@ function tersus_comment($comment, $args, $depth) {
 		}
 	}
 
+
 // Removes the link delimiter when viewing first or last comment
 
 	function delim_comment_link() {
@@ -438,6 +452,7 @@ function tersus_comment($comment, $args, $depth) {
 			echo " | ";
 		}
 	}
+
 
 // Removes the link delimiter when viewing first or last image
 
@@ -457,6 +472,7 @@ function tersus_comment($comment, $args, $depth) {
 			echo " | ";
 		}
 	}
+
 
 // Custom excerpt links
 
