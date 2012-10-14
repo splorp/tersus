@@ -64,12 +64,14 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Removed theme ‘flavours’ and the related switching option
 + Theme styles are now supported via child themes
 + Theme now uses both parent and child theme favicons
++ The theme version is once again displayed in the footer
++ The name and version of the child theme are now displayed in the footer
 + Fixed improperly generated gallery description lists
 + Replaced the externally linked HTML5 Shiv with a local, minified version
-+ Added support for page menu navigation
-+ Added theme option to display page menu navigation
-+ The theme version is displayed in the footer again
-+ The name and version of the child theme will also be displayed in the footer
++ Added support for `wp_nav_menu` navigation menu
++ Added theme option to toggle the display of navigation menu
++ Added theme option to toggle the display of theme information in the footer
++ Added language attribute to `<html>` element
 + Embiggened theme screenshot
 
 

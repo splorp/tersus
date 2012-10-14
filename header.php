@@ -6,7 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
+	<head lang="<?php bloginfo('language'); ?>">
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title('&mdash;', true, 'right'); ?><?php bloginfo('name'); ?></title>
 		<?php
