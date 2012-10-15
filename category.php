@@ -18,8 +18,8 @@
 			$cat_ID = get_query_var('cat');
 			$children=  get_categories('child_of='.$cat_ID) ;
 			if ( $children && $children != 'No Children.' ) {
-				echo '<ul class="cat-children">';
-				echo '<li><strong>Sub-Categories:</strong></li>';
+				echo '<p><strong>Subcategories:</strong></p>';
+				echo '<ul>';
 					wp_list_categories('title_li&hide_empty=0&child_of='.$cat_ID);
 				echo '</ul>';
 			}
