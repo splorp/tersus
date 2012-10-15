@@ -11,8 +11,6 @@
 	<?php if (have_posts()) : ?>
 		<h2><?php printf( __( 'Category: %s' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
 
-		<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
-
 		<?php
 			$category_description = category_description();
 			if ( ! empty( $category_description ) )
@@ -25,9 +23,13 @@
 					wp_list_categories('title_li&hide_empty=0&child_of='.$cat_ID);
 				echo '</ul>';
 			}
+ 		?>
 
+ 		<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
+
+		<?php
 			/* Start the Loop */
-			
+
 			while ( have_posts() ) : the_post(); ?>
 		
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
