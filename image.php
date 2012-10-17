@@ -10,7 +10,9 @@
 <section id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<?php if (show_image_link_nav()): ?>
 	<p><?php previous_image_link(0,'Previous Image'); delim_image_link(); next_image_link(0,'Next Image'); ?></p>
+<?php endif; ?>
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
@@ -45,6 +47,10 @@
 		<?php } edit_post_link('Edit','<p>','</p>'); ?>
 
 	</article>
+
+<?php if (show_image_link_nav()): ?>
+	<p><?php previous_image_link(0,'Previous Image'); delim_image_link(); next_image_link(0,'Next Image'); ?></p>
+<?php endif; ?>
 
 <?php comments_template(); ?>
 

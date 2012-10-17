@@ -20,13 +20,17 @@ if ( post_password_required() ) { ?>
 if ( have_comments() ) : ?>
 	<h3><?php comments_number('No Comments', 'One comment', '% comments' );?> on “<?php the_title(); ?>”</h3>
 
+<?php if (show_comments_link_nav()): ?>
 	<p><?php previous_comments_link('Older'); delim_comment_link(); next_comments_link('Newer') ?></p>
+<?php endif; ?>
 
 	<ol>
 		<?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
 	</ol>
 
+<?php if (show_comments_link_nav()): ?>
 	<p><?php previous_comments_link('Older'); delim_comment_link(); next_comments_link('Newer') ?></p>
+<?php endif; ?>
 
 <?php else :					// No comments posted
 	if ( comments_open() ) :	// Comments are open, but no comments posted

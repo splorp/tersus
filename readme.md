@@ -67,11 +67,14 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + The theme version is once again displayed in the footer
 + The name and version of the child theme are now displayed in the footer
 + Fixed improperly generated gallery description lists
-+ Replaced the externally linked HTML5 Shiv with a local, minified version
++ Fixed display of empty wrapper elements on post and archive pages
++ Standardized comment navigation links
 + Added support for `wp_nav_menu` navigation menu
 + Added theme option to toggle the display of navigation menu
 + Added theme option to toggle the display of theme information in the footer
 + Added language attribute to `<html>` element
++ Simplified subcategory lists
++ Replaced the externally linked HTML5 Shiv with a local, minified version
 + Embiggened theme screenshot
 
 

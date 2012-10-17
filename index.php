@@ -44,7 +44,9 @@
 
 	<?php endwhile; ?>
 
+	<?php if (show_posts_link_nav()): ?>
 		<p><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></p>
+	<?php endif; ?>
 
 <?php else : ?>
 

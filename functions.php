@@ -425,6 +425,59 @@ function tersus_comment($comment, $args, $depth) {
 	add_filter('the_content_feed', 'insertThumbnailRSS'); 
 
 
+// Tests whether post paging links should be shown
+
+	function show_post_link_nav() {
+		$prev = get_previous_post();
+		$next = get_next_post();
+		if ( $prev || $next ) {
+			return true;
+		}
+	}
+
+
+// Tests whether archive paging links should be shown
+
+	function show_posts_link_nav() {
+		$prev = get_previous_posts_link();
+		$next = get_next_posts_link();
+		if ( $prev || $next ) {
+			return true;
+		}
+	}
+
+
+// Tests whether comment paging links should be shown
+
+	function show_comments_link_nav() {
+		$prev = get_previous_comments_link();
+		$next = get_next_comments_link();
+		if ( $prev || $next ) {
+			return true;
+		}
+	}
+
+
+// Tests whether image paging links should be shown
+
+	function show_image_link_nav() {
+
+		ob_start();
+		previous_image_link();
+		$prev = ob_get_contents();
+		ob_end_clean();
+	
+		ob_start();
+		next_image_link();
+		$next = ob_get_contents();
+		ob_end_clean();
+
+		if ( $prev || $next ) {
+			return true;
+		}
+	}
+
+
 // Removes the link delimiter when viewing first or last post
 
 	function delim_post_link() {
@@ -450,7 +503,6 @@ function tersus_comment($comment, $args, $depth) {
 // Removes the link delimiter when viewing first or last comment
 
 	function delim_comment_link() {
-
 	$prev = get_previous_comments_link();
 	$next = get_next_comments_link();
 		if ( $prev && $next ) {
@@ -463,15 +515,15 @@ function tersus_comment($comment, $args, $depth) {
 
 	function delim_image_link() {
 
-	ob_start();
-	previous_image_link();
-	$prev = ob_get_contents();
-	ob_end_clean();
-
-	ob_start();
-	next_image_link();
-	$next = ob_get_contents();
-	ob_end_clean();
+		ob_start();
+		previous_image_link();
+		$prev = ob_get_contents();
+		ob_end_clean();
+	
+		ob_start();
+		next_image_link();
+		$next = ob_get_contents();
+		ob_end_clean();
 
 		if ( $prev && $next ) {
 			echo " | ";
