@@ -3,6 +3,9 @@
  * @package WordPress
  * @subpackage Tersus
  */
+/*
+	Template Name: Archives
+*/
 ?>
 
 <?php get_header(); ?>
