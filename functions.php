@@ -259,13 +259,22 @@
 		return preg_replace('/ id=[\"\'].+?[\"\']/','',$c_);
 	}
 
+	add_filter('wp_tag_cloud','decruft');
 	add_filter('wp_list_bookmarks','decruft');
 	add_filter('wp_list_categories','decruft');
 	add_filter('wp_list_pages','decruft');
 	add_filter('edit_comment_link','decruft');
 	add_filter('comment_reply_link','decruft');
 
+// Remove crufty class, ID and title attributes from Tag Cloud.
+// TO DO: Reformat title="% topics" to title="% posts"
 
+	function decruft_tagcloud($c) {
+		$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
+		return preg_replace('/ title=[\"\'].+?[\"\']/','',$c_);
+	}
+	add_filter('wp_tag_cloud','decruft_tagcloud');
+	
 // Remove crufty class attributes from avatars
 
 	function decruft_avatars($str) {
