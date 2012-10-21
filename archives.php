@@ -2,9 +2,9 @@
 /**
  * @package WordPress
  * @subpackage Tersus
- */
-/*
-	Template Name: Archives
+
+Template Name: Archives
+
 */
 ?>
 
