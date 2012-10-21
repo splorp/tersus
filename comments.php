@@ -65,7 +65,7 @@ if ( have_comments() ) : ?>
 		<label for="author">Name <?php if ($req) echo "(required)"; ?></label></p>
 
 		<p><input type="email" name="email" id="email" placeholder="you@example.com" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		<label for="email">Mail (<?php if ($req) echo "required, but "; ?>will not be published)</label></p>
+		<label for="email">Email (<?php if ($req) echo "required, but "; ?>will not be published)</label></p>
 
 		<p><input type="url" name="url" id="url" placeholder="http://example.com" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 		<label for="url">Website</label></p>
