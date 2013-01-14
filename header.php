@@ -18,10 +18,15 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<!-- Apple device home screen buttons -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-57x57-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-144x144-precomposed.png">
+		<!-- Windows 8 Pinned Site Tile -->
+		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/style/img/tile.png">
+		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
