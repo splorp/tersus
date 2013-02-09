@@ -59,6 +59,16 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
+### 0.2.1
+
++ Added support for archives page template
++ Added support for links page template
++ Enabled `viewport` page zoom
++ Embiggened theme screenshot to support HiDPI displays
++ Embiggened theme avatar to support HiDPI displays
++ Added support for the proliferation of various iOS and Windows 8 iconography
+
+
 ### 0.2.0 - The “Flavourless” Release
 
 + Removed theme ‘flavours’ and the related switching option
