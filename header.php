@@ -33,7 +33,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php wp_head(); ?>
-		<!--[if IE]>
+		<!--[if (lt IE 9) & (!IEMobile 7)]>
 			<script src="<?php bloginfo('stylesheet_directory'); ?>/style/js/html5.js"></script>
 		<![endif]-->
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
