@@ -30,13 +30,16 @@
 			?>
 		</li>
 
-		<?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
+		<?php if ( is_404() || is_category() || is_tag() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
 			<li>
 
 			<?php if (is_404()) { ?>
 
 			<?php } elseif (is_category()) { ?>
 				<p>You are browsing the <strong>“<?php single_cat_title(''); ?>”</strong> category archive.</p>
+
+			<?php } elseif (is_tag()) { ?>
+				<p>You are browsing the <strong>“<?php single_cat_title(''); ?>”</strong> tag archive.</p>
 
 			<?php } elseif (is_day()) { ?>
 				<p>You are browsing the <strong><?php the_time('l, F jS, Y'); ?></strong> archive.</p>
