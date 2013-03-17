@@ -8,7 +8,7 @@
 <html lang="<?php bloginfo('language'); ?>">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<title><?php wp_title('&mdash;', true, 'right'); ?><?php bloginfo('name'); ?></title>
+		<title><?php wp_title('&mdash;', true, 'right'); ?></title>
 		<?php
 			global $options;
 			foreach ($options as $value) {
