@@ -170,7 +170,7 @@ add_action('admin_menu', 'tersus_add_admin');
 
 // Automatic feed links support
 
-automatic_feed_links();
+add_theme_support('automatic-feed-links');
 	
 
 // Page menu support
