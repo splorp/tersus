@@ -63,8 +63,8 @@ array( "name" => "",
 
 function tersus_add_admin() {
 	global $themename, $shortname, $options;
-	if ( $_GET['page'] == basename(__FILE__) ) {
-		if ( 'save' == $_REQUEST['action'] ) {
+	if ( isset($_GET['page']) && $_GET['page'] == basename(__FILE__) ) {
+		if ( !empty( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
 			foreach ($options as $value) {
 				update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 			}
@@ -77,7 +77,7 @@ function tersus_add_admin() {
 			}
 			header("Location: themes.php?page=functions.php&saved=true");
 			die;
-		} else if( 'reset' == $_REQUEST['action'] ) {
+		} else if( !empty( $_REQUEST['action'] ) && 'reset' == $_REQUEST['action'] ) {
 			foreach ($options as $value) {
 				delete_option( $value['id'] );
 			}
@@ -90,8 +90,8 @@ function tersus_add_admin() {
 
 function tersus_admin() {
 	global $themename, $shortname, $options;
-	if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
-	if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been reset to their default settings.</strong></p></div>';
+	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
+	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been reset to their default settings.</strong></p></div>';
 
 ?>
 
