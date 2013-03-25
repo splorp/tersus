@@ -64,7 +64,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
-### 0.2.1
+### 0.2.1 — The “Engorged” Release
 
 + Theme now requires WordPress 3.0 or later
 + Added support for archives page template
@@ -80,6 +80,8 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Replaced deprecated `wp_specialchars` function with `esc_html`
 + Replaced deprecated `automatic_feed_links` function with `add_theme_support`
 + Fixed ‘undefined index’ debug errors in theme admin functions
++ Fixed ‘undefined variable’ debug error in `simple_post_class` function
++ Fixed ‘undefined variable’ debug error in `searchform.php`
 
 
 ### 0.2.0 - The “Flavourless” Release

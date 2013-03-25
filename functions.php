@@ -215,7 +215,7 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', '
 // Replace default post class verbosity
 
 function simple_post_class() {
-	$post = get_post($post_id);
+	global $post;
 	$c = array();
 
 	// hentry for hAtom compliance
