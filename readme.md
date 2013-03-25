@@ -27,6 +27,11 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + Clean, valid, and awesome
 
 
+## Requirements
+
+* WordPress 3.0 or later
+
+
 ## Child Themes
 
 By removing the majority of the presentational markup from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
@@ -61,6 +66,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.2.1
 
++ Theme now requires WordPress 3.0 or later
 + Added support for archives page template
 + Added support for links page template
 + Archive and search result page titles are more descriptive
@@ -70,6 +76,10 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Added support for the proliferation of various iOS and Windows 8 iconography
 + Added specificity to the `[if IE]` conditional
 + Updated to HTML5 Shiv 3.6.2
++ Replaced deprecated `get_settings` function with `get_option`
++ Replaced deprecated `wp_specialchars` function with `esc_html`
++ Replaced deprecated `automatic_feed_links` function with `add_theme_support`
++ Fixed ‘undefined index’ debug errors in theme admin functions
 
 
 ### 0.2.0 - The “Flavourless” Release
