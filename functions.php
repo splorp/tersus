@@ -109,7 +109,7 @@ function tersus_admin() {
 
 	<tr>
 		<th><strong><?php echo $value['name']; ?></strong></th>
-		<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_settings($value['id']) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" /> <?php echo $value['desc']; ?></td>
+		<td><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (get_option($value['id']) != "") { echo get_option($value['id']); } else { echo $value['std']; } ?>" /> <?php echo $value['desc']; ?></td>
 	</tr>
 
 	<?php
@@ -119,7 +119,7 @@ function tersus_admin() {
 
 	<tr>
 		<th><strong><?php echo $value['name']; ?></strong></th>
-		<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_settings($value['id']) != "") { echo stripslashes(get_settings( $value['id'] )); } else { echo $value['std']; } ?></textarea>
+		<td><textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="80" rows="5"><?php if (get_option($value['id']) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?></textarea>
 		<p><?php echo $value['desc']; ?></p></td>
 	</tr>
 
@@ -130,7 +130,7 @@ function tersus_admin() {
 
 	<tr>
 		<th><strong><?php echo $value['name']; ?></strong></th>
-		<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_settings($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select> <?php echo $value['desc']; ?></td>
+		<td><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if (get_option($value['id']) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select> <?php echo $value['desc']; ?></td>
 	</tr>
 
 	<?php
