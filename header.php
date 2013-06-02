@@ -27,7 +27,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-144x144-precomposed.png" />
 
 		<!-- Windows 8 device pinned site tile -->
-		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/style/img/msapplication-tileimage-144x144" />
+		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/style/img/msapplication-tileimage-144x144.png" />
 		<meta name="msapplication-TileColor" content="#bfbfbf" />
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

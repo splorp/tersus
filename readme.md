@@ -189,8 +189,8 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Fixed the ‘headers already sent’ error
 + Reset and base stylesheets are now based on YUI 2.8.2
 + Added artwork for the screenshot and favicon files
-+ Updated screenshot.png
-+ Updated favicon.ico
++ Updated `screenshot.png`
++ Updated `favicon.ico`
 
 
 ### 0.1.0 — The “Getting Our Feet Wet” Release
