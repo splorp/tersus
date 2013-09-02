@@ -48,7 +48,7 @@ Lovely chaps, all of them.
 
 The groundwork for Tersus was based on the [Starkers](http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](http://elliotjaystocks.com/).
 
-We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [Adam Chamberlin](http://shibbyonline.co.uk/), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets), and [HTML5 Shiv](https://github.com/aFarkas/html5shiv).
+We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [Adam Chamberlin](http://shibbyonline.co.uk/), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets), [HTML5 Shiv](https://github.com/aFarkas/html5shiv), and [Theme-Check](http://pross.org.uk/plugins/theme-check/).
 
 Cheers.
 
