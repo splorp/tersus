@@ -75,7 +75,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Embiggened theme avatar to support HiDPI displays
 + Added support for the proliferation of various iOS and Windows 8 iconography
 + Added specificity to the `[if IE]` conditional
-+ Updated to HTML5 Shiv 3.6.2
++ Updated to HTML5 Shiv 3.7.0
 + Replaced deprecated `get_settings` function with `get_option`
 + Replaced deprecated `wp_specialchars` function with `esc_html`
 + Replaced deprecated `automatic_feed_links` function with `add_theme_support`
