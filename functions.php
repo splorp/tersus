@@ -150,7 +150,7 @@ function tersus_admin() {
 
 	</table>
 	<p class="submit">
-		<input name="save" type="submit" value="Save Changes" />
+		<input name="save" type="submit" class="button button-primary" value="Save Changes" />
 		<input type="hidden" name="action" value="save" />
 	</p>
 </form>
