@@ -77,12 +77,6 @@ function tersus_add_admin() {
 			}
 			header("Location: themes.php?page=functions.php&saved=true");
 			die;
-		} else if( !empty( $_REQUEST['action'] ) && 'reset' == $_REQUEST['action'] ) {
-			foreach ($options as $value) {
-				delete_option( $value['id'] );
-			}
-			header("Location: themes.php?page=functions.php&reset=true");
-			die;
 		}
 	}
 	add_theme_page($themename." Options", "".$themename." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
@@ -91,7 +85,6 @@ function tersus_add_admin() {
 function tersus_admin() {
 	global $themename, $shortname, $options;
 	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
-	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been reset to their default settings.</strong></p></div>';
 
 ?>
 
