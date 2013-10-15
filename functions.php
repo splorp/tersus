@@ -155,13 +155,6 @@ function tersus_admin() {
 	</p>
 </form>
 
-<form method="post">
-	<p class="submit">
-		<input name="reset" type="submit" value="Reset Options" />
-		<input type="hidden" name="action" value="reset" />
-	</p>
-</form>
-
 <?php
 }
 
