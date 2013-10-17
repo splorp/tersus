@@ -64,6 +64,14 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
+### 0.2.2
+
++ Reinstated some core WordPress classes so the theme options look prettier
++ Removed reset button from theme options
++ Added icons to support iOS 7
++ Updated all iOS and Windows 8 icons for typographic consistency
+
+
 ### 0.2.1 — The “Engorged” Release
 
 + Theme now requires WordPress 3.0 or later
