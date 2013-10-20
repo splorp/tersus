@@ -5,7 +5,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language'); ?>">
+<html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title('&mdash;', true, 'right'); ?></title>
@@ -18,33 +18,33 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
 		<!-- Apple device icons -->
 		<!-- iPhone non-retina -->
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-57x57-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-57x57-precomposed.png" />
 		<!-- iPad non-retina -->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-72x72-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-72x72-precomposed.png" />
 		<!-- iPad non-retina iOS 7 -->
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-76x76-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-76x76-precomposed.png" />
 		<!-- iPhone retina -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-114x114-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-114x114-precomposed.png" />
 		<!-- iPhone retina iOS 7 -->
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-120x120-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-120x120-precomposed.png" />
 		<!-- iPad retina -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-144x144-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-144x144-precomposed.png" />
 		<!-- iPad retina iOS 7 -->
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('stylesheet_directory'); ?>/style/img/apple-touch-icon-152x152-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-152x152-precomposed.png" />
 
 		<!-- Windows 8 device pinned site tile -->
-		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/style/img/msapplication-tileimage-144x144.png" />
+		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/style/img/msapplication-tileimage-144x144.png" />
 		<meta name="msapplication-TileColor" content="#bfbfbf" />
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php wp_head(); ?>
 		<!--[if (lt IE 9) & (!IEMobile 7)]>
-			<script src="<?php bloginfo('stylesheet_directory'); ?>/style/js/html5.js"></script>
+			<script src="<?php echo get_stylesheet_directory_uri(); ?>/style/js/html5.js"></script>
 		<![endif]-->
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	</head>
@@ -64,7 +64,7 @@
 				// page-level ids or classes instead
 			?>
 			
-			<h1><a href="<?php echo get_option('home'); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
+			<h1><a href="<?php echo home_url(); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
 		

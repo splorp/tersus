@@ -15,18 +15,7 @@
 	?>
 		<li>
 			<h2>Search</h2>
-			<?php
-				include ( TEMPLATEPATH . '/searchform.php' );
-				/*
-					get_search_form(); 
-
-					Because we’ve added searchform.php to the theme, using
-					the built-in function isn’t necessary. We’ve left the 
-					syntax in place in case you prefer to use it instead.
-
-					http://codex.wordpress.org/Function_Reference/get_search_form
-				*/
-			?>
+			<?php get_search_form(); ?>
 		</li>
 
 		<?php if ( is_404() || is_category() || is_tag() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
