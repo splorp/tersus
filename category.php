@@ -9,7 +9,7 @@
 
 <section id="content">
 	<?php if (have_posts()) : ?>
-		<h2><?php printf( __( 'Category: %s' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
+		<h2><?php printf( 'Category: %s' , '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
 
 		<?php
 			$category_description = category_description();
