@@ -64,12 +64,20 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
-### 0.2.2
+### 0.2.2 — The “Pretty Pony” Release
 
++ Replaced `bloginfo('language')` function with `language_attributes()`
++ Replaced `bloginfo('stylesheet_directory')` function with `get_stylesheet_directory_uri()`
++ Replaced `get_option('home')` and `bloginfo('url')` functions with `home_url()`
++ Replaced `TEMPLATEPATH` variable with `get_template_directory()`
++ Replaced a handful of renegade PHP short tags for code consistency
++ Removed unused `_e()` and `__()` text localization functions
++ Reinstated the `get_search_form()` function in `sidebar.php` because drunk
 + Reinstated some core WordPress classes so the theme options look prettier
 + Removed reset button from theme options
 + Added icons to support iOS 7
 + Updated all iOS and Windows 8 icons for typographic consistency
++ Replaced the rather free spirited theme tags with a set of “official” WordPress tags
 
 
 ### 0.2.1 — The “Engorged” Release
