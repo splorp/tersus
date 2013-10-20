@@ -8,8 +8,7 @@
 <aside id="sidebar-1">
 	<ul>
 	<?php
-		// Insert widgetized sidebar
-		// Only appears if the plugin is installed and widgets are active
+		// Sidebar widgets only appear if the plugin is installed and widgets are active
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar2' ) ) :
 
 		// Otherwise insert default sidebar elements
@@ -88,8 +87,7 @@
 	<ul>
 	<?php
 
-		// Insert widgetized sidebar
-		// Only appears if the plugin is installed and widgets are active
+		// Sidebar widgets only appear if the plugin is installed and widgets are active
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar1' ) ) :
 
 		// Otherwise insert default sidebar elements
