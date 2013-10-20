@@ -23,13 +23,13 @@ Template Name: Archives
 			endwhile;
 	?>
 		<li>
-			<h3><a href="<?php echo get_year_link($year); ?>" title="<?= $year ?> Archives"><?= $year ?></a></h3>
+			<h3><a href="<?php echo get_year_link($year); ?>" title="<?php $year ?> Archives"><?php $year ?></a></h3>
 			<ul><?php
 					$months = $wpdb->get_col("SELECT DISTINCT MONTH(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' AND YEAR(post_date) = $year ORDER BY post_date ASC");
 					foreach($months as $month) :
 						$tstamp = mktime(0, 0, 0, $month, 1, $year);
 				?>
-					<li class="m<?= $month ?>"><a href="<?php echo get_month_link($year, $month); ?> " title="<?php echo date("M", $tstamp); ?> <?= $year?>"><span><?php echo date("m", $tstamp); ?></span></a></li>
+					<li class="m<?php $month ?>"><a href="<?php echo get_month_link($year, $month); ?> " title="<?php echo date("M", $tstamp); ?> <?php $year?>"><span><?php echo date("m", $tstamp); ?></span></a></li>
 				<?php endforeach; ?>
 			</ul>
 		</li>
