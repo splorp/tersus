@@ -11,7 +11,6 @@ $theme_data = get_theme_data( get_template_directory() . '/style.css');
 
 define('THEME_URI', $theme_data['URI']);
 define('THEME_NAME', $theme_data['Name']);
-define('THEME_AUTHOR', $theme_data['Author']);
 define('THEME_VERSION', trim($theme_data['Version']));
 define('THEME_DESCRIPTION', trim($theme_data['Description']));
 
