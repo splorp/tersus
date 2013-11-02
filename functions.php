@@ -248,6 +248,8 @@ add_filter('wp_tag_cloud','decruft');
 add_filter('wp_list_bookmarks','decruft');
 add_filter('wp_list_categories','decruft');
 add_filter('wp_list_pages','decruft');
+add_filter('wp_nav_menu','decruft');
+add_filter('wp_page_menu','decruft');
 add_filter('edit_comment_link','decruft');
 add_filter('comment_reply_link','decruft');
 
