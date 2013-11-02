@@ -75,9 +75,10 @@
 			<?php
 				$menuParameters = array(
 				  'container'       => false,
-				  'echo'            => false,
-				  'items_wrap'      => '%3$s',
+				  'echo'            => true,
+				  'items_wrap'      => '<ul>%3$s</ul>',
 				  'depth'           => 0,
+				  'fallback_cb'		=> false,
 				);				
 				echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
 			?>
