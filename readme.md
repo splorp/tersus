@@ -71,10 +71,14 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Replaced `get_option('home')` and `bloginfo('url')` functions with `home_url()`
 + Replaced `TEMPLATEPATH` variable with `get_template_directory()`
 + Replaced a handful of renegade PHP short tags for code consistency
++ A custom menu must be defined to display navigation above main content
++ Decrufted navigation and page menu lists
 + Removed unused `_e()` and `__()` text localization functions
 + Reinstated the `get_search_form()` function in `sidebar.php` because drunk
 + Reinstated some core WordPress classes so the theme options look prettier
 + Removed reset button from theme options
++ Added theme option to toggle the display of custom footer text
++ Consolidated display of theme and version information in footer
 + Added icons to support iOS 7
 + Updated all iOS and Windows 8 icons for typographic consistency
 + Replaced the rather free spirited theme tags with a set of “official” WordPress tags
@@ -105,7 +109,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Removed theme ‘flavours’ and the related switching option
 + Theme styles are now supported via child themes
 + Theme now uses both parent and child theme favicons
-+ The theme version is once again displayed in the footer
++ The theme version has returned to the footer
 + The name and version of the child theme are now displayed in the footer
 + Fixed improperly generated gallery description lists
 + Fixed display of empty wrapper elements on post and archive pages

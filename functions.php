@@ -169,6 +169,7 @@ add_theme_support('automatic-feed-links');
 	
 
 // Page menu support
+// http://codex.wordpress.org/Function_Reference/register_nav_menus
 
 function register_my_menus() {
 	register_nav_menus(
@@ -184,6 +185,7 @@ remove_action('wp_head', 'parent_post_rel_link');
 
 
 // Sidebar support
+// http://codex.wordpress.org/Function_Reference/register_sidebar
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array('name'=>'Sidebar1',
