@@ -29,8 +29,6 @@
 			<li><?php the_category('</li><li>') ?></li>
 		</ul>
 
-		<p>You can follow comments on this item via the <?php post_comments_feed_link('RSS 2.0'); ?> feed.</p>
-
 		<?php if ( comments_open() && pings_open() ) { ?>
 		<p>Feel free to <a href="#comment" title="Contribute to the discussion">leave a comment</a> below or <a href="<?php trackback_url(); ?>" title="Send a notification when you refer to this entry">trackback</a> from your own site.</p>
 

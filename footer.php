@@ -26,10 +26,13 @@
 				<?php endif; ?>
 			</ul>
 			<?php endif; ?>
-			<p>
-				Subscribe to <a href="<?php bloginfo('rss2_url'); ?>" rel="alternate" title="Feed me.">Posts (RSS)</a> or
-				<a href="<?php bloginfo('comments_rss2_url'); ?>" rel="alternate" title="Feed me.">Comments (RSS)</a>
-			</p>
+			<ul>
+				<li>Subscribe to <a href="<?php bloginfo('rss2_url'); ?>" rel="alternate" title="Feed me.">all posts</a> (RSS)</li>
+				<li>Subscribe to <a href="<?php bloginfo('comments_rss2_url'); ?>" rel="alternate" title="Feed me.">all comments</a> (RSS)</li>
+			<?php if (is_singular()): ?>
+				<li>Subscribe to <a href="<?php echo get_post_comments_feed_link(); ?>" rel="alternate" title="Feed me.">comments for this page only</a> (RSS)</li>
+			<?php endif; ?>
+			</ul>
 		</footer>
 
 		<?php wp_footer(); ?>
