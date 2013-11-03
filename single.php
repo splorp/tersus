@@ -45,15 +45,16 @@
 
 	</article>
 
+<?php comments_template(); ?>
+
 <?php if (show_post_link_nav()): ?>
 	<p><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></p>
 <?php endif; ?>
 
-<?php comments_template(); ?>
-
 <?php endwhile; else: ?>
 	<p>Sorry, no posts matched your criteria.</p>
 <?php endif; ?>
+
 </section>
 
 <?php get_sidebar(); ?>

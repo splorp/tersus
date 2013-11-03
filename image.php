@@ -46,15 +46,16 @@
 
 	</article>
 
+<?php comments_template(); ?>
+
 <?php if (show_image_link_nav()): ?>
 	<p><?php previous_image_link(0,'Previous Image'); delim_image_link(); next_image_link(0,'Next Image'); ?></p>
 <?php endif; ?>
 
-<?php comments_template(); ?>
-
 <?php endwhile; else: ?>
 	<p>Sorry, no attachments matched your criteria.</p>
 <?php endif; ?>
+
 </section>
 
 <?php get_sidebar(); ?>
