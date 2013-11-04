@@ -30,13 +30,13 @@
 		</ul>
 
 		<?php if ( comments_open() && pings_open() ) { ?>
-		<p>Feel free to <a href="#comment" title="Contribute to the discussion">leave a comment</a> below or <a href="<?php trackback_url(); ?>" title="Send a notification when you refer to this entry">trackback</a> from your own site.</p>
+		<p><a href="#comment" title="Contribute to the discussion">Leave a comment</a> or <a href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) { ?>
-		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" title="Send a notification when you refer to this entry">trackback</a> from your own site.</p>
+		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) { ?>
-		<p>Feel free to <a href="#comment" title="Contribute to the discussion">Leave a comment</a> below.</p>
+		<p><a href="#comment" title="Contribute to the discussion">Leave a comment</a>.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) { ?>
 		<p>Comments are closed.</p>
