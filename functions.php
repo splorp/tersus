@@ -266,12 +266,11 @@ add_filter('edit_comment_link','decruft');
 add_filter('comment_reply_link','decruft');
 
 
-// Remove crufty class, ID and title attributes from Tag Cloud.
-// *** Still to do *** Reformat title="% topics" to title="% posts"
+// Remove crufty class and ID attributes from tag cloud, reformat title attributes
 
 function decruft_tagcloud($c) {
 	$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
-	return preg_replace('/ title=[\"\'].+?[\"\']/','',$c_);
+	return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/','/ title="View \1 post\2"',$c_);
 }
 
 add_filter('wp_tag_cloud','decruft_tagcloud');
