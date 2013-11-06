@@ -45,7 +45,7 @@ if ( have_comments() ) : ?>
 
 <div id="comment">
 
-	<h3><?php comment_form_title( 'Leave a comment.', 'Reply to %s …' ); ?></h3>
+	<h3><?php comment_form_title( 'Leave a comment.', 'Reply to %s.' ); ?></h3>
 
 	<p><?php cancel_comment_reply_link(); ?></p>
 
