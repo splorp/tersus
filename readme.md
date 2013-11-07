@@ -8,7 +8,7 @@ An achingly simple WordPress theme without all the usual cruft.
 
 Tersus is an exercise in publishing template minimalism.
 
-Why create yet another theme? As clean and stripped down as some themes are, we wanted to prune things a bit further.
+Why create yet another theme? Well, as clean and stripped down as some themes are, we wanted to prune things a bit further.
 
 Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that very name. After a brief discussion, several Latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely — and here we are.
 
@@ -22,7 +22,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + HTML5 structure and compliance
 + CSS that has been reset and built from the ground up
 + Non-semantic, presentational markup has been dispatched
-+ Built-in theme options for navigation, sidebar, and announcement text
++ Built-in theme options for navigation, sidebar, footer, and announcement text
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
 
@@ -34,7 +34,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 
 ## Child Themes
 
-By removing the majority of the presentational markup from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
+By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
 
 + [Splorp](http://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
 + [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
@@ -79,9 +79,12 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Removed reset button from theme options
 + Added theme option to toggle the display of custom footer text
 + Consolidated display of theme and version information in footer
++ Consolidated comment feeds for individual pages and posts in footer
++ Tidied up the comment form and related support text
++ Reinstated properly formatted tag cloud title attributes
 + Added icons to support iOS 7
 + Updated all iOS and Windows 8 icons for typographic consistency
-+ Replaced the rather free spirited theme tags with a set of “official” WordPress tags
++ Replaced the rather free spirited theme tags with official WordPress tags
 
 
 ### 0.2.1 — The “Engorged” Release
