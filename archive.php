@@ -8,11 +8,7 @@
 <?php get_header(); ?>
 
 <section id="content">
-<?php if (have_posts()) : ?>
-
-	<?php $post = $posts[0];
-	// This is a hack.
-	// Setting $post so that the_date() works.
+<?php if (have_posts()) :
 	if (is_category()) { ?>
 		<h2>Category: &#8220;<?php single_cat_title(); ?>&#8221; category</h2>
 	<?php } elseif( is_tag() ) { ?>
