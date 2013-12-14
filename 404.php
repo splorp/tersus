@@ -10,8 +10,10 @@
 <?php
 
 /*
- * Note: The category_base and tag_base values are null by default and only return
- * a value if they’ve been set by the user. See: Settings > Permalinks > Optional
+ * The category_base and tag_base values are null by default
+ * and only return a value if they have been set by the user.
+ *
+ * cf. Settings > Permalinks > Optional
 */
 
 	$c == get_option('category_base');
@@ -47,7 +49,7 @@
 	<?php } else { ?>
 		
 		<h2>Not found.</h2>
-		<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
+		<p>Sorry, you seem to be looking for something that simply isn&#8217;t here.</p>
 
 	<?php } ?> 
 

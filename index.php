@@ -16,7 +16,7 @@
 		
 			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
 				<p class="published" title="<?php the_time('c') ?>"><?php the_date() ?></p>
-				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h2>
 
 			<?php }
 				the_content();
@@ -25,7 +25,7 @@
 				<h6>Author</h6>
 				<p class="vcard author">
 					<cite class="fn">
-						<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site">
+						<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author&#8217;s site">
 							<?php the_author_meta('display_name'); ?>
 						</a>
 					</cite>
@@ -51,7 +51,7 @@
 <?php else : ?>
 
 	<h2>Not found.</h2>
-	<p>Sorry, you seem to be looking for something that simply isn’t here.</p>
+	<p>Sorry, you seem to be looking for something that simply isn&#8217;t here.</p>
 
 <?php endif; ?>
 </section>

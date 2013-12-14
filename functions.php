@@ -548,7 +548,7 @@ function new_excerpt_more($more) {
 	global $post;
 	$t = get_post($post->ID); 
 	$title = $t->post_title;
-	return ' … <a href="' . get_permalink($post->ID) . '" title="Read the rest of “' . $title . '”">Read the rest of this item</a>';
+	return ' &#8230; <a href="' . get_permalink($post->ID) . '" title="Read the rest of &#8220;' . $title . '&#8221;">Read the rest of this item</a>';
 }
 
 add_filter('excerpt_more', 'new_excerpt_more');
@@ -584,7 +584,7 @@ function tersus_title( $title, $sep ) {
 
 	// Add pretty search terms
 	if ( is_search() )
-		$title = 'Search Results ' . "$sep " . '“' . get_search_query() . '”' . " $sep " . get_bloginfo( 'name' );
+		$title = 'Search Results ' . "$sep " . '&#8220;' . get_search_query() . '&#8221;' . " $sep " . get_bloginfo( 'name' );
 
 	// Add a page number if necessary
 	if ( $paged >= 2 || $page >= 2 )

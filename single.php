@@ -20,7 +20,7 @@
 		<h2 class="entry-title"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-		<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
+		<p>This item was posted by <span class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author&#8217;s site"><?php the_author_meta('display_name'); ?></a></cite></span>.</p>
 
 		<?php if (has_tag()) echo '<p>Tags:</p>'; the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 
@@ -45,11 +45,11 @@
 
 	</article>
 
-<?php comments_template(); ?>
-
 <?php if (show_post_link_nav()): ?>
 	<p><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></p>
 <?php endif; ?>
+
+<?php comments_template(); ?>
 
 <?php endwhile; else: ?>
 	<p>Sorry, no posts matched your criteria.</p>
