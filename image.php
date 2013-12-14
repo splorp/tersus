@@ -16,7 +16,7 @@
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-		<p class="published" title="<?php the_time('c') ?>"><?php the_date() ?></p>
+		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
 		<h2 class="entry-title"><?php the_title(); ?></h2>
 		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
 		<?php

@@ -16,7 +16,7 @@
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-		<p class="published" title="<?php the_time('c') ?>"><?php the_date() ?></p>
+		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
 		<h2 class="entry-title"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></h2>
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
