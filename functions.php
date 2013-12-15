@@ -588,7 +588,7 @@ function tersus_title( $title, $sep ) {
 
 	// Add a page number if necessary
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( 'Page %s', 'twentytwelve' , max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( 'Page %s', max( $paged, $page ) );
 
 	return $title;
 }
