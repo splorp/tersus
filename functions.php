@@ -7,62 +7,62 @@
 
 // Define theme constants
 
-$theme_data = get_theme_data( get_template_directory() . '/style.css');
+$theme_name = 'tersus';
+$theme_data = wp_get_theme($theme_name);
 
-define('THEME_URI', $theme_data['URI']);
-define('THEME_NAME', $theme_data['Name']);
-define('THEME_VERSION', trim($theme_data['Version']));
-define('THEME_DESCRIPTION', trim($theme_data['Description']));
+define('THEME_URI', $theme_data->get('ThemeURI'));
+define('THEME_NAME', $theme_data->get('Name'));
+define('THEME_VERSION', trim($theme_data->get('Version')));
+define('THEME_DESCRIPTION', trim($theme_data->get('Description')));
 
 
 // Tersus theme options
 
-$themename = "Tersus";
-$shortname = "tersus";
+$theme_name_full = $theme_data->get('Name');
 $options = array (
 array( "name" => "Sidebar",
 	"desc" => "Show subpages in page list",
-	"id" => $shortname."_page_depth",
+	"id" => $theme_name."_page_depth",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "",
 	"desc" => "Show the number of posts beside each category",
-	"id" => $shortname."_category_count",
+	"id" => $theme_name."_category_count",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "",
 	"desc" => "Show the number of posts beside each archive",
-	"id" => $shortname."_archive_count",
+	"id" => $theme_name."_archive_count",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "Navigation",
 	"desc" => "Display navigation above main content",
-	"id" => $shortname."_navigation_display",
+	"id" => $theme_name."_navigation_display",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "Announcement",
 	"desc" => "Display the following text at the top of each page",
-	"id" => $shortname."_announcement_display",
+	"id" => $theme_name."_announcement_display",
 	"type" => "checkbox",
 	"std" => ""),
 array( "name" => "",
 	"desc" => "HTML may be used to format the announcement text.",
-	"id" => $shortname."_announcement",
+	"id" => $theme_name."_announcement",
 	"type" => "textarea",
 	"std" => "<p>This text will appear in the announcement area.</p>"),
 array( "name" => "Footer",
 	"desc" => "Display theme information in footer",
-	"id" => $shortname."_theme_information",
+	"id" => $theme_name."_theme_information",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "",
 	"desc" => "Display the following text in the footer of each page",
-	"id" => $shortname."_footer_display",
+	"id" => $theme_name."_footer_display",
 	"type" => "checkbox",
 	"std" => "true"),
 array( "name" => "",
 	"desc" => "HTML may be used to format the footer text.",
-	"id" => $shortname."_footer_text",
+	"id" => $theme_name."_footer_text",
 	"type" => "textarea",
 	"std" => "<p>This text will appear in the footer.</p>"),
 );
@@ -71,7 +71,7 @@ array( "name" => "",
 // Tersus theme options admin
 
 function tersus_add_admin() {
-	global $themename, $shortname, $options;
+	global $theme_name_full, $theme_name, $options;
 	if ( isset($_GET['page']) && $_GET['page'] == basename(__FILE__) ) {
 		if ( !empty( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
 			foreach ($options as $value) {
@@ -88,18 +88,18 @@ function tersus_add_admin() {
 			die;
 		}
 	}
-	add_theme_page($themename." Options", "".$themename." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
+	add_theme_page($theme_name_full." Options", "".$theme_name_full." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
 }
 
 function tersus_admin() {
-	global $themename, $shortname, $options;
-	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' options have been saved.</strong></p></div>';
+	global $theme_name_full, $theme_name, $options;
+	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$theme_name_full.' options have been saved.</strong></p></div>';
 
 ?>
 
 <div class="wrap">
 	<div id="icon-themes" class="icon32"><br /></div>
-	<h2><?php echo $themename; ?> Options</h2>
+	<h2><?php echo $theme_name_full; ?> Options</h2>
 	<form method="post">
 	<table class="form-table">
 
