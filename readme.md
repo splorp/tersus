@@ -23,19 +23,21 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + CSS that has been reset and built from the ground up
 + Non-semantic, presentational markup has been dispatched
 + Built-in theme options for navigation, sidebar, footer, and announcement text
++ Two widget-enabled sidebar areas
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
 
 
 ## Requirements
 
-* WordPress 3.0 or later
+* WordPress 3.4 or later
 
 
 ## Child Themes
 
 By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
 
++ [Newted](http://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
 + [Splorp](http://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
 + [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
 
@@ -66,25 +68,32 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.2.2 — The “Pretty Pony” Release
 
++ Theme now requires WordPress 3.4 or later
++ Replaced deprecated `get_theme_data()` function with `wp_get_theme()`
 + Replaced `bloginfo('language')` function with `language_attributes()`
 + Replaced `bloginfo('stylesheet_directory')` function with `get_stylesheet_directory_uri()`
 + Replaced `get_option('home')` and `bloginfo('url')` functions with `home_url()`
-+ Replaced `TEMPLATEPATH` variable with `get_template_directory()`
++ Replaced `the_date()` function with `the_time(get_option('date_format'))` to use the formatting specified in settings
++ Replaced `TEMPLATEPATH` constant with `get_template_directory()` for more consistent support in child themes
 + Replaced a handful of renegade PHP short tags for code consistency
-+ A custom menu must be defined to display navigation above main content
++ A custom menu must now be defined to display navigation above main content
 + Decrufted navigation and page menu lists
 + Removed unused `_e()` and `__()` text localization functions
++ Removed `$post` hack from `archive.php` since `the_date()` is no longer being used
 + Reinstated the `get_search_form()` function in `sidebar.php` because drunk
++ Reinstated properly formatted tag cloud title attributes
 + Reinstated some core WordPress classes so the theme options look prettier
 + Removed reset button from theme options
 + Added theme option to toggle the display of custom footer text
 + Consolidated display of theme and version information in footer
 + Consolidated comment feeds for individual pages and posts in footer
 + Tidied up the comment form and related support text
-+ Reinstated properly formatted tag cloud title attributes
++ Added a handful of declarations for WordPress-generated classes to `core.css`
 + Added icons to support iOS 7
 + Updated all iOS and Windows 8 icons for typographic consistency
++ Embiggened theme screenshot to WordPress 3.8 specifications
 + Replaced the rather free spirited theme tags with official WordPress tags
++ Changed all raw high-ASCII characters to HTML entities
 
 
 ### 0.2.1 — The “Engorged” Release
@@ -120,7 +129,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Added support for `wp_nav_menu` navigation menu
 + Added theme option to toggle the display of navigation menu
 + Added theme option to toggle the display of theme information in the footer
-+ Added language attribute to `<html>` element
++ Added `language` attribute to `<html>` element
 + Simplified subcategory lists
 + Replaced the externally linked HTML5 Shiv with a local, minified version
 + Embiggened theme screenshot
@@ -168,7 +177,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Advanced layout typography and colours have been adjusted
 + Form elements now have more consistent stylee
 + Tag lists now only appear if there are tags present
-+ All ‘rel’ attributes now validate
++ All `rel` attributes now validate
 + Added current theme style to footer
 + Removed a schwack of empty CSS selectors
 + Standardized stylesheet naming conventions
@@ -188,7 +197,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Standardized ‘not found’ messaging
 + Standardized and simplified header text and formatting
 + Simplified ‘older’ and ‘newer’ link text
-+ Fixed invalid textarea attributes
++ Fixed invalid `<textarea>` attributes
 + Removed non-valid, IE-specific CSS selectors
 + Removed `get_search_form()` function from everywhere except the sidebar
 + Continued HTML5 conversion 
