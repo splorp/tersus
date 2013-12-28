@@ -413,6 +413,15 @@ function comment_reply_anchor($str) {
 add_filter ('comment_reply_link','comment_reply_anchor');
 
 
+// Add support for content_width
+// Required by Theme Check Guidelines
+// http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
+
+if ( ! isset( $content_width ) ) {
+	$content_width = 600;
+}
+
+	
 // Add support for the_post_thumbnail
 
 if ( function_exists( 'add_theme_support' ) ) {    // Added in 2.9

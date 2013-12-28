@@ -68,6 +68,9 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.2.3 — The “Chk-Chk-Boom” Release
 
++ Added `$content_width` theme feature
+
+
 ### 0.2.2 — The “Pretty Pony” Release
 
 + Theme now requires WordPress 3.4 or later
