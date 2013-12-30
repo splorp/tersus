@@ -270,7 +270,7 @@ add_filter('comment_reply_link','decruft');
 
 function decruft_tagcloud($c) {
 	$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
-	return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/','/ title="View \1 post\2"',$c_);
+	return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/',' title="View \1 post\2"',$c_);
 }
 
 add_filter('wp_tag_cloud','decruft_tagcloud');
