@@ -392,7 +392,7 @@ function tersus_gallery($attr) {
 function tersus_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 	<li id="comment-<?php comment_ID() ?>">
-		<p>Posted by <span class="vcard author"><?php echo get_avatar( $comment->comment_author_email, 48 ); ?> <?php printf('<cite class="fn">%s</cite>', get_comment_author_link()) ?></span> on <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark" title="<?php comment_time('c') ?>"><?php comment_time('l, F jS, Y') ?></a>.</p>
+		<p>Posted by <span class="vcard author"><?php echo get_avatar( $comment->comment_author_email, 48, '', $comment->comment_author ); ?> <?php printf('<cite class="fn">%s</cite>', get_comment_author_link()) ?></span> on <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark" title="<?php comment_time('c') ?>"><?php comment_time('l, F jS, Y') ?></a>.</p>
 
 	<?php if ($comment->comment_approved == '0') : ?>
 		<p><em>Your comment is awaiting moderation.</em></p>
