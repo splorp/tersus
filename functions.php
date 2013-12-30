@@ -176,6 +176,7 @@ function register_my_menus() {
 		array( 'header-menu' => 'Header Menu' )
 	);
 }
+
 add_action( 'init', 'register_my_menus' );
 
 
@@ -243,7 +244,7 @@ add_filter('the_category','relfix');
 // Add a proper thousands delimiter to category post counts
 
 function delim($c) {
-	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to @myfonts for the regex tweaks
+	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to MyFonts for the regex tweaks
 }
 
 add_filter('wp_list_categories','delim');
@@ -278,11 +279,11 @@ add_filter('wp_tag_cloud','decruft_tagcloud');
 
 // Remove crufty class attributes from avatars
 
-function decruft_avatars($str) {
-	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$str);
+function decruft_avatars($a) {
+	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$a);
 }
 
-add_filter ('get_avatar','decruft_avatars');
+add_filter('get_avatar','decruft_avatars');
 
 
 // Replacement gallery shortcut function
@@ -410,7 +411,7 @@ function comment_reply_anchor($str) {
 	return preg_replace('/respond/', 'comment', $str);
 }
 
-add_filter ('comment_reply_link','comment_reply_anchor');
+add_filter('comment_reply_link','comment_reply_anchor');
 
 
 // Add support for content_width
