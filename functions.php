@@ -266,6 +266,19 @@ function delim($c) {
 add_filter('wp_list_categories','delim');
 
 
+// Replace single attribute quotes with double quotes
+
+function double_down($d) {
+	return preg_replace('/\'/','"',$d);
+}
+
+add_filter('wp_tag_cloud','double_down');
+add_filter('wp_list_categories','double_down');
+add_filter('get_avatar','double_down');
+add_filter('get_archives_link','double_down');
+add_filter('get_comment_author_link','double_down');
+
+
 // Remove crufty class and ID attributes from list elements
 
 function decruft($c) {
