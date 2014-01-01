@@ -66,9 +66,13 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
-### 0.2.3 — The “Chk-Chk-Boom” Release
+### 0.3.0 — The “Chk-Chk-Boom” Release
 
 + Added `$content_width` theme feature
++ Added `alt` attributes to post and comment author avatars
++ Reinstated `body_class()` using a extremely stripped down set of classes
++ Removed extraneous slashes from tag cloud links
++ Standardized attribute quoting for several WordPress functions and template tags
 
 
 ### 0.2.2 — The “Pretty Pony” Release
