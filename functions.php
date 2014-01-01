@@ -210,6 +210,22 @@ if ( function_exists('register_sidebar') ) {
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 
 
+// Replace default body class verbosity
+
+function simple_body_class($wp_class_list, $simple_class_list) {
+    // List allowed classes
+    $whitelist = array('home', 'page', 'single', 'attachment', 'archive', 'search', 'error404');
+
+    // Filter the unwanted classes
+    $wp_class_list = array_intersect($wp_class_list, $whitelist);
+
+    // Output allowed classes
+    return array_merge($wp_class_list, (array) $simple_class_list);
+}
+
+add_filter('body_class', 'simple_body_class', 10, 2);
+
+
 // Replace default post class verbosity
 
 function simple_post_class() {
