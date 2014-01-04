@@ -37,48 +37,62 @@ if ( have_comments() ) : ?>
 
 <?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+<?php if ( comments_open() ) :
 
-<div id="comment">
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? ' aria-required="true"' : '' );
 
-	<h3><?php comment_form_title( 'Leave a comment.', 'Reply to %s.' ); ?></h3>
+	$tersus_comment_args = array(
+		'id_form'			=> 'commentform',
+		'id_submit'			=> 'submit',
+		'title_reply'		=> 'Leave a comment.',
+		'title_reply_to'	=> 'Reply to %s.',
+		'cancel_reply_link'	=> 'Cancel Reply',
+		'label_submit'		=> 'Submit Comment',
 
-	<p><?php cancel_comment_reply_link(); ?></p>
+		'comment_field' =>	'<p><label for="comment">' . 'Comment' .
+			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+			'</textarea></p>',
 
-	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-	<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Log into your account">logged in</a> to post a comment.</p>
-	<?php else : ?>
+		'must_log_in' => '<p>' .
+			sprintf( 'You must be <a href="%s">logged in</a> to post a comment.' ,
+				wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+			) . '</p>',
 
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+		'logged_in_as' => '<p>' .
+			sprintf( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ,
+				admin_url( 'profile.php' ),
+				$user_identity,
+				wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+			) . '</p>',
 
-		<?php if ( is_user_logged_in() ) : ?>
+		'comment_notes_before' => '',
 
-		<p>You are logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php" title="View and edit your profile"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out</a></p>
+		'comment_notes_after' => '<p><strong>' .
+			sprintf( 'You may use the following <abbr title="HyperText Markup Language">HTML</abbr> elements and attributes to format your comment:</strong></p> %s' ,
+				'<p><code>' . allowed_tags() . '</code></p>' ),
 
-		<?php else : ?>
+		'fields' => apply_filters( 'comment_form_default_fields', array(
 
-		<p><label for="author">Name <?php if ($req) echo "(required)"; ?></label> <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> /></p>
+			'author' =>
+				'<p><label for="author">' . 'Name' . ( $req ? ' (required)' : '' ) . '</label> ' .
+				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+				'" size="30"' . $aria_req . ' /></p>',
 
-		<p><label for="email">Email (<?php if ($req) echo "required, but "; ?>will not be published)</label> <input type="email" name="email" id="email" placeholder="you@example.com" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		</p>
+			'email' =>
+				'<p><label for="email">' . 'Email' . ( $req ? ' (required, but will not be published)' : '' ) . '</label> ' .
+				'<input id="email" name="email" type="text" placeholder="you@example.com" value="' . esc_attr(	$commenter['comment_author_email'] ) .
+				'" size="30"' . $aria_req . ' /></p>',
 
-		<p><label for="url">Website</label> <input type="url" name="url" id="url" placeholder="http://example.com" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" /></p>
-
-		<?php endif; ?>
-
-		<textarea name="comment" cols="40" rows="10" tabindex="4"></textarea>
-
-		<p><strong>You may use the following tags to format your comment:</strong></p>
-		<p><code><?php echo allowed_tags(); ?></code></p>
-
-		<input name="submit" type="submit" tabindex="5" value="Submit Comment" />
-		<?php comment_id_fields(); ?>
-		<?php do_action('comment_form', $post->ID); ?>
-
-	</form>
-
-	<?php endif; ?>
-
-</div>
-
-<?php endif; ?>
+			'url' =>
+				'<p><label for="url">' . 'Website' . '</label>' .
+				'<input id="url" name="url" type="text" placeholder="http://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				'" size="30" /></p>'
+			)
+		),
+	);
+	
+	comment_form($tersus_comment_args);
+	
+endif; ?>
