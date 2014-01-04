@@ -81,13 +81,13 @@ if ( have_comments() ) : ?>
 				'" size="30" tabindex="1"' . $aria_req . ' /></p>',
 
 			'email' =>
-				'<p><label for="email">' . 'Email' . ( $req ? ' (required, but will not be published)' : '' ) . '</label> ' .
-				'<input id="email" name="email" type="text" placeholder="you@example.com" value="' . esc_attr(	$commenter['comment_author_email'] ) .
+				'<p><label for="email">' . 'Email (' . ( $req ? ' (required, but ' : '' ) . 'will not be published)' . '</label> ' .
+				'<input id="email" name="email" type="email" placeholder="you@example.com" value="' . esc_attr(	$commenter['comment_author_email'] ) .
 				'" size="30" tabindex="2"' . $aria_req . ' /></p>',
 
 			'url' =>
 				'<p><label for="url">' . 'Website' . '</label>' .
-				'<input id="url" name="url" type="text" placeholder="http://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				'<input id="url" name="url" type="url" placeholder="http://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
 				'" size="30" tabindex="3" /></p>'
 			)
 		),
