@@ -56,12 +56,12 @@ if ( have_comments() ) : ?>
 			'</textarea></p>',
 
 		'must_log_in' => '<p>' .
-			sprintf( 'You must be <a href="%s">logged in</a> to post a comment.' ,
+			sprintf( 'You must be <a href="%s" title="Log into your account">logged in</a> to post a comment.' ,
 				wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
 			) . '</p>',
 
 		'logged_in_as' => '<p>' .
-			sprintf( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ,
+			sprintf( 'You are logged in as <a href="%1$s" title="View and edit your profile">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out</a>' ,
 				admin_url( 'profile.php' ),
 				$user_identity,
 				wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
