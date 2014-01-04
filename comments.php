@@ -51,8 +51,8 @@ if ( have_comments() ) : ?>
 		'cancel_reply_link'	=> 'Cancel Reply',
 		'label_submit'		=> 'Submit Comment',
 
-		'comment_field' =>	'<p><label for="comment">' . 'Comment' .
-			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+		'comment_field' => '<p><label for="comment">' . 'Comment' .
+			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" tabindex="4">' .
 			'</textarea></p>',
 
 		'must_log_in' => '<p>' .
@@ -78,17 +78,17 @@ if ( have_comments() ) : ?>
 			'author' =>
 				'<p><label for="author">' . 'Name' . ( $req ? ' (required)' : '' ) . '</label> ' .
 				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-				'" size="30"' . $aria_req . ' /></p>',
+				'" size="30" tabindex="1"' . $aria_req . ' /></p>',
 
 			'email' =>
 				'<p><label for="email">' . 'Email' . ( $req ? ' (required, but will not be published)' : '' ) . '</label> ' .
 				'<input id="email" name="email" type="text" placeholder="you@example.com" value="' . esc_attr(	$commenter['comment_author_email'] ) .
-				'" size="30"' . $aria_req . ' /></p>',
+				'" size="30" tabindex="2"' . $aria_req . ' /></p>',
 
 			'url' =>
 				'<p><label for="url">' . 'Website' . '</label>' .
 				'<input id="url" name="url" type="text" placeholder="http://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
-				'" size="30" /></p>'
+				'" size="30" tabindex="3" /></p>'
 			)
 		),
 	);
