@@ -18,7 +18,7 @@
 
 		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
 		<h2 class="entry-title"><?php the_title(); ?></h2>
-		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
+		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'large' ); ?></a></p>
 		<?php
 			// Display the caption
 			if ( !empty($post->post_excerpt) ) the_excerpt();
