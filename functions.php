@@ -268,8 +268,8 @@ add_filter('wp_list_categories','delim');
 
 // Replace single attribute quotes with double quotes
 
-function double_down($d) {
-	return preg_replace('/\'/','"',$d);
+function double_down($c) {
+	return preg_replace('/\'/','"',$c);
 }
 
 add_filter('wp_tag_cloud','double_down');
@@ -308,8 +308,8 @@ add_filter('wp_tag_cloud','decruft_tagcloud');
 
 // Remove crufty class attributes from avatars
 
-function decruft_avatars($a) {
-	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$a);
+function decruft_avatars($c) {
+	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
 }
 
 add_filter('get_avatar','decruft_avatars');
