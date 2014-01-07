@@ -52,7 +52,7 @@ if ( have_comments() ) : ?>
 		'label_submit'		=> 'Submit Comment',
 
 		'comment_field' => '<p><label for="comment">' . 'Comment' .
-			'</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" tabindex="4">' .
+			'</label></p>' . '<p><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" tabindex="4">' .
 			'</textarea></p>',
 
 		'must_log_in' => '<p>' .
