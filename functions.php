@@ -322,6 +322,24 @@ if ( ! is_admin() ) {	// Don't apply filter to admin pages
 }
 
 
+// Decruft and update comment form
+
+function decruft_comment_form($c) {
+	$find = array(
+		'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
+		'/ id=\"reply-title\"/',		// Find id attribute
+		'/<\/?small>/',					// Find <small> tags
+		'/type="submit"/'				// Find submit button
+		);
+	$replace = array(
+		'',								// Declass entire comment form
+		'',								// Remove ID attribute from title_reply
+		'',								// Remove <small> tags from cancel_reply_link
+		'type="submit" tabindex="5"'	// Add tabindex attribute to submit button
+		);
+	return preg_replace($find, $replace, $c);
+}
+
 
 // Replacement gallery shortcut function
 // Removes default cruft and verbosity

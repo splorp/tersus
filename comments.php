@@ -93,6 +93,9 @@ if ( have_comments() ) : ?>
 		),
 	);
 	
+	ob_start();
 	comment_form($tersus_comment_args);
+	$form_object = ob_get_clean();
+	echo decruft_comment_form($form_object);
 	
 endif; ?>
