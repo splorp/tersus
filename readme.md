@@ -70,9 +70,14 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 + Added `$content_width` theme feature
 + Added `alt` attributes to post and comment author avatars
-+ Reinstated `body_class()` using a extremely stripped down set of classes
++ Reinstated `body_class()` function with an extremely stripped down set of classes
++ Reinstated `comment_form()` function
++ Reinstated default comment form anchors
 + Removed extraneous slashes from tag cloud links
++ Removed weird “do not load this page directly” check from comments template
 + Standardized attribute quoting for several WordPress functions and template tags
++ Embiggened media display on attachment pages
++ Decrufting filters are no longer applied to avatars on admin pages
 
 
 ### 0.2.2 — The “Pretty Pony” Release
