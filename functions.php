@@ -276,6 +276,8 @@ add_filter('wp_tag_cloud','double_down');
 add_filter('wp_list_categories','double_down');
 add_filter('get_archives_link','double_down');
 add_filter('get_comment_author_link','double_down');
+add_filter('next_image_link','double_down');
+add_filter('previous_image_link','double_down');
 
 // The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
 // Without the following check, the current user's avatar is displayed instead of the default images.
@@ -283,6 +285,7 @@ add_filter('get_comment_author_link','double_down');
 if ( ! is_admin() ) {
 	add_filter('get_avatar','double_down');
 }
+
 
 // Remove crufty class and ID attributes from list elements
 
