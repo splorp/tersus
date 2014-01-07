@@ -274,10 +274,12 @@ function double_down($c) {
 
 add_filter('wp_tag_cloud','double_down');
 add_filter('wp_list_categories','double_down');
-add_filter('get_avatar','double_down');
 add_filter('get_archives_link','double_down');
 add_filter('get_comment_author_link','double_down');
 
+if ( ! is_admin() ) {
+	add_filter('get_avatar','double_down');
+}
 
 // Remove crufty class and ID attributes from list elements
 
@@ -312,7 +314,10 @@ function decruft_avatars($c) {
 	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
 }
 
-add_filter('get_avatar','decruft_avatars');
+if ( ! is_admin() ) {
+	add_filter('get_avatar','decruft_avatars');
+}
+
 
 
 // Replacement gallery shortcut function
