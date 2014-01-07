@@ -277,6 +277,9 @@ add_filter('wp_list_categories','double_down');
 add_filter('get_archives_link','double_down');
 add_filter('get_comment_author_link','double_down');
 
+// The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
+// Without the following check, the current user's avatar is displayed instead of the default images.
+
 if ( ! is_admin() ) {
 	add_filter('get_avatar','double_down');
 }
@@ -314,7 +317,7 @@ function decruft_avatars($c) {
 	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
 }
 
-if ( ! is_admin() ) {
+if ( ! is_admin() ) {	// Don't apply filter to admin pages
 	add_filter('get_avatar','decruft_avatars');
 }
 
