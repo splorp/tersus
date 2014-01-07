@@ -268,15 +268,23 @@ add_filter('wp_list_categories','delim');
 
 // Replace single attribute quotes with double quotes
 
-function double_down($d) {
-	return preg_replace('/\'/','"',$d);
+function double_down($c) {
+	return preg_replace('/\'/','"',$c);
 }
 
 add_filter('wp_tag_cloud','double_down');
 add_filter('wp_list_categories','double_down');
-add_filter('get_avatar','double_down');
 add_filter('get_archives_link','double_down');
 add_filter('get_comment_author_link','double_down');
+add_filter('next_image_link','double_down');
+add_filter('previous_image_link','double_down');
+
+// The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
+// Without the following check, the current user's avatar is displayed instead of the default images.
+
+if ( ! is_admin() ) {
+	add_filter('get_avatar','double_down');
+}
 
 
 // Remove crufty class and ID attributes from list elements
@@ -308,11 +316,32 @@ add_filter('wp_tag_cloud','decruft_tagcloud');
 
 // Remove crufty class attributes from avatars
 
-function decruft_avatars($a) {
-	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$a);
+function decruft_avatars($c) {
+	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
 }
 
-add_filter('get_avatar','decruft_avatars');
+if ( ! is_admin() ) {	// Don't apply filter to admin pages
+	add_filter('get_avatar','decruft_avatars');
+}
+
+
+// Decruft and update comment form
+
+function decruft_comment_form($c) {
+	$find = array(
+		'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
+		'/ id=\"reply-title\"/',		// Find id attribute
+		'/<\/?small>/',					// Find <small> tags
+		'/type="submit"/'				// Find submit button
+		);
+	$replace = array(
+		'',								// Declass entire comment form
+		'',								// Remove ID attribute from title_reply
+		'',								// Remove <small> tags from cancel_reply_link
+		'type="submit" tabindex="5"'	// Add tabindex attribute to submit button
+		);
+	return preg_replace($find, $replace, $c);
+}
 
 
 // Replacement gallery shortcut function
@@ -416,7 +445,7 @@ function tersus_gallery($attr) {
 
 
 // Replacement comment callback function
-// Removes default class and ID verbosity
+// Remove crufty class and ID attributes
 
 function tersus_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
@@ -424,7 +453,7 @@ function tersus_comment($comment, $args, $depth) {
 		<p>Posted by <span class="vcard author"><?php echo get_avatar( $comment->comment_author_email, 48, '', $comment->comment_author ); ?> <?php printf('<cite class="fn">%s</cite>', get_comment_author_link()) ?></span> on <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>" rel="bookmark" title="<?php comment_time('c') ?>"><?php comment_time('l, F jS, Y') ?></a>.</p>
 
 	<?php if ($comment->comment_approved == '0') : ?>
-		<p><em>Your comment is awaiting moderation.</em></p>
+		<p><em>This comment is awaiting moderation.</em></p>
 	<?php endif; ?>
 
 	<?php comment_text() ?>
@@ -432,15 +461,6 @@ function tersus_comment($comment, $args, $depth) {
 	<p><?php edit_comment_link('Edit Comment','',' | ') ?><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></p>
 <?php
 }
-
-
-// Update comment reply link anchors 
-
-function comment_reply_anchor($str) {
-	return preg_replace('/respond/', 'comment', $str);
-}
-
-add_filter('comment_reply_link','comment_reply_anchor');
 
 
 // Add support for content_width

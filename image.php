@@ -18,7 +18,7 @@
 
 		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
 		<h2 class="entry-title"><?php the_title(); ?></h2>
-		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
+		<p><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'large' ); ?></a></p>
 		<?php
 			// Display the caption
 			if ( !empty($post->post_excerpt) ) the_excerpt();
@@ -31,13 +31,13 @@
 		<?php the_taxonomies(); ?>
 
 		<?php if ( comments_open() && pings_open() ) { ?>
-		<p><a href="#comment" title="Contribute to the discussion">Leave a comment</a> or <a href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a trackback</a> from your own site.</p>
+		<p><a href="#respond" title="Contribute to the discussion">Leave a comment</a> or <a href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a trackback</a> from your own site.</p>
 
 		<?php } elseif ( !comments_open() && pings_open() ) { ?>
 		<p>Comments are closed, but you can <a href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a trackback</a> from your own site.</p>
 
 		<?php } elseif ( comments_open() && !pings_open() ) { ?>
-		<p><a href="#comment" title="Contribute to the discussion">Leave a comment</a>.</p>
+		<p><a href="#respond" title="Contribute to the discussion">Leave a comment</a>.</p>
 
 		<?php } elseif ( !comments_open() && !pings_open() ) { ?>
 		<p>Comments are closed.</p>

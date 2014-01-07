@@ -51,7 +51,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class( $class ); ?>>
+	<body <?php body_class(); ?>>
 		<header>
 			<?php if ($tersus_announcement_display == "1"): ?>
 			<section id="announcement">
