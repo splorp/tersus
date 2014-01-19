@@ -78,6 +78,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Standardized attribute quoting for several WordPress functions and template tags
 + Embiggened media display on attachment pages
 + Decrufting filters are no longer applied to avatars on admin pages
++ Namespaced all theme functions with the `tersus_` prefix
 
 
 ### 0.2.2 — The “Pretty Pony” Release

@@ -228,7 +228,7 @@ add_filter('body_class', 'simple_body_class', 10, 2);
 
 // Replace default post class verbosity
 
-function simple_post_class() {
+function tersus_post_class() {
 	global $post;
 	$c = array();
 
@@ -245,89 +245,89 @@ function simple_post_class() {
 	return $c;
 }
 
-add_filter( 'post_class', 'simple_post_class' );
+add_filter( 'post_class', 'tersus_post_class' );
 
 
 // Remove non-validating rel attributes from category links
 
-function relfix($c) {
+function tersus_relfix($c) {
 	return preg_replace('/category tag/','tag',$c);
 }
 
-add_filter('the_category','relfix');
+add_filter('the_category','tersus_relfix');
 
 
 // Add a proper thousands delimiter to category post counts
 
-function delim($c) {
+function tersus_delim($c) {
 	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to MyFonts for the regex tweaks
 }
 
-add_filter('wp_list_categories','delim');
+add_filter('wp_list_categories','tersus_delim');
 
 
 // Replace single attribute quotes with double quotes
 
-function double_down($c) {
+function tersus_double_down($c) {
 	return preg_replace('/\'/','"',$c);
 }
 
-add_filter('wp_tag_cloud','double_down');
-add_filter('wp_list_categories','double_down');
-add_filter('get_archives_link','double_down');
-add_filter('get_comment_author_link','double_down');
-add_filter('next_image_link','double_down');
-add_filter('previous_image_link','double_down');
+add_filter('wp_tag_cloud','tersus_double_down');
+add_filter('wp_list_categories','tersus_double_down');
+add_filter('get_archives_link','tersus_double_down');
+add_filter('get_comment_author_link','tersus_double_down');
+add_filter('next_image_link','tersus_double_down');
+add_filter('previous_image_link','tersus_double_down');
 
 // The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
 // Without the following check, the current user's avatar is displayed instead of the default images.
 
 if ( ! is_admin() ) {
-	add_filter('get_avatar','double_down');
+	add_filter('get_avatar','tersus_double_down');
 }
 
 
 // Remove crufty class and ID attributes from list elements
 
-function decruft($c) {
+function tersus_decruft($c) {
 	$c_ = preg_replace('/ class=[\"\'].+?[\"\']/','',$c);
 	return preg_replace('/ id=[\"\'].+?[\"\']/','',$c_);
 }
 
-add_filter('wp_tag_cloud','decruft');
-add_filter('wp_list_bookmarks','decruft');
-add_filter('wp_list_categories','decruft');
-add_filter('wp_list_pages','decruft');
-add_filter('wp_nav_menu','decruft');
-add_filter('wp_page_menu','decruft');
-add_filter('edit_comment_link','decruft');
-add_filter('comment_reply_link','decruft');
+add_filter('wp_tag_cloud','tersus_decruft');
+add_filter('wp_list_bookmarks','tersus_decruft');
+add_filter('wp_list_categories','tersus_decruft');
+add_filter('wp_list_pages','tersus_decruft');
+add_filter('wp_nav_menu','tersus_decruft');
+add_filter('wp_page_menu','tersus_decruft');
+add_filter('edit_comment_link','tersus_decruft');
+add_filter('comment_reply_link','tersus_decruft');
 
 
 // Remove crufty class and ID attributes from tag cloud, reformat title attributes
 
-function decruft_tagcloud($c) {
+function tersus_decruft_tagcloud($c) {
 	$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
 	return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/',' title="View \1 post\2"',$c_);
 }
 
-add_filter('wp_tag_cloud','decruft_tagcloud');
+add_filter('wp_tag_cloud','tersus_decruft_tagcloud');
 	
 
 // Remove crufty class attributes from avatars
 
-function decruft_avatars($c) {
+function tersus_decruft_avatar($c) {
 	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
 }
 
 if ( ! is_admin() ) {	// Don't apply filter to admin pages
-	add_filter('get_avatar','decruft_avatars');
+	add_filter('get_avatar','tersus_decruft_avatar');
 }
 
 
 // Decruft and update comment form
 
-function decruft_comment_form($c) {
+function tersus_decruft_comment_form($c) {
 	$find = array(
 		'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
 		'/ id=\"reply-title\"/',		// Find id attribute
@@ -483,7 +483,7 @@ if ( function_exists( 'add_theme_support' ) ) {    // Added in 2.9
 
 // Add support for the_post_thumbnail in RSS feeds
 
-function insertThumbnailRSS($content) {
+function tersus_rss_thumb($content) {
    global $post;
    if ( has_post_thumbnail( $post->ID ) ){
 	   $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
@@ -491,8 +491,8 @@ function insertThumbnailRSS($content) {
    return $content;
 }
 
-add_filter('the_excerpt_rss', 'insertThumbnailRSS');  
-add_filter('the_content_feed', 'insertThumbnailRSS'); 
+add_filter('the_excerpt_rss', 'tersus_rss_thumb');  
+add_filter('the_content_feed', 'tersus_rss_thumb'); 
 
 
 // Tests whether post paging links should be shown
@@ -603,14 +603,14 @@ function delim_image_link() {
 
 // Custom excerpt links
 
-function new_excerpt_more($more) {
+function tersus_excerpt_more($more) {
 	global $post;
 	$t = get_post($post->ID); 
 	$title = $t->post_title;
 	return ' &#8230; <a href="' . get_permalink($post->ID) . '" title="Read the rest of &#8220;' . $title . '&#8221;">Read the rest of this item</a>';
 }
 
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'tersus_excerpt_more');
 
 
 // Custom title element text
