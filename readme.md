@@ -17,6 +17,11 @@ A version of Tersus is being developed for [Tumblr](http://tersustheme.tumblr.co
 Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 
 
+## Requirements
+
+* WordPress 3.4 or later
+
+
 ## Features
 
 + HTML5 structure and compliance
@@ -26,11 +31,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + Two widget-enabled sidebar areas
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
-
-
-## Requirements
-
-* WordPress 3.4 or later
++ Passes WordPress [Theme Check Guidelines](http://make.wordpress.org/themes/guidelines/guidelines-theme-check/)
 
 
 ## Child Themes
@@ -68,6 +69,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.3.0 — The “Chk-Chk-Boom” Release
 
++ Theme passes WordPress Theme Check Guidelines
 + Added `$content_width` theme feature
 + Added `alt` attributes to post and comment author avatars
 + Reinstated `body_class()` function with an extremely stripped down set of classes
