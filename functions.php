@@ -463,13 +463,12 @@ function tersus_comment($comment, $args, $depth) {
 }
 
 
-// Add support for content_width
+// Add support for $content_width
 // Required by Theme Check Guidelines
 // http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
 
-if ( ! isset( $content_width ) ) {
+if ( ! isset( $content_width ) )
 	$content_width = 600;
-}
 
 	
 // Add support for the_post_thumbnail
