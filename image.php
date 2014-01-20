@@ -7,7 +7,10 @@
 
 <?php get_header(); ?>
 
+<?php $content_width = get_option( 'large_size_w' ); // Set $content_width to match options setting for large images ?>
+
 <section id="content">
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php if (show_image_link_nav()): ?>

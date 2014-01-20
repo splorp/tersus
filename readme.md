@@ -78,7 +78,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Removed extraneous slashes from tag cloud links
 + Removed weird “do not load this page directly” check from comments template
 + Standardized attribute quoting for several WordPress functions and template tags
-+ Embiggened media display on attachment pages
++ Embiggened display of content on image attachment pages
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 
