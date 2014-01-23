@@ -473,11 +473,9 @@ if ( ! isset( $content_width ) )
 	
 // Add support for the_post_thumbnail
 
-if ( function_exists( 'add_theme_support' ) ) {    // Added in 2.9
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 600, 9999, true );    // Normal post thumbnails
 	add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
-}
 
 
 // Add support for the_post_thumbnail in RSS feeds
