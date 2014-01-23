@@ -164,9 +164,24 @@ add_action('admin_menu', 'tersus_add_admin');
 
 
 // Automatic feed links support
+// http://codex.wordpress.org/Automatic_Feed_Links
 
-add_theme_support('automatic-feed-links');
+add_theme_support( 'automatic-feed-links' );
 	
+
+// Post format support
+// http://codex.wordpress.org/Post_Formats
+
+add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+
+
+// Add support for the_post_thumbnail
+// http://codex.wordpress.org/Post_Thumbnails
+
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 600, 9999, true );    // Normal post thumbnails
+add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
+
 
 // Page menu support
 // http://codex.wordpress.org/Function_Reference/register_nav_menus
@@ -202,12 +217,6 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h2>',
 	));
 }
-
-
-// Post format support
-// http://codex.wordpress.org/Post_Formats
-
-add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 
 
 // Replace default body class verbosity
@@ -471,13 +480,6 @@ if ( ! isset( $content_width ) )
 	$content_width = 600;
 
 	
-// Add support for the_post_thumbnail
-
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 600, 9999, true );    // Normal post thumbnails
-	add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
-
-
 // Add support for the_post_thumbnail in RSS feeds
 
 function tersus_rss_thumb($content) {
