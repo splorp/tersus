@@ -640,43 +640,45 @@ add_filter('excerpt_more', 'tersus_excerpt_more');
 
 // Custom title element text
 
-function tersus_title( $title, $sep ) {
-	global $paged, $page;
+if ( ! function_exists( 'tersus_title' ) ) {
+	function tersus_title( $title, $sep ) {
+		global $paged, $page;
 
-	if ( is_feed() )
+		if ( is_feed() )
+			return $title;
+
+		// Add the site name
+		$title .= get_bloginfo( 'name' );
+
+		// Add the site description to home or front page
+		// $site_description = get_bloginfo( 'description', 'display' );
+		// if ( $site_description && ( is_home() || is_front_page() ) )
+		//		$title = "$title $sep $site_description";
+
+		// Add tag designation
+		if ( is_tag() )
+			$title = 'Tag ' . "$sep $title";
+
+		// Add category designation
+		if ( is_category() )
+			$title = 'Category ' . "$sep $title";
+
+		// Add archive designation
+		if ( is_day() || is_month() || is_year() )
+			$title = 'Archive ' . "$sep $title";
+
+		// Add pretty search terms
+		if ( is_search() )
+			$title = 'Search Results ' . "$sep " . '&#8220;' . get_search_query() . '&#8221;' . " $sep " . get_bloginfo( 'name' );
+
+		// Add a page number if necessary
+		if ( $paged >= 2 || $page >= 2 )
+			$title = "$title $sep " . sprintf( 'Page %s', max( $paged, $page ) );
+
 		return $title;
+	}
 
-	// Add the site name
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description to home or front page
-	// $site_description = get_bloginfo( 'description', 'display' );
-	// if ( $site_description && ( is_home() || is_front_page() ) )
-	//		$title = "$title $sep $site_description";
-
-	// Add tag designation
-	if ( is_tag() )
-		$title = 'Tag ' . "$sep $title";
-
-	// Add category designation
-	if ( is_category() )
-		$title = 'Category ' . "$sep $title";
-
-	// Add archive designation
-	if ( is_day() || is_month() || is_year() )
-		$title = 'Archive ' . "$sep $title";
-
-	// Add pretty search terms
-	if ( is_search() )
-		$title = 'Search Results ' . "$sep " . '&#8220;' . get_search_query() . '&#8221;' . " $sep " . get_bloginfo( 'name' );
-
-	// Add a page number if necessary
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( 'Page %s', max( $paged, $page ) );
-
-	return $title;
+	add_filter( 'wp_title', 'tersus_title', 10, 2 );
 }
-
-add_filter( 'wp_title', 'tersus_title', 10, 2 );
 
 ?>
