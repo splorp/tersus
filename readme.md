@@ -77,10 +77,12 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Reinstated default comment form anchors
 + Removed extraneous slashes from tag cloud links
 + Removed weird “do not load this page directly” check from comments template
++ Removed renegade styles injected by the Recent Comments widget
 + Standardized attribute quoting for several WordPress functions and template tags
 + Embiggened display of content on image attachment pages
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
++ Custom theme functions are now pluggable by child themes
 
 
 ### 0.2.2 — The “Pretty Pony” Release
