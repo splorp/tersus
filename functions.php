@@ -233,7 +233,7 @@ function tersus_body_class($wp_class_list, $simple_class_list) {
     return array_merge($wp_class_list, (array) $tersus_body_class);
 }
 
-add_filter('body_class', 'simple_body_class', 10, 2);
+	add_filter('body_class', 'tersus_body_class', 10, 2);
 
 
 // Replace default post class verbosity
