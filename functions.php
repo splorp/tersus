@@ -508,16 +508,18 @@ if ( ! isset( $content_width ) )
 	
 // Add support for the_post_thumbnail in RSS feeds
 
-function tersus_rss_thumb($content) {
-   global $post;
-   if ( has_post_thumbnail( $post->ID ) ){
-	   $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
-   }
-   return $content;
-}
+if ( ! function_exists( 'tersus_rss_thumb' ) ) {
+	function tersus_rss_thumb($content) {
+	   global $post;
+	   if ( has_post_thumbnail( $post->ID ) ){
+		   $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
+	   }
+	   return $content;
+	}
 
-add_filter('the_excerpt_rss', 'tersus_rss_thumb');  
-add_filter('the_content_feed', 'tersus_rss_thumb'); 
+	add_filter('the_excerpt_rss', 'tersus_rss_thumb');  
+	add_filter('the_content_feed', 'tersus_rss_thumb'); 
+}
 
 
 // Tests whether post paging links should be shown
