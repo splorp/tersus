@@ -223,40 +223,44 @@ register_sidebar(array(
 
 // Replace default body class verbosity
 
-function tersus_body_class($wp_class_list, $simple_class_list) {
-    // List allowed classes
-    $whitelist = array('home', 'page', 'single', 'attachment', 'archive', 'search', 'error404');
+if ( ! function_exists( 'tersus_body_class' ) ) {
+	function tersus_body_class($wp_class_list, $simple_class_list) {
+		// List allowed classes
+		$whitelist = array('home', 'page', 'single', 'attachment', 'archive', 'search', 'error404');
 
-    // Filter the unwanted classes
-    $wp_class_list = array_intersect($wp_class_list, $whitelist);
+		// Filter the unwanted classes
+		$wp_class_list = array_intersect($wp_class_list, $whitelist);
 
-    // Output allowed classes
-    return array_merge($wp_class_list, (array) $tersus_body_class);
-}
+		// Output allowed classes
+		return array_merge($wp_class_list, (array) $tersus_body_class);
+	}
 
 	add_filter('body_class', 'tersus_body_class', 10, 2);
+}
 
 
 // Replace default post class verbosity
 
-function tersus_post_class() {
-	global $post;
-	$c = array();
+if ( ! function_exists( 'tersus_post_class' ) ) {
+	function tersus_post_class() {
+		global $post;
+		$c = array();
 
-	// hentry for hAtom compliance
-	$c[] = 'hentry';
+		// hentry for hAtom compliance
+		$c[] = 'hentry';
 
-	// Determine Post Format
-	$post_format = get_post_format( $post->ID );
-	if ( $post_format && !is_wp_error($post_format) ) $c[] = $post->post_type . '-' . sanitize_html_class( $post_format );
+		// Determine Post Format
+		$post_format = get_post_format( $post->ID );
+		if ( $post_format && !is_wp_error($post_format) ) $c[] = $post->post_type . '-' . sanitize_html_class( $post_format );
 
-	// Is it Sticky?
-	if ( is_sticky($post->ID) && is_home() && !is_paged() ) $c[] = 'sticky';
+		// Is it Sticky?
+		if ( is_sticky($post->ID) && is_home() && !is_paged() ) $c[] = 'sticky';
 
-	return $c;
+		return $c;
+	}
+
+	add_filter( 'post_class', 'tersus_post_class' );
 }
-
-add_filter( 'post_class', 'tersus_post_class' );
 
 
 // Remove non-validating rel attributes from category links
