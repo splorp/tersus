@@ -67,33 +67,33 @@ array( "name" => "",
 	"std" => "<p>This text will appear in the footer.</p>"),
 );
 
-
-// Tersus theme options admin
-
-function tersus_add_admin() {
-	global $theme_name_full, $theme_name, $options;
-	if ( isset($_GET['page']) && $_GET['page'] == basename(__FILE__) ) {
-		if ( !empty( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
-			foreach ($options as $value) {
-				update_option( $value['id'], $_REQUEST[ $value['id'] ] );
-			}
-			foreach ($options as $value) {
-				if( isset( $_REQUEST[ $value['id'] ] ) ) {
-					update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
-				} else {
-					delete_option( $value['id'] );
+if ( ! function_exists( 'tersus_add_admin' ) ) {
+	function tersus_add_admin() {
+		global $theme_name_full, $theme_name, $options;
+		if ( isset($_GET['page']) && $_GET['page'] == basename(__FILE__) ) {
+			if ( !empty( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
+				foreach ($options as $value) {
+					update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 				}
+				foreach ($options as $value) {
+					if( isset( $_REQUEST[ $value['id'] ] ) ) {
+						update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+					} else {
+						delete_option( $value['id'] );
+					}
+				}
+				header("Location: themes.php?page=functions.php&saved=true");
+				die;
 			}
-			header("Location: themes.php?page=functions.php&saved=true");
-			die;
 		}
+		add_theme_page($theme_name_full." Options", "".$theme_name_full." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
 	}
-	add_theme_page($theme_name_full." Options", "".$theme_name_full." Options", 'edit_themes', basename(__FILE__), 'tersus_admin');
 }
 
-function tersus_admin() {
-	global $theme_name_full, $theme_name, $options;
-	if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$theme_name_full.' options have been saved.</strong></p></div>';
+if ( ! function_exists( 'tersus_admin' ) ) {
+	function tersus_admin() {
+		global $theme_name_full, $theme_name, $options;
+		if ( !empty( $_REQUEST['saved'] ) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$theme_name_full.' options have been saved.</strong></p></div>';
 
 ?>
 
@@ -158,6 +158,7 @@ function tersus_admin() {
 </form>
 
 <?php
+	}
 }
 
 add_action('admin_menu', 'tersus_add_admin');
