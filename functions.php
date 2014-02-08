@@ -315,58 +315,66 @@ if ( ! function_exists( 'tersus_double_down' ) ) {
 
 // Remove crufty class and ID attributes from list elements
 
-function tersus_decruft($c) {
-	$c_ = preg_replace('/ class=[\"\'].+?[\"\']/','',$c);
-	return preg_replace('/ id=[\"\'].+?[\"\']/','',$c_);
-}
+if ( ! function_exists( 'tersus_decruft' ) ) {
+	function tersus_decruft($c) {
+		$c_ = preg_replace('/ class=[\"\'].+?[\"\']/','',$c);
+		return preg_replace('/ id=[\"\'].+?[\"\']/','',$c_);
+	}
 
-add_filter('wp_tag_cloud','tersus_decruft');
-add_filter('wp_list_bookmarks','tersus_decruft');
-add_filter('wp_list_categories','tersus_decruft');
-add_filter('wp_list_pages','tersus_decruft');
-add_filter('wp_nav_menu','tersus_decruft');
-add_filter('wp_page_menu','tersus_decruft');
-add_filter('edit_comment_link','tersus_decruft');
-add_filter('comment_reply_link','tersus_decruft');
+	add_filter('wp_tag_cloud','tersus_decruft');
+	add_filter('wp_list_bookmarks','tersus_decruft');
+	add_filter('wp_list_categories','tersus_decruft');
+	add_filter('wp_list_pages','tersus_decruft');
+	add_filter('wp_nav_menu','tersus_decruft');
+	add_filter('wp_page_menu','tersus_decruft');
+	add_filter('edit_comment_link','tersus_decruft');
+	add_filter('comment_reply_link','tersus_decruft');
+}
 
 
 // Remove crufty class and ID attributes from tag cloud, reformat title attributes
 
-function tersus_decruft_tagcloud($c) {
-	$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
-	return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/',' title="View \1 post\2"',$c_);
-}
+if ( ! function_exists( 'tersus_decruft_tagcloud' ) ) {
+	function tersus_decruft_tagcloud($c) {
+		$c_ = preg_replace('/ style=[\"\'].+?[\"\']/','',$c);
+		return preg_replace('/ title=[\"\']([0-9]+?) topic(s?)[\"\']/',' title="View \1 post\2"',$c_);
+	}
 
-add_filter('wp_tag_cloud','tersus_decruft_tagcloud');
-	
+	add_filter('wp_tag_cloud','tersus_decruft_tagcloud');
+}	
+
 
 // Remove crufty class attributes from avatars
 
-function tersus_decruft_avatar($c) {
-	return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
-}
+if ( ! function_exists( 'tersus_decruft_avatar' ) ) {
+	function tersus_decruft_avatar($c) {
+		return preg_replace('/ class=[\"\'].+?[\"\']/',' class="photo"',$c);
+	}
 
-if ( ! is_admin() ) {	// Don't apply filter to admin pages
-	add_filter('get_avatar','tersus_decruft_avatar');
+	if ( ! is_admin() ) {	// Don't apply filter to admin pages
+		add_filter('get_avatar','tersus_decruft_avatar');
+	}
 }
 
 
 // Decruft and update comment form
 
-function tersus_decruft_comment_form($c) {
-	$find = array(
-		'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
-		'/ id=\"reply-title\"/',		// Find id attribute
-		'/<\/?small>/',					// Find <small> tags
-		'/type="submit"/'				// Find submit button
-		);
-	$replace = array(
-		'',								// Declass entire comment form
-		'',								// Remove ID attribute from title_reply
-		'',								// Remove <small> tags from cancel_reply_link
-		'type="submit" tabindex="5"'	// Add tabindex attribute to submit button
-		);
-	return preg_replace($find, $replace, $c);
+if ( ! function_exists( 'tersus_decruft_comment_form' ) ) {
+	function tersus_decruft_comment_form($c) {
+		$find = array(
+			'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
+			'/ id=\"reply-title\"/',		// Find id attribute
+			'/<\/?small>/',					// Find <small> tags
+			'/type="submit"/'				// Find submit button
+			);
+		$replace = array(
+			'',								// Declass entire comment form
+			'',								// Remove ID attribute from title_reply
+			'',								// Remove <small> tags from cancel_reply_link
+			'type="submit" tabindex="5"'	// Add tabindex attribute to submit button
+			);
+		return preg_replace($find, $replace, $c);
+	}
 }
 
 
