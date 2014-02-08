@@ -281,24 +281,30 @@ function tersus_delim($c) {
 add_filter('wp_list_categories','tersus_delim');
 
 
-// Replace single attribute quotes with double quotes
 
-function tersus_double_down($c) {
-	return preg_replace('/\'/','"',$c);
 }
 
-add_filter('wp_tag_cloud','tersus_double_down');
-add_filter('wp_list_categories','tersus_double_down');
-add_filter('get_archives_link','tersus_double_down');
-add_filter('get_comment_author_link','tersus_double_down');
-add_filter('next_image_link','tersus_double_down');
-add_filter('previous_image_link','tersus_double_down');
 
-// The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
-// Without the following check, the current user's avatar is displayed instead of the default images.
+// Replace single attribute quotes with double quotes
 
-if ( ! is_admin() ) {
-	add_filter('get_avatar','tersus_double_down');
+if ( ! function_exists( 'tersus_double_down' ) ) {
+	function tersus_double_down($c) {
+		return preg_replace('/\'/','"',$c);
+	}
+
+	add_filter('wp_tag_cloud','tersus_double_down');
+	add_filter('wp_list_categories','tersus_double_down');
+	add_filter('get_archives_link','tersus_double_down');
+	add_filter('get_comment_author_link','tersus_double_down');
+	add_filter('next_image_link','tersus_double_down');
+	add_filter('previous_image_link','tersus_double_down');
+
+	// The options-discussion.php admin page performs a preg_replace() when building the Default Avatar list.
+	// Without the following check, the current user's avatar is displayed instead of the default images.
+
+	if ( ! is_admin() ) {
+		add_filter('get_avatar','tersus_double_down');
+	}
 }
 
 
