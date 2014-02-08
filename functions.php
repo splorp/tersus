@@ -380,101 +380,102 @@ if ( ! function_exists( 'tersus_decruft_comment_form' ) ) {
 
 // Replacement gallery shortcut function
 // Removes default cruft and verbosity
-
-remove_shortcode('gallery');
-add_shortcode('gallery', 'tersus_gallery');
-
-
+//
 // Portions by Michael Preuss and Aaron Cimolini
 // http://snipplr.com/view.php?codeview&id=27051
 
-function tersus_gallery($attr) {
-	global $post;
+if ( ! function_exists( 'tersus_gallery' ) ) {
+	function tersus_gallery($attr) {
+		global $post;
 
-	static $instance = 0;
-	$instance++;
+		static $instance = 0;
+		$instance++;
 
-	// Check for a valid orderby statement
-	if ( isset( $attr['orderby'] ) ) {
-		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( !$attr['orderby'] )
-			unset( $attr['orderby'] );
-	}
-
-	extract(shortcode_atts(array(
-		'order'      => 'ASC',
-		'orderby'    => 'menu_order ID',
-		'id'         => $post->ID,
-		'itemtag'    => 'dl',
-		'icontag'    => 'dt',
-		'captiontag' => 'dd',
-		'columns'    => 3,
-		'size'       => 'thumbnail',
-		'include'    => '',
-		'exclude'    => ''
-		), $attr));
-
-	$id = intval($id);
-	if ( 'RAND' == $order )
-		$orderby = 'none';
-
-	if ( !empty($include) ) {
-		$include = preg_replace( '/[^0-9,]+/', '', $include );
-		$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-
-		$attachments = array();
-		foreach ( $_attachments as $key => $val ) {
-			$attachments[$val->ID] = $_attachments[$key];
+		// Check for a valid orderby statement
+		if ( isset( $attr['orderby'] ) ) {
+			$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+			if ( !$attr['orderby'] )
+				unset( $attr['orderby'] );
 		}
-	} elseif ( !empty($exclude) ) {
-		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
-		$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-	} else {
-		$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-	}
 
-	if ( empty($attachments) )
-		return '';
+		extract(shortcode_atts(array(
+			'order'      => 'ASC',
+			'orderby'    => 'menu_order ID',
+			'id'         => $post->ID,
+			'itemtag'    => 'dl',
+			'icontag'    => 'dt',
+			'captiontag' => 'dd',
+			'columns'    => 3,
+			'size'       => 'thumbnail',
+			'include'    => '',
+			'exclude'    => ''
+			), $attr));
 
-	if ( is_feed() ) {
-		$output = "\n";
-		foreach ( $attachments as $att_id => $attachment )
-			$output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+		$id = intval($id);
+		if ( 'RAND' == $order )
+			$orderby = 'none';
+
+		if ( !empty($include) ) {
+			$include = preg_replace( '/[^0-9,]+/', '', $include );
+			$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+
+			$attachments = array();
+			foreach ( $_attachments as $key => $val ) {
+				$attachments[$val->ID] = $_attachments[$key];
+			}
+		} elseif ( !empty($exclude) ) {
+			$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
+			$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+		} else {
+			$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+		}
+
+		if ( empty($attachments) )
+			return '';
+
+		if ( is_feed() ) {
+			$output = "\n";
+			foreach ( $attachments as $att_id => $attachment )
+				$output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+			return $output;
+		}
+
+		// Check to see whether any tags have been set to false
+		if ($itemtag) $itemtag = tag_escape($itemtag);
+		if ($captiontag) $captiontag = tag_escape($captiontag);
+		if ($icontag) $icontag = tag_escape($icontag);
+		$columns = intval($columns);
+
+		$output = "<div class=\"gallery " .$size. "\">\n";
+
+		$i = 0;
+		foreach ( $attachments as $id => $attachment ) {
+		  ++$i;
+			$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+
+			if ($itemtag) {
+				$output .= "<" .$itemtag. ">";
+			}
+			if ($icontag) $output .= "\n\t<" .$icontag. ">\t";
+			$output .=  "\n\t".$link;
+			if ($icontag) $output .= "\n\t</" .$icontag. ">";
+			// if the attachment has a caption set
+			if ( trim($attachment->post_excerpt) ) {
+			  if ($captiontag) $output .= "\n<" .$captiontag. ">\n\t";
+			  $output .= wptexturize($attachment->post_excerpt);
+			  if ($captiontag) $output .= "\n</" .$captiontag. ">" . "\n";
+			}
+			if ($itemtag) $output .= "\n</" .$itemtag. ">\n";
+			if ( $columns > 0 && $i % $columns == 0 ) $output .= "\n";
+		}
+
+		$output .= "</div>\n";
+
 		return $output;
 	}
 
-	// Check to see whether any tags have been set to false
-	if ($itemtag) $itemtag = tag_escape($itemtag);
-	if ($captiontag) $captiontag = tag_escape($captiontag);
-	if ($icontag) $icontag = tag_escape($icontag);
-	$columns = intval($columns);
-
-	$output = "<div class=\"gallery " .$size. "\">\n";
-
-	$i = 0;
-	foreach ( $attachments as $id => $attachment ) {
-	  ++$i;
-		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
-
-		if ($itemtag) {
-			$output .= "<" .$itemtag. ">";
-		}
-		if ($icontag) $output .= "\n\t<" .$icontag. ">\t";
-		$output .=  "\n\t".$link;
-		if ($icontag) $output .= "\n\t</" .$icontag. ">";
-		// if the attachment has a caption set
-		if ( trim($attachment->post_excerpt) ) {
-		  if ($captiontag) $output .= "\n<" .$captiontag. ">\n\t";
-		  $output .= wptexturize($attachment->post_excerpt);
-		  if ($captiontag) $output .= "\n</" .$captiontag. ">" . "\n";
-		}
-		if ($itemtag) $output .= "\n</" .$itemtag. ">\n";
-		if ( $columns > 0 && $i % $columns == 0 ) $output .= "\n";
-	}
-
-	$output .= "</div>\n";
-
-	return $output;
+	remove_shortcode('gallery');
+	add_shortcode('gallery', 'tersus_gallery');
 }
 
 
