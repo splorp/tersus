@@ -272,16 +272,18 @@ function tersus_relfix($c) {
 add_filter('the_category','tersus_relfix');
 
 
-// Add a proper thousands delimiter to category post counts
 
-function tersus_delim($c) {
-	return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to MyFonts for the regex tweaks
 }
 
-add_filter('wp_list_categories','tersus_delim');
 
+// Add a proper thousands delimiter to category post counts
 
+if ( ! function_exists( 'tersus_delim' ) ) {
+	function tersus_delim($c) {
+		return preg_replace('/(\d)(\d{3})\b/','\1,\2',$c);	// Hat tip to MyFonts for the regex tweaks
+	}
 
+	add_filter('wp_list_categories','tersus_delim');
 }
 
 
