@@ -274,8 +274,16 @@ if ( ! function_exists( 'tersus_relfix' ) ) {
 }
 
 
+// Remove styles injected by the Recent Comments widget
+// https://core.trac.wordpress.org/ticket/11928
 
+if ( ! function_exists( 'tersus_remove_style' ) ) {
+	function tersus_remove_style() {
+		global $wp_widget_factory;
+		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'  ) );
+	}
 
+	add_action( 'widgets_init', 'tersus_remove_style' );
 }
 
 
