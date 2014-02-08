@@ -630,14 +630,16 @@ function delim_image_link() {
 
 // Custom excerpt links
 
-function tersus_excerpt_more($more) {
-	global $post;
-	$t = get_post($post->ID); 
-	$title = $t->post_title;
-	return ' &#8230; <a href="' . get_permalink($post->ID) . '" title="Read the rest of &#8220;' . $title . '&#8221;">Read the rest of this item</a>';
-}
+if ( ! function_exists( 'tersus_excerpt_more' ) ) {
+	function tersus_excerpt_more($more) {
+		global $post;
+		$t = get_post($post->ID); 
+		$title = $t->post_title;
+		return ' &#8230; <a href="' . get_permalink($post->ID) . '" title="Read the rest of &#8220;' . $title . '&#8221;">Read the rest of this item</a>';
+	}
 
-add_filter('excerpt_more', 'tersus_excerpt_more');
+	add_filter('excerpt_more', 'tersus_excerpt_more');
+}
 
 
 // Custom title element text
