@@ -201,7 +201,7 @@ add_action( 'init', 'register_my_menus' );
 remove_action('wp_head', 'parent_post_rel_link');
 
 
-// Sidebar support
+// Add sidebar support
 // http://codex.wordpress.org/Function_Reference/register_sidebar
 
 register_sidebar(array(
@@ -219,6 +219,14 @@ register_sidebar(array(
 	'before_title' => '<h2 class="widgettitle">',
 	'after_title' => '</h2>',
 ));
+
+
+// Add support for $content_width
+// Required by Theme Check Guidelines
+// http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
+
+if ( ! isset( $content_width ) )
+	$content_width = 600;
 
 
 // Replace default body class verbosity
@@ -508,14 +516,6 @@ if ( ! function_exists( 'tersus_comment' ) ) {
 }
 
 
-// Add support for $content_width
-// Required by Theme Check Guidelines
-// http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
-
-if ( ! isset( $content_width ) )
-	$content_width = 600;
-
-	
 // Add support for the_post_thumbnail in RSS feeds
 
 if ( ! function_exists( 'tersus_rss_thumb' ) ) {
