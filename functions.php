@@ -265,11 +265,14 @@ if ( ! function_exists( 'tersus_post_class' ) ) {
 
 // Remove non-validating rel attributes from category links
 
-function tersus_relfix($c) {
-	return preg_replace('/category tag/','tag',$c);
+if ( ! function_exists( 'tersus_relfix' ) ) {
+	function tersus_relfix($c) {
+		return preg_replace('/category tag/','tag',$c);
+	}
+
+	add_filter('the_category','tersus_relfix');
 }
 
-add_filter('the_category','tersus_relfix');
 
 
 
