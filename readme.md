@@ -45,7 +45,7 @@ By removing the majority of the presentational markup and other cruft from the T
 
 ## Credits
 
-The Tersus project is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.me/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
+Tersus is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.me/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
 
 Lovely chaps, all of them.
 
@@ -83,6 +83,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
++ Updated to HTML5 Shiv 3.7.1
 
 
 ### 0.2.2 — The “Pretty Pony” Release
