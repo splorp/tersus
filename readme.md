@@ -83,7 +83,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
-+ Updated to HTML5 Shiv 3.7.1
++ Updated to HTML5 Shiv 3.7.2
 
 
 ### 0.2.2 — The “Pretty Pony” Release
