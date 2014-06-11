@@ -591,7 +591,8 @@ function delim_post_link() {
 	$prev = get_previous_post();
 	$next = get_next_post();
 	if ( $prev && $next ) {
-		echo " | ";
+		$d = " | ";
+		echo apply_filters( 'post_link_delim', $d );
 	}
 }
 
@@ -602,7 +603,8 @@ function delim_posts_link() {
 	$prev = get_previous_posts_link();
 	$next = get_next_posts_link();
 	if ( $prev && $next ) {
-		echo " | ";
+		$d = " | ";
+		echo apply_filters( 'posts_link_delim', $d );
 	}
 }
 
@@ -613,7 +615,8 @@ function delim_comment_link() {
 	$prev = get_previous_comments_link();
 	$next = get_next_comments_link();
 	if ( $prev && $next ) {
-		echo " | ";
+		$d = " | ";
+		echo apply_filters( 'comment_link_delim', $d );
 	}
 }
 
@@ -633,7 +636,8 @@ function delim_image_link() {
 	ob_end_clean();
 
 	if ( $prev && $next ) {
-		echo " | ";
+		$d = " | ";
+		echo apply_filters( 'image_link_delim', $d );
 	}
 }
 
