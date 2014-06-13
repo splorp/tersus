@@ -11,7 +11,7 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php if (show_post_link_nav()): ?>
-	<p><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></p>
+	<nav><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></nav>
 <?php endif; ?>
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -46,7 +46,7 @@
 	</article>
 
 <?php if (show_post_link_nav()): ?>
-	<p><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></p>
+	<nav><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></nav>
 <?php endif; ?>
 
 <?php comments_template(); ?>
