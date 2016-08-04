@@ -240,7 +240,8 @@ if ( ! function_exists( 'tersus_body_class' ) ) {
 
 		// Filter the unwanted classes
 		$wp_class_list = array_intersect($wp_class_list, $whitelist);
-
+		$tersus_body_class = $wp_class_list;
+		
 		// Output allowed classes
 		return array_merge($wp_class_list, (array) $tersus_body_class);
 	}
