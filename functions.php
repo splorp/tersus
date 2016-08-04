@@ -168,7 +168,7 @@ add_action('admin_menu', 'tersus_add_admin');
 // http://codex.wordpress.org/Automatic_Feed_Links
 
 add_theme_support( 'automatic-feed-links' );
-	
+
 
 // Post format support
 // http://codex.wordpress.org/Post_Formats
@@ -206,6 +206,7 @@ remove_action('wp_head', 'parent_post_rel_link');
 
 register_sidebar(array(
 	'name'=>'Sidebar1',
+	'id'=>'sidebar-1',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h2 class="widgettitle">',
@@ -214,6 +215,7 @@ register_sidebar(array(
 
 register_sidebar(array(
 	'name'=>'Sidebar2',
+	'id'=>'sidebar-2',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h2 class="widgettitle">',
@@ -357,7 +359,7 @@ if ( ! function_exists( 'tersus_decruft_tagcloud' ) ) {
 	}
 
 	add_filter('wp_tag_cloud','tersus_decruft_tagcloud');
-}	
+}
 
 
 // Remove crufty class attributes from avatars
@@ -527,8 +529,8 @@ if ( ! function_exists( 'tersus_rss_thumb' ) ) {
 	   return $content;
 	}
 
-	add_filter('the_excerpt_rss', 'tersus_rss_thumb');  
-	add_filter('the_content_feed', 'tersus_rss_thumb'); 
+	add_filter('the_excerpt_rss', 'tersus_rss_thumb');
+	add_filter('the_content_feed', 'tersus_rss_thumb');
 }
 
 
@@ -647,7 +649,7 @@ function delim_image_link() {
 if ( ! function_exists( 'tersus_excerpt_more' ) ) {
 	function tersus_excerpt_more($more) {
 		global $post;
-		$t = get_post($post->ID); 
+		$t = get_post($post->ID);
 		$title = $t->post_title;
 		return ' &#8230; <a href="' . get_permalink($post->ID) . '" title="Read the rest of &#8220;' . $title . '&#8221;">Read the rest of this item</a>';
 	}
