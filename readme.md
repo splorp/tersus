@@ -31,7 +31,7 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + Two widget-enabled sidebar areas
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
-+ Passes WordPress [Theme Check Guidelines](http://make.wordpress.org/themes/guidelines/guidelines-theme-check/)
++ WordPress [Theme Check Guidelines](http://make.wordpress.org/themes/guidelines/guidelines-theme-check/) compliance (a work in progress)
 
 
 ## Child Themes
@@ -70,7 +70,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 ### 0.3.1 — The “Missing, Inaction” Release
 
 + Fixed error where `$tersus_body_class` wasn’t defined in `functions.php`
-+ Added `id` attributes to `register_sidebar()` function per WordPress 4.2.0 requirements
++ Added `id` attributes to `register_sidebar()` function per WordPress 4.2 requirements
 + Updated to HTML5 Shiv 3.7.3
 
 
