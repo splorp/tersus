@@ -67,6 +67,13 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
+### 0.3.1 — The “Missing, Inaction” Release
+
++ Fixed error where `$tersus_body_class` wasn’t defined in `functions.php`
++ Added `id` attributes to `register_sidebar()` function per WordPress 4.2.0 requirements
++ Updated to HTML5 Shiv 3.7.3
+
+
 ### 0.3.0 — The “Chk-Chk-Boom” Release
 
 + Theme passes WordPress Theme Check Guidelines
@@ -83,6 +90,8 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
++ Custom link delimiter functions are now filterable too
++ Changed post and page navigation to `<nav>` elements
 + Updated to HTML5 Shiv 3.7.2
 
 
