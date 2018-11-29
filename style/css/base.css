@@ -46,6 +46,7 @@ acronym,
 acronym[title] {
 	border-bottom: 1px dotted #000;
 	cursor: help;
+	text-decoration: none;
 	}
 
 em {
