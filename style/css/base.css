@@ -41,7 +41,9 @@ optgroup {
 	}
 
 abbr,
-acronym {
+abbr[title],
+acronym,
+acronym[title] {
 	border-bottom: 1px dotted #000;
 	cursor: help;
 	}
