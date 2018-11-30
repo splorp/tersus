@@ -19,27 +19,23 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-
-		<!-- Apple device icons -->
-		<!-- iPhone non-retina -->
+		<!-- iPhone non-Retina icon -->
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-57x57-precomposed.png" />
-		<!-- iPad non-retina -->
+		<!-- iPad non-Retina icon -->
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-72x72-precomposed.png" />
-		<!-- iPad non-retina iOS 7 -->
+		<!-- iPad non-Retina icon (iOS 7+) -->
 		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-76x76-precomposed.png" />
-		<!-- iPhone retina -->
+		<!-- iPhone Retina icon -->
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-114x114-precomposed.png" />
-		<!-- iPhone retina iOS 7 -->
+		<!-- iPhone Retina icon (iOS 7+) -->
 		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-120x120-precomposed.png" />
-		<!-- iPad retina -->
+		<!-- iPad Retina icon -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-144x144-precomposed.png" />
-		<!-- iPad retina iOS 7 -->
+		<!-- iPad Retina icon (iOS 7+) -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-152x152-precomposed.png" />
-
-		<!-- Windows 8 device pinned site tile -->
+		<!-- Windows 8 pinned site tile -->
 		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/style/img/msapplication-tileimage-144x144.png" />
 		<meta name="msapplication-TileColor" content="#bfbfbf" />
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!--[if (lt IE 9) & (!IEMobile 7)]>

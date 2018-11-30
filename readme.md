@@ -71,7 +71,9 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 + Fixed error where `$tersus_body_class` wasn’t defined in `functions.php`
 + Added `id` attributes to `register_sidebar()` function per WordPress 4.2 requirements
++ Fixed duplicate `text-decoration` attributes on `<abbr>` and `acronym` elements
 + Updated to HTML5 Shiv 3.7.3
++ Removed deprecated theme tags
 
 
 ### 0.3.0 — The “Chk-Chk-Boom” Release
