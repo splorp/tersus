@@ -9,12 +9,6 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title('&mdash;', true, 'right'); ?></title>
-		<?php
-			global $options;
-			foreach ($options as $value) {
-				if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-			}
-		?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -49,16 +43,19 @@
 
 	<body <?php body_class(); ?>>
 		<header>
-			<?php if ($tersus_announcement_display == "1"): ?>
+			<?php if (get_option('tersus_announcement_display') == "1"): ?>
 			<section id="announcement">
-				<?php echo (stripslashes($tersus_announcement)); ?>
+			<?php
+				$tersus_announcement = get_option('tersus_announcement');
+				echo (stripslashes($tersus_announcement));
+			?>
 			</section>
 			<?php endif; ?>			
 			<h1><a href="<?php echo home_url(); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
 		
-		<?php if ($tersus_navigation_display == "1"): ?>
+		<?php if (get_option('tersus_navigation_display') == "1"): ?>
 		<nav role="navigation">
 			<?php
 				$menuParameters = array(

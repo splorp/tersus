@@ -4,20 +4,13 @@
  * @subpackage Tersus
  */
 ?>
-
-<?php
-	global $options;
-	foreach ($options as $value) {
-		if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-	}
-?>
-
 		<footer>
 			<?php
-			if ($tersus_footer_display == "1"):
+			if (get_option('tersus_footer_display') == "1"):
+				$tersus_footer_text = get_option('tersus_footer_text');
 				echo (stripslashes($tersus_footer_text));
 			endif;
-			if ($tersus_theme_information == "1"): ?>
+			if (get_option('tersus_theme_information') == "1"): ?>
 			<ul>
 				<li>Powered by <a href="http://wordpress.org/" rel="external" title="Code is poetry.">WordPress <?php bloginfo('version'); ?></a></li>
 				<li>Themed by <a href="<?php echo THEME_URI; ?>" rel="external" title="<?php echo THEME_DESCRIPTION; ?>"><?php echo THEME_NAME; ?> <?php echo THEME_VERSION; ?></a></li>
