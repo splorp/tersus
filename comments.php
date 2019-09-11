@@ -28,13 +28,6 @@ if ( have_comments() ) : ?>
 	<nav><?php previous_comments_link('Older'); delim_comment_link(); next_comments_link('Newer') ?></nav>
 <?php endif; ?>
 
-<?php else :					// No comments posted
-	if ( comments_open() ) :	// Comments are open, but no comments posted
-	else :						// Comments are closed
-	?>
-	<p>Comments are closed.</p>
-	<?php endif; ?>
-
 <?php endif; ?>
 
 <?php if ( comments_open() ) :
