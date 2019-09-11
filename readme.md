@@ -10,11 +10,11 @@ Tersus is an exercise in publishing template minimalism.
 
 Why create yet another theme? Well, as clean and stripped down as some themes are, we wanted to prune things a bit further.
 
-Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](http://wordpress.org/) theme already using that very name. After a brief discussion, several Latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely — and here we are.
+Tersus was originally named Simplicity — a term that described exactly what the project was all about. However, that was prior to the discovery of a [WordPress](https://wordpress.org/) theme already using that very name. After a brief discussion, several Latin terms were bandied about as replacements. Tersus (which means ‘clean, neat, or cleansed’) seemed to fit the bill rather nicely — and here we are.
 
-A version of Tersus is being developed for [Tumblr](http://tersustheme.tumblr.com/) and is also [available on GitHub](http://github.com/splorp/tersus-tumblr/).
+A version of Tersus is being developed for [Tumblr](https://tersustheme.tumblr.com/) and is also [available on GitHub](https://github.com/splorp/tersus-tumblr/).
 
-Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
+Keep track of Tersus development on [Twitter](https://twitter.com/tersustheme).
 
 
 ## Requirements
@@ -31,27 +31,27 @@ Keep track of Tersus development on [Twitter](http://twitter.com/tersustheme).
 + Two widget-enabled sidebar areas
 + Responsive, adaptive layout for small screens
 + Clean, valid, and awesome
-+ WordPress [Theme Check Guidelines](http://make.wordpress.org/themes/guidelines/guidelines-theme-check/) compliance (a work in progress)
++ WordPress [Theme Review Process](https://make.wordpress.org/themes/handbook/review/) compliance (a work in progress)
 
 
 ## Child Themes
 
 By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
 
-+ [Newted](http://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
-+ [Splorp](http://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
++ [Newted](httsp://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
++ [Splorp](https://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
 + [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
 
 
 ## Credits
 
-Tersus is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](http://splorp.me/), [Dan Rubin](http://danielrubin.org/), and [Andy van der Raadt](http://nicemodernist.com/).
+Tersus is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](https://splorp.me/), [Dan Rubin](http://danrubin.is/), and [Andy van der Raadt](https://nicemodernist.com/).
 
 Lovely chaps, all of them.
 
-The groundwork for Tersus was based on the [Starkers](http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](http://elliotjaystocks.com/).
+The groundwork for Tersus was based on the [Starkers](https://web.archive.org/web/20111007044007/http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](https://elliotjaystocks.com/).
 
-We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](http://twitter.com/avengio), [Adam Chamberlin](http://shibbyonline.co.uk/), [David Kendal](http://davidkendal.net/), [BBEdit](http://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub for Mac](http://mac.github.com/), Google’s [Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets), [HTML5 Shiv](https://github.com/aFarkas/html5shiv), and [Theme-Check](http://pross.org.uk/plugins/theme-check/).
+We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](https://twitter.com/avengio), [Adam Chamberlin](https://shibbyonline.co.uk/), [Daphne Preston-Kendal](http://dpk.io/), [BBEdit](https://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub Desktop](https://desktop.github.com/), Google’s [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/), [HTML5 Shiv](https://github.com/aFarkas/html5shiv), and [Theme Check](https://wordpress.org/plugins/theme-check/).
 
 Cheers.
 
@@ -60,7 +60,7 @@ Cheers.
 
 The Tersus theme is absolutely free and conveniently licensed under GPL. You may use it for personal or commercial projects, as you see fit. Please refer to the [license.txt](https://github.com/splorp/tersus/blob/master/license.txt) file included with the source for more information.
 
-Portions of the stylesheets are based on the [YUI CSS Reset](http://developer.yahoo.com/yui/reset/) and [YUI CSS Base](http://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](http://developer.yahoo.com/yui/). All of the [YUI Library](http://developer.yahoo.com/yui/ "Copyright © Yahoo! Inc. All rights reserved") components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/).
+Portions of the stylesheets are based on the [YUI CSS Reset](https://web.archive.org/web/20170104054347/https://developer.yahoo.com/yui/reset/) and [YUI CSS Base](https://web.archive.org/web/20160728104648/https://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](https://web.archive.org/web/20160728022010/http://yuilibrary.com/). All of the [YUI Library](https://web.archive.org/web/20160728022010/http://yuilibrary.com/ "Copyright © Yahoo! Inc. All rights reserved") components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/).
 
 The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under MIT/GPL2.
 
