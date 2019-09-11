@@ -73,6 +73,8 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Added `id` attributes to `register_sidebar()` function per WordPress 4.2 requirements
 + Added `Text Domain` field to `style.css` header
 + Fixed duplicate `text-decoration` attributes on `<abbr>` and `<acronym>` elements
++ Custom link delimiter functions are now filterable
++ Changed post and page navigation to `<nav>` elements
 + Updated to HTML5 Shiv 3.7.3
 + Removed deprecated theme tags
 
@@ -93,8 +95,6 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
-+ Custom link delimiter functions are now filterable too
-+ Changed post and page navigation to `<nav>` elements
 + Updated to HTML5 Shiv 3.7.2
 
 
