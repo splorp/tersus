@@ -19,7 +19,7 @@ Keep track of Tersus development on [Twitter](https://twitter.com/tersustheme).
 
 ## Requirements
 
-* WordPress 3.4 or later
+* WordPress 4.1 or later
 
 
 ## Features
@@ -69,19 +69,22 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.3.1 — The “Missing, Inaction” Release
 
++ Theme now requires WordPress 4.1 or later
 + Fixed error where `$tersus_body_class` wasn’t defined in `functions.php`
 + Added `id` attributes to `register_sidebar()` function per WordPress 4.2 requirements
 + Added `Text Domain` field to `style.css` header
 + Fixed duplicate `text-decoration` attributes on `<abbr>` and `<acronym>` elements
++ Fixed broken display of theme options
 + Custom link delimiter functions are now filterable
 + Changed post and page navigation to `<nav>` elements
-+ Updated to HTML5 Shiv 3.7.3
++ Removed duplicate closed comments messaging
++ Embiggened theme screenshot, yet again
 + Removed deprecated theme tags
++ Updated to HTML5 Shiv 3.7.3
 
 
 ### 0.3.0 — The “Chk-Chk-Boom” Release
 
-+ Theme passes WordPress Theme Check Guidelines
 + Added `$content_width` theme feature
 + Added `alt` attributes to post and comment author avatars
 + Reinstated `body_class()` function with an extremely stripped down set of classes
@@ -123,7 +126,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Added a handful of declarations for WordPress-generated classes to `core.css`
 + Added icons to support iOS 7
 + Updated all iOS and Windows 8 icons for typographic consistency
-+ Embiggened theme screenshot to WordPress 3.8 specifications
++ Embiggened theme screenshot, again
 + Replaced the rather free spirited theme tags with official WordPress tags
 + Changed all raw high-ASCII characters to HTML entities
 
