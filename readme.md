@@ -38,7 +38,7 @@ Keep track of Tersus development on [Twitter](https://twitter.com/tersustheme).
 
 By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
 
-+ [Newted](httsp://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
++ [Newted](https://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
 + [Splorp](https://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
 + [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
 
