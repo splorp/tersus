@@ -24,10 +24,10 @@
 			<?php if (is_404()) { ?>
 
 			<?php } elseif (is_category()) { ?>
-				<p>You are browsing the <strong>&#8220;<?php single_cat_title(''); ?>&#8221;</strong> category archive.</p>
+				<p>You are browsing the <strong>“<?php single_cat_title(''); ?>”</strong> category archive.</p>
 
 			<?php } elseif (is_tag()) { ?>
-				<p>You are browsing the <strong>&#8220;<?php single_tag_title(''); ?>&#8221;</strong> tag archive.</p>
+				<p>You are browsing the <strong>“<?php single_tag_title(''); ?>”</strong> tag archive.</p>
 
 			<?php } elseif (is_day()) { ?>
 				<p>You are browsing the <strong><?php the_time('l, F jS, Y'); ?></strong> archive.</p>
@@ -39,7 +39,7 @@
 				<p>You are browsing the <strong><?php the_time('Y'); ?></strong> archive.</p>
 
 			<?php } elseif (is_search()) { ?>
-				<p>You are browsing the search results for <strong>&#8220;<?php the_search_query(); ?>&#8221;</strong>.</p>
+				<p>You are browsing the search results for <strong>“<?php the_search_query(); ?>”</strong>.</p>
 
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 				<p>You are browsing the archive.</p>

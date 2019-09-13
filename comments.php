@@ -14,7 +14,7 @@ if ( post_password_required() ) { ?>
 }
 
 if ( have_comments() ) : ?>
-	<h3><?php comments_number('No Comments', 'One comment', '% comments' );?> on &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3><?php comments_number('No Comments', 'One comment', '% comments' );?> on “<?php the_title(); ?>”</h3>
 
 	<ol>
 		<?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
