@@ -67,6 +67,12 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ## Version History
 
+### 0.4.0 — The “Burn It All Down” Release
+
++ Removed duplicate post and page navigation located above the content
++ Converted HTML entities to their equivalent characters
+
+
 ### 0.3.1 — The “Missing, Inaction” Release
 
 + Theme now requires WordPress 4.1 or later
