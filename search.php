@@ -12,10 +12,6 @@
 
 	<h2>Search: &#8220;<span><?php the_search_query(); ?></span>&#8221;</h2>
 
-<?php if (show_posts_link_nav()): ?>
-	<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
-<?php endif; ?>
-
 	<?php while (have_posts()) : the_post(); ?>
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">

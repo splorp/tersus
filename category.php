@@ -25,10 +25,6 @@
 			}
  		?>
 
-		<?php if (show_posts_link_nav()): ?>
-			<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
-		<?php endif; ?>
-
 		<?php
 			/* Start the Loop */
 

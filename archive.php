@@ -25,10 +25,6 @@
 		<h2>Archives</h2>
 	<?php } ?>
 
-	<?php if (show_posts_link_nav()): ?>
-		<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
-	<?php endif; ?>
-
 	<?php while (have_posts()) : the_post(); ?>
 		
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">

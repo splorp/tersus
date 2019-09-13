@@ -16,10 +16,6 @@ if ( post_password_required() ) { ?>
 if ( have_comments() ) : ?>
 	<h3><?php comments_number('No Comments', 'One comment', '% comments' );?> on &#8220;<?php the_title(); ?>&#8221;</h3>
 
-<?php if (show_comments_link_nav()): ?>
-	<nav><?php previous_comments_link('Older'); delim_comment_link(); next_comments_link('Newer') ?></nav>
-<?php endif; ?>
-
 	<ol>
 		<?php wp_list_comments('type=comment&callback=tersus_comment'); ?>
 	</ol>

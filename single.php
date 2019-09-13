@@ -10,10 +10,6 @@
 <section id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<?php if (show_post_link_nav()): ?>
-	<nav><?php previous_post_link('%link'); delim_post_link(); next_post_link('%link') ?></nav>
-<?php endif; ?>
-
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
