@@ -58,11 +58,11 @@ del {
 	}
 
 blockquote, ul, ol, dl {
-	margin: 1em;
+	margin: 1.0em;
 	}
 
 ol, ul, dl {
-	margin-left: 2em;
+	margin-left: 2.0em;
 	}
 
 ol li {
@@ -104,7 +104,7 @@ p,
 fieldset,
 table,
 pre {
-	margin-bottom: 1em;
+	margin-bottom: 1.0em;
 	}
 
 /*
