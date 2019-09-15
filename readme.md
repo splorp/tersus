@@ -36,10 +36,10 @@ Keep track of Tersus development on [Twitter](https://twitter.com/tersustheme).
 
 ## Child Themes
 
-By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently two child themes being developed for Tersus.
+By removing the majority of the presentational markup and other cruft from the Tersus parent theme, we’ve opened the door for child themes to pick up the aesthetic slack. There are currently three child themes being developed for Tersus.
 
-+ [Newted](https://github.com/splorp/newted/) by [Grant Hutchinson](http://splorp.me/)
-+ [Splorp](https://github.com/splorp/splorp/) by [Grant Hutchinson](http://splorp.me/)
++ [Newted](https://github.com/splorp/newted/) by [Grant Hutchinson](https://splorp.me/)
++ [Splorp](https://github.com/splorp/splorp/) by [Grant Hutchinson](https://splorp.me/)
 + [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
 
 
@@ -69,8 +69,9 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 
 ### 0.4.0 — The “Burn It All Down” Release
 
++ Added `.screen-reader-text` class to `core.css` per [Theme Check](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) requirements 
 + Removed duplicate post and page navigation located above the content
-+ Converted HTML entities to their equivalent characters
++ Changed all HTML entities back to their original ASCII characters
 
 
 ### 0.3.1 — The “Missing, Inaction” Release
@@ -84,9 +85,9 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Custom link delimiter functions are now filterable
 + Changed post and page navigation to `<nav>` elements
 + Removed duplicate closed comments messaging
-+ Embiggened theme screenshot, yet again
++ Embiggened theme screenshot, this time with feeling
 + Removed deprecated theme tags
-+ Updated to HTML5 Shiv 3.7.3
++ Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.3
 
 
 ### 0.3.0 — The “Chk-Chk-Boom” Release
@@ -104,7 +105,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Decrufting filters are no longer applied to avatars on admin pages
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
-+ Updated to HTML5 Shiv 3.7.2
++ Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.2
 
 
 ### 0.2.2 — The “Pretty Pony” Release
@@ -148,7 +149,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Embiggened theme avatar to support HiDPI displays
 + Added support for the proliferation of various iOS and Windows 8 iconography
 + Added specificity to the `[if IE]` conditional
-+ Updated to HTML5 Shiv 3.7.0
++ Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.0
 + Replaced deprecated `get_settings` function with `get_option`
 + Replaced deprecated `wp_specialchars` function with `esc_html`
 + Replaced deprecated `automatic_feed_links` function with `add_theme_support`
@@ -172,7 +173,7 @@ The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under 
 + Added theme option to toggle the display of theme information in the footer
 + Added `language` attribute to `<html>` element
 + Simplified subcategory lists
-+ Replaced the externally linked HTML5 Shiv with a local, minified version
++ Replaced the externally linked [HTML5 Shiv](https://github.com/afarkas/html5shiv) with a local, minified version
 + Embiggened theme screenshot
 
 
