@@ -40,12 +40,12 @@ By removing the majority of the presentational markup and other cruft from the T
 
 + [Newted](https://github.com/splorp/newted/) by [Grant Hutchinson](https://splorp.me/)
 + [Splorp](https://github.com/splorp/splorp/) by [Grant Hutchinson](https://splorp.me/)
-+ [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](http://cdharrison.com/)
++ [Super Ginormous](https://github.com/cdharrison/super-ginormous) by [Chris Harrison](https://cdharrison.com/)
 
 
 ## Credits
 
-Tersus is brought to you by [Chris Harrison](http://cdharrison.com/), [Grant Hutchinson](https://splorp.me/), [Dan Rubin](http://danrubin.is/), and [Andy van der Raadt](https://nicemodernist.com/).
+Tersus is brought to you by [Chris Harrison](https://cdharrison.com/), [Grant Hutchinson](https://splorp.me/), [Dan Rubin](http://danrubin.is/), and [Andy van der Raadt](https://andy.vanderraadt.codes/).
 
 Lovely chaps, all of them.
 
@@ -62,16 +62,16 @@ The Tersus theme is absolutely free and conveniently licensed under GPL. You may
 
 Portions of the stylesheets are based on the [YUI CSS Reset](https://web.archive.org/web/20170104054347/https://developer.yahoo.com/yui/reset/) and [YUI CSS Base](https://web.archive.org/web/20160728104648/https://developer.yahoo.com/yui/base/) tools provided as part of the [Yahoo! User Interface Library](https://web.archive.org/web/20160728022010/http://yuilibrary.com/). All of the [YUI Library](https://web.archive.org/web/20160728022010/http://yuilibrary.com/ "Copyright © Yahoo! Inc. All rights reserved") components are provided free of charge under a liberal [BSD license](http://yuilibrary.com/license/).
 
-The [HTML5 Shiv](https://github.com/afarkas/html5shiv) script is licensed under MIT/GPL2.
-
 
 ## Version History
 
 ### 0.4.0 — The “Burn It All Down” Release
 
 + Added `.screen-reader-text` class to `core.css` per [Theme Check](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) requirements 
++ Fixed improperly defined category and tag variables in `404.php`
 + Removed duplicate post and page navigation located above the content
 + Changed all HTML entities back to their original ASCII characters
++ Removed [HTML5 Shiv](https://github.com/afarkas/html5shiv) because it was time
 
 
 ### 0.3.1 — The “Missing, Inaction” Release
