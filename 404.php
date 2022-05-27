@@ -16,14 +16,14 @@
  * cf. Settings > Permalinks > Optional
 */
 
-	$c == get_option('category_base');
+	$c = get_option('category_base');
 	if ($c == '') {
 		$category_base = "/category/";
 	} else {
 		$category_base = "/" . $c . "/";
 	}
 
-	$t == get_option('tag_base');
+	$t = get_option('tag_base');
 	if ($t == '') {
 		$tag_base = "/tag/";
 	} else {
