@@ -46,9 +46,6 @@
 			printf("<h2>Sorry, but there aren’t any posts in the %s category yet.</h2>", single_cat_title('',false));
 		} elseif ( is_date() ) {
 			echo("<h2>Sorry, but there aren’t any posts with this date.</h2>");
-		} elseif ( is_author() ) {
-			$userdata = get_userdatabylogin(get_query_var('author_name'));
-			printf("<h2>Sorry, but there aren’t any posts by %s yet.</h2>", $userdata->display_name);
 		} else {
 			echo("<h2>Sorry, no posts found.</h2>");
 		}
