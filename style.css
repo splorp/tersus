@@ -5,6 +5,9 @@ Description: An achingly simple WordPress theme without all the usual cruft.
 Author: Chris Harrison, Grant Hutchinson, Dan Rubin, Andy van der Raadt
 Author URI: http://tersustheme.com/
 Version: 0.4.0
+Requires at least: 5.0
+Tested up to: 5.9
+Requires PHP: 7.0
 License: GNU General Public License
 License URI: https://raw.github.com/splorp/tersus/master/license.txt
 Text Domain: tersus
