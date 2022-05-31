@@ -38,7 +38,12 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<header>
+	<?php
+		if (function_exists('wp_body_open')) {
+		wp_body_open();
+		}
+	?>
+    	<header>
 			<?php if (get_option('tersus_announcement_display') == "1"): ?>
 			<section id="announcement">
 			<?php

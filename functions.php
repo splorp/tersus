@@ -163,6 +163,13 @@ if ( ! function_exists( 'tersus_admin' ) ) {
 
 add_action('admin_menu', 'tersus_add_admin');
 
+// Document title tage support
+// https://codex.wordpress.org/Title_Tag
+
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+function theme_slug_setup() {
+	add_theme_support( 'title-tag' );
+}
 
 // Automatic feed links support
 // http://codex.wordpress.org/Automatic_Feed_Links
