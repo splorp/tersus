@@ -78,7 +78,7 @@ Portions of the stylesheets are based on the [YUI CSS Reset](https://web.archive
 
 + Theme now requires WordPress 4.1 or later
 + Fixed error where `$tersus_body_class` wasn’t defined in `functions.php`
-+ Added `id` attributes to `register_sidebar()` function per WordPress 4.2 requirements
++ Added `id` attributes to `register_sidebar()` function
 + Added `Text Domain` field to `style.css` header
 + Fixed duplicate `text-decoration` attributes on `<abbr>` and `<acronym>` elements
 + Fixed broken display of theme options
@@ -152,7 +152,7 @@ Portions of the stylesheets are based on the [YUI CSS Reset](https://web.archive
 + Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.0
 + Replaced deprecated `get_settings` function with `get_option`
 + Replaced deprecated `wp_specialchars` function with `esc_html`
-+ Replaced deprecated `automatic_feed_links` function with `add_theme_support`
++ Replaced deprecated `automatic_feed_links` function with `add_theme_support` equivalent
 + Fixed ‘undefined index’ debug errors in theme admin functions
 + Fixed ‘undefined variable’ debug error in `simple_post_class` function
 + Fixed ‘undefined variable’ debug error in `searchform.php`

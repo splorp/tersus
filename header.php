@@ -52,7 +52,7 @@
 			?>
 			</section>
 			<?php endif; ?>			
-			<h1><a href="<?php echo echo esc_url(home_url()); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
+			<h1><a href="<?php echo esc_url(home_url()); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
 		

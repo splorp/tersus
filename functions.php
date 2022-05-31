@@ -176,12 +176,10 @@ function theme_slug_setup() {
 
 add_theme_support( 'automatic-feed-links' );
 
-
 // Post format support
 // http://codex.wordpress.org/Post_Formats
 
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
-
 
 // Add support for the_post_thumbnail
 // http://codex.wordpress.org/Post_Thumbnails
