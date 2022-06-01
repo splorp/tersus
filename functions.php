@@ -191,13 +191,14 @@ if ( ! function_exists('theme_support_features') ) {
 // Page menu support
 // http://codex.wordpress.org/Function_Reference/register_nav_menus
 
-function register_my_menus() {
-	register_nav_menus(
-		array( 'header-menu' => 'Header Menu' )
-	);
+if ( ! function_exists('register_my_menus') ) {
+	function register_my_menus() {
+		register_nav_menus(
+			array( 'header-menu' => __('Header Menu', 'tersus') )
+		);
+	}
+	add_action( 'init', 'register_my_menus' );
 }
-
-add_action( 'init', 'register_my_menus' );
 
 
 // Remove non-validating parent post link from header
