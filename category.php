@@ -16,7 +16,7 @@
 			if ( ! empty( $category_description ) )
 				echo apply_filters( 'category_archive_meta', '' . $category_description . '' );
 			$cat_ID = get_query_var('cat');
-			$children=  get_categories('child_of='.$cat_ID) ;
+			$children = get_categories('child_of='.$cat_ID) ;
 			if ( $children && $children != 'No Children.' ) {
 				echo '<p><strong>Subcategories:</strong></p>';
 				echo '<ul>';

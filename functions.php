@@ -77,7 +77,7 @@ if ( ! function_exists( 'tersus_add_admin' ) ) {
 				}
 				foreach ($options as $value) {
 					if( isset( $_REQUEST[ $value['id'] ] ) ) {
-						update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+						update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 					} else {
 						delete_option( $value['id'] );
 					}
@@ -166,7 +166,7 @@ add_action('admin_menu', 'tersus_add_admin');
 // Theme feature support
 
 if ( ! function_exists('theme_support_features') ) {
-	function theme_support_features()  {
+	function theme_support_features() {
 
 		// Add theme support for automatic feed links
 		// http://codex.wordpress.org/Automatic_Feed_Links
@@ -232,9 +232,9 @@ register_sidebar(array(
 // Required by Theme Check Guidelines
 // http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
 
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
 	$content_width = 600;
-
+}
 
 // Replace default body class verbosity
 
@@ -296,7 +296,7 @@ if ( ! function_exists( 'tersus_relfix' ) ) {
 if ( ! function_exists( 'tersus_remove_style' ) ) {
 	function tersus_remove_style() {
 		global $wp_widget_factory;
-		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'  ) );
+		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 	}
 
 	add_action( 'widgets_init', 'tersus_remove_style' );
@@ -474,14 +474,14 @@ if ( ! function_exists( 'tersus_gallery' ) ) {
 
 		$i = 0;
 		foreach ( $attachments as $id => $attachment ) {
-		  ++$i;
+			++$i;
 			$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
 
 			if ($itemtag) {
 				$output .= "<" .$itemtag. ">";
 			}
 			if ($icontag) $output .= "\n\t<" .$icontag. ">\t";
-			$output .=  "\n\t".$link;
+			$output .= "\n\t".$link;
 			if ($icontag) $output .= "\n\t</" .$icontag. ">";
 			// if the attachment has a caption set
 			if ( trim($attachment->post_excerpt) ) {

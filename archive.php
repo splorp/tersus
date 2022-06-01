@@ -42,7 +42,7 @@
 	<?php endif; ?>
 		
 	<?php else :
-    	if ( is_category() ) {
+		if ( is_category() ) {
 			printf("<h2>Sorry, but there aren’t any posts in the %s category yet.</h2>", single_cat_title('',false));
 		} elseif ( is_date() ) {
 			echo("<h2>Sorry, but there aren’t any posts with this date.</h2>");
