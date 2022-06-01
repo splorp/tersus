@@ -59,14 +59,14 @@
 		<?php if (get_option('tersus_navigation_display') == "1"): ?>
 		<nav role="navigation">
 			<?php
-				$menuParameters = array(
-				  'container'       => false,
-				  'echo'            => true,
-				  'items_wrap'      => '<ul>%3$s</ul>',
-				  'depth'           => 0,
-				  'fallback_cb'		=> false,
-				);				
-				echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+				echo strip_tags(wp_nav_menu(array(
+					'container'      => false,
+					'echo'           => true,
+					'items_wrap'     => '<ul>%3$s</ul>',
+					'depth'          => 0,
+					'fallback_cb'    => false,
+					'theme_location' => 'header-menu',
+				)), '<a>' );
 			?>
 		</nav>
 		<?php endif; ?>
