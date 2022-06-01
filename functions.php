@@ -163,30 +163,29 @@ if ( ! function_exists( 'tersus_admin' ) ) {
 
 add_action('admin_menu', 'tersus_add_admin');
 
-// Document title tage support
-// https://codex.wordpress.org/Title_Tag
+// Theme feature support
 
-add_action( 'after_setup_theme', 'theme_slug_setup' );
-function theme_slug_setup() {
-	add_theme_support( 'title-tag' );
+if ( ! function_exists('theme_support_features') ) {
+	function theme_support_features()  {
+
+		// Add theme support for automatic feed links
+		// http://codex.wordpress.org/Automatic_Feed_Links
+		add_theme_support( 'automatic-feed-links' );
+
+		// Add theme support for post formats
+		// http://codex.wordpress.org/Post_Formats
+		add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
+
+		// Add theme support for featured images
+		// http://codex.wordpress.org/Post_Thumbnails
+		add_theme_support( 'post-thumbnails' );
+
+		// Add theme support for document title tag
+		// https://codex.wordpress.org/Title_Tag
+		add_theme_support( 'title-tag' );
+	}
+	add_action( 'after_setup_theme', 'theme_support_features' );
 }
-
-// Automatic feed links support
-// http://codex.wordpress.org/Automatic_Feed_Links
-
-add_theme_support( 'automatic-feed-links' );
-
-// Post format support
-// http://codex.wordpress.org/Post_Formats
-
-add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
-
-// Add support for the_post_thumbnail
-// http://codex.wordpress.org/Post_Thumbnails
-
-add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 600, 9999, true );    // Normal post thumbnails
-add_image_size( 'archive-thumbnail', 50, 50 ); // Permalink thumbnail size
 
 
 // Page menu support
