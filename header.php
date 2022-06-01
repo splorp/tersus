@@ -9,13 +9,11 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title('&mdash;', true, 'right'); ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-
 		<?php wp_head(); ?>
 	</head>
 
@@ -25,7 +23,7 @@
 		wp_body_open();
 		}
 	?>
-    	<header>
+		<header>
 			<?php if (get_option('tersus_announcement_display') == "1"): ?>
 			<section id="announcement">
 			<?php

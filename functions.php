@@ -487,9 +487,9 @@ if ( ! function_exists( 'tersus_gallery' ) ) {
 			if ($icontag) $output .= "\n\t</" .$icontag. ">";
 			// if the attachment has a caption set
 			if ( trim($attachment->post_excerpt) ) {
-			  if ($captiontag) $output .= "\n<" .$captiontag. ">\n\t";
-			  $output .= wptexturize($attachment->post_excerpt);
-			  if ($captiontag) $output .= "\n</" .$captiontag. ">" . "\n";
+				if ($captiontag) $output .= "\n<" .$captiontag. ">\n\t";
+				$output .= wptexturize($attachment->post_excerpt);
+				if ($captiontag) $output .= "\n</" .$captiontag. ">" . "\n";
 			}
 			if ($itemtag) $output .= "\n</" .$itemtag. ">\n";
 			if ( $columns > 0 && $i % $columns == 0 ) $output .= "\n";
@@ -530,11 +530,11 @@ if ( ! function_exists( 'tersus_comment' ) ) {
 
 if ( ! function_exists( 'tersus_rss_thumb' ) ) {
 	function tersus_rss_thumb($content) {
-	   global $post;
-	   if ( has_post_thumbnail( $post->ID ) ){
-		   $content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
-	   }
-	   return $content;
+		global $post;
+		if ( has_post_thumbnail( $post->ID ) ){
+			$content = '<p class="image">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</p>' . $content;
+		}
+		return $content;
 	}
 
 	add_filter('the_excerpt_rss', 'tersus_rss_thumb');
