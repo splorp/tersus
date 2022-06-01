@@ -51,7 +51,7 @@ Lovely chaps, all of them.
 
 The groundwork for Tersus was based on the [Starkers](https://web.archive.org/web/20111007044007/http://starkerstheme.com/) theme created by the affable [Elliot Jay Stocks](https://elliotjaystocks.com/).
 
-We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](http://tinypineapple.com/), [Beau Calvez](https://twitter.com/avengio), [Adam Chamberlin](https://shibbyonline.co.uk/), [Daphne Preston-Kendal](http://dpk.io/), [BBEdit](https://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub Desktop](https://desktop.github.com/), Google’s [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/), [HTML5 Shiv](https://github.com/aFarkas/html5shiv), and [Theme Check](https://wordpress.org/plugins/theme-check/).
+We’d also like to give some props to the fine individuals and handy resources which have made the development of Tersus much more enjoyable. Currently on the guest list are [Grettir Asmundarson](https://tinypineapple.com/), [Beau Calvez](https://github.com/beaucalvez), [Adam Chamberlin](https://shibbyonline.co.uk/), [Daphne Preston-Kendal](http://dpk.io/), [BBEdit](https://www.barebones.com/products/bbedit/), [CSS Lint](http://csslint.net/), [GitHub Desktop](https://desktop.github.com/), Google’s [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data), and [Theme Check](https://wordpress.org/plugins/theme-check/).
 
 Cheers.
 
