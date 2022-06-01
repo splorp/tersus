@@ -12,24 +12,6 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-		<!-- iPhone non-Retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-57x57-precomposed.png" />
-		<!-- iPad non-Retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-72x72-precomposed.png" />
-		<!-- iPad non-Retina icon (iOS 7+) -->
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-76x76-precomposed.png" />
-		<!-- iPhone Retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-114x114-precomposed.png" />
-		<!-- iPhone Retina icon (iOS 7+) -->
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-120x120-precomposed.png" />
-		<!-- iPad Retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-144x144-precomposed.png" />
-		<!-- iPad Retina icon (iOS 7+) -->
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/style/img/apple-touch-icon-152x152-precomposed.png" />
-		<!-- Windows 8 pinned site tile -->
-		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/style/img/msapplication-tileimage-144x144.png" />
-		<meta name="msapplication-TileColor" content="#bfbfbf" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
