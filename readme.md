@@ -60,7 +60,11 @@ Cheers.
 
 The Tersus theme is absolutely free and conveniently licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). You may use it for personal or commercial projects, as you see fit. Please refer to the [license.txt](https://github.com/splorp/tersus/blob/master/license.txt) file included with the source for more information.
 
-Portions of the stylesheets are based on the [YUI Library Reset](https://github.com/yui/yui2/tree/master/src/reset) and [YUI Library Base](https://github.com/yui/yui2/tree/master/src/base) tools provided as part of the [Yahoo! User Interface Library](https://github.com/yui/yui2). All of the library components are provided free of charge under a liberal [BSD license](https://github.com/yui/yui3/blob/master/LICENSE.md).
+Copyright © 2010–2022 Chris Harrison, Grant Hutchinson, Dan Rubin, Andy van der Raadt
+
+The [Normalize.css](http://necolas.github.io/normalize.css/) stylesheet included with Tersus has been made available under an [MIT License](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
+
+Copyright © Nicolas Gallagher & Jonathan Neal
 
 
 ## Version History
