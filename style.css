@@ -14,5 +14,6 @@ Text Domain: tersus
 Tags: one-column, full-width-template, post-formats, theme-options, microformats, threaded-comments
 */
 
-@import "style/css/normalize.css";
-@import "style/css/core.css";
+@import "style/css/normalize.css?2022060300";
+@import "style/css/base.css?2022060300";
+@import "style/css/core.css?2022060300";
