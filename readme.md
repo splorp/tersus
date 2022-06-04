@@ -58,7 +58,7 @@ Cheers.
 
 ## Licensing
 
-The Tersus theme is absolutely free and conveniently licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). You may use it for personal or commercial projects, as you see fit. Please refer to the [license.txt](https://github.com/splorp/tersus/blob/master/license.txt) file included with the source for more information.
+The Tersus theme is absolutely free and conveniently licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). You may use it for personal or commercial projects, as you see fit. Please refer to the `license.txt` file included with the source for more information.
 
 Copyright © 2010–2022 Chris Harrison, Grant Hutchinson, Dan Rubin, Andy van der Raadt
 
@@ -71,12 +71,11 @@ Copyright © Nicolas Gallagher & Jonathan Neal
 
 ### 0.4.0 — The “Burn It All Down” Release
 
-+ Added `.screen-reader-text` class to `core.css` per [Theme Check](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) requirements 
++ Added `.screen-reader-text` class to `core.css`
 + Fixed improperly defined category and tag variables in `404.php`
 + Removed duplicate post and page navigation located above the content
 + Changed all HTML entities back to their original ASCII characters
-+ Removed [HTML5 Shiv](https://github.com/afarkas/html5shiv) because it was time
-
++ Removed [HTML5 Shiv](https://github.com/afarkas/html5shiv) because really
 
 ### 0.3.1 — The “Missing, Inaction” Release
 
@@ -246,7 +245,7 @@ Copyright © Nicolas Gallagher & Jonathan Neal
 + Fixed invalid `<textarea>` attributes
 + Removed non-valid, IE-specific CSS selectors
 + Removed `get_search_form()` function from everywhere except the sidebar
-+ Continued HTML5 conversion 
++ Continued HTML5 conversion
 
 
 ### 0.1.2 — The “Dustbunnies” Release
@@ -265,7 +264,7 @@ Copyright © Nicolas Gallagher & Jonathan Neal
 ### 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
 
 + Fixed the ‘headers already sent’ error
-+ Reset and base stylesheets are now based on YUI 2.8.2
++ Reset and base stylesheets are now based on the [Yahoo! User Interface Library](https://github.com/yui/yui2)
 + Added artwork for the screenshot and favicon files
 + Updated `screenshot.png`
 + Updated `favicon.ico`
