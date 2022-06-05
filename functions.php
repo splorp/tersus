@@ -206,9 +206,6 @@ if ( ! function_exists('register_my_menus') ) {
 }
 
 
-// Add site icon
-add_action( 'wp_head', 'wp_site_icon', 99 );
-
 // Remove non-validating parent post link from head
 remove_action('wp_head', 'parent_post_rel_link');
 
