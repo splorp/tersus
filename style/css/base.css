@@ -21,7 +21,11 @@ h3 {
 	font-size: 1.5em;
 	}
 
-h1, h2, h3 {
+h4, h5, h6 {
+	font-size: 1.0em;
+	}
+
+h1, h2, h3, h4, h5, h6 {
 	margin: 0.5em 0;
 	}
 
@@ -44,6 +48,10 @@ acronym[title] {
 	text-decoration: none;
 	}
 
+cite {
+	font-style: normal;
+	}
+	
 em {
 	font-style: italic;
 	}
