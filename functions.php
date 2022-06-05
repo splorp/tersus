@@ -176,6 +176,10 @@ if ( ! function_exists('theme_support_features') ) {
 		// http://codex.wordpress.org/Post_Formats
 		add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
 
+		// Add theme support for HTML5 markup for various page elements
+		// https://codex.wordpress.org/Theme_Markup
+		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+		
 		// Add theme support for featured images
 		// http://codex.wordpress.org/Post_Thumbnails
 		add_theme_support( 'post-thumbnails' );
@@ -183,7 +187,8 @@ if ( ! function_exists('theme_support_features') ) {
 		// Add theme support for document title tag
 		// https://codex.wordpress.org/Title_Tag
 		add_theme_support( 'title-tag' );
-	}
+	
+		}
 	add_action( 'after_setup_theme', 'theme_support_features' );
 }
 
