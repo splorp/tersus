@@ -102,18 +102,6 @@ pre {
 	margin-bottom: 1.0em;
 	}
 
-/*
-	Opera requires 1px of passing to render with contemporary native chrome
-*/
-
-button,
-input[type="checkbox"],
-input[type="radio"],
-input[type="reset"],
-input[type="submit"] {
-	padding: 1px;
-	}
-
 a img {
 	border: none;
 	}
