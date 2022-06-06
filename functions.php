@@ -209,6 +209,27 @@ if ( ! function_exists('register_my_menus') ) {
 // Remove non-validating parent post link from head
 remove_action('wp_head', 'parent_post_rel_link');
 
+// Remove Windows Live Writer manifest link from head
+remove_action('wp_head', 'wlwmanifest_link');
+
+// Remove WordPress emoji cruft from head
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+// Remove Gutenberg cruft CSS from head
+if ( ! function_exists('remove_block_library_css') ) {
+	function remove_block_library_css() {
+		wp_dequeue_style( 'wp-block-library' );
+	}
+	add_action('wp_enqueue_scripts', 'remove_block_library_css');
+	remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+}
+
+// Remove WordPress SVG filters from body
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+
 
 // Add sidebar support
 // http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -338,6 +359,15 @@ if ( ! function_exists( 'tersus_double_down' ) ) {
 	if ( ! is_admin() ) {
 		add_filter('get_avatar','tersus_double_down');
 	}
+}
+
+// Replace single attribute quotes with double quotes in shortlink and robots elements
+if ( ! function_exists( 'tersus_wp_head_tidy' ) ) {
+	remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
+	function tersus_wp_head_tidy() {
+		echo '<meta name="robots" content="follow" />' . PHP_EOL;
+	}
+	add_action('wp_head', 'tersus_wp_head_tidy');
 }
 
 
