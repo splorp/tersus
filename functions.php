@@ -472,6 +472,70 @@ if ( ! function_exists( 'tersus_rss_thumb' ) ) {
 }
 
 
+// Add missing attributes to next and previous post links
+
+function add_next_post_attributes($attr) {
+    $attr = str_replace("href=", 'title="View the next post" href=', $attr);
+    return $attr;
+}
+function add_prev_post_attributes($attr) {
+    $attr = str_replace("href=", 'title="View the previous post" href=', $attr);
+    return $attr;
+}
+add_filter('next_post_link', 'add_next_post_attributes');
+add_filter('previous_post_link', 'add_prev_post_attributes');
+
+
+// Add missing attributes to next and previous image links
+
+function add_next_image_attributes($attr) {
+    $attr = str_replace("href=", 'title="View the next image" rel="next" href=', $attr);
+    return $attr;
+}
+function add_prev_image_attributes($attr) {
+    $attr = str_replace("href=", 'title="View the previous image" rel="prev" href=', $attr);
+    return $attr;
+}
+add_filter('next_image_link', 'add_next_image_attributes');
+add_filter('previous_image_link', 'add_prev_image_attributes');
+
+
+// Add missing attributes to next and previous post page links
+
+if ( !function_exists( 'add_next_posts_attributes' ) ) {
+    function add_next_posts_attributes($attr) {
+        $attr = 'rel="next" title="View the next page of posts"';
+        return $attr;
+    }
+}
+if ( !function_exists( 'add_prev_posts_attributes' ) ) {
+    function add_prev_posts_attributes($attr) {
+        $attr = 'rel="prev" title="View the previous page of posts"';
+        return $attr;
+    }
+}
+add_filter('next_posts_link_attributes', 'add_next_posts_attributes');
+add_filter('previous_posts_link_attributes', 'add_prev_posts_attributes');
+
+
+// Add missing attributes to next and previous comment page links
+
+if ( !function_exists( 'add_next_comments_attributes' ) ) {
+    function add_next_comments_attributes($attr) {
+        $attr = 'rel="next" title="View the next page of comments"';
+        return $attr;
+    }
+}
+if ( !function_exists( 'add_prev_comments_attributes' ) ) {
+    function add_prev_comments_attributes($attr) {
+        $attr = 'rel="prev" title="View the previous page of comments"';
+        return $attr;
+    }
+}
+add_filter('next_comments_link_attributes', 'add_next_comments_attributes');
+add_filter('previous_comments_link_attributes', 'add_prev_comments_attributes');
+
+
 // Tests whether post paging links should be shown
 
 function show_post_link_nav() {
