@@ -358,13 +358,15 @@ if ( ! function_exists( 'tersus_double_down' ) ) {
 	}
 }
 
-// Replace single attribute quotes with double quotes in shortlink and robots elements
+
+// Replace malformed robots meta element
+
 if ( ! function_exists( 'tersus_wp_head_tidy' ) ) {
 	remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
-	function tersus_wp_head_tidy() {
-		echo '<meta name="robots" content="follow" />' . PHP_EOL;
+	function tersus_wp_robots_tidy() {
+		echo '<meta name="robots" content="index, follow" />' . PHP_EOL;
 	}
-	add_action('wp_head', 'tersus_wp_head_tidy');
+	add_action('wp_head', 'tersus_wp_robots_tidy');
 }
 
 
