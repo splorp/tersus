@@ -231,23 +231,23 @@ if ( ! function_exists('tersus_gutenberg_cruft') ) {
 // Add sidebar support
 // http://codex.wordpress.org/Function_Reference/register_sidebar
 
-register_sidebar(array(
-	'name'=>'Sidebar1',
+register_sidebar( array (
+	'name'=>'Sidebar 1',
 	'id'=>'sidebar-1',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h2 class="widgettitle">',
 	'after_title' => '</h2>',
-));
+) );
 
-register_sidebar(array(
-	'name'=>'Sidebar2',
+register_sidebar( array (
+	'name'=>'Sidebar 2',
 	'id'=>'sidebar-2',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h2 class="widgettitle">',
 	'after_title' => '</h2>',
-));
+) );
 
 
 // Add support for $content_width

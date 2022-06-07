@@ -9,7 +9,7 @@
 	<ul>
 	<?php
 		// Sidebar widgets only appear if the plugin is installed and widgets are active
-		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('sidebar2') ) :
+		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('Sidebar 1') ) :
 
 		// Otherwise insert default sidebar elements
 	?>
@@ -77,7 +77,7 @@
 	<?php
 
 		// Sidebar widgets only appear if the plugin is installed and widgets are active
-		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('sidebar1') ) :
+		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('Sidebar 2') ) :
 
 		// Otherwise insert default sidebar elements
 				
