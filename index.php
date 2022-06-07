@@ -23,13 +23,7 @@
 				if(!has_post_format('aside') && !has_post_format('image')) {
 			?>
 				<h6>Author</h6>
-				<p class="vcard author">
-					<cite class="fn">
-						<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site">
-							<?php the_author_meta('display_name'); ?>
-						</a>
-					</cite>
-				</p>
+				<p class="vcard author"><cite class="fn"><a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author’s site"><?php the_author_meta('display_name'); ?></a></cite></p>
 				<?php if (has_tag()) { ?>
 					<h6>Tags</h6>
 					<p><?php the_tags( '', ', ', '' ) ?></p>
