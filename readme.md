@@ -64,7 +64,7 @@ Cheers.
 
 ## Licensing
 
-The Tersus theme is absolutely free and conveniently licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). You may use it for personal or commercial projects, as you see fit. Please refer to the `license.txt` file included with the source for more information.
+The Tersus theme is absolutely free and conveniently licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). You may use it for personal or commercial projects, as you see fit. Please refer to the [license](https://github.com/splorp/tersus/blob/master/license.txt) document included with the source for more information.
 
 Copyright © 2010–2022 Chris Harrison, Grant Hutchinson, Dan Rubin, Andy van der Raadt
 

@@ -98,7 +98,7 @@ Licensing
 
 The Tersus theme is absolutely free and conveniently licensed under
 GPLv3. You may use it for personal or commercial projects, as you see
-fit. Please refer to the license file included with the source for
+fit. Please refer to the license document included with the source for
 more information.
 
 https://github.com/splorp/tersus/blob/master/license.txt
