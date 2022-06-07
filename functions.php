@@ -219,17 +219,14 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
 // Remove Gutenberg cruft CSS from head
-if ( ! function_exists('remove_block_library_css') ) {
-	function remove_block_library_css() {
+if ( ! function_exists('tersus_gutenberg_cruft') ) {
+	function tersus_gutenberg_cruft() {
 		wp_dequeue_style( 'wp-block-library' );
 	}
-	add_action('wp_enqueue_scripts', 'remove_block_library_css');
+	add_action('wp_enqueue_scripts', 'tersus_gutenberg_cruft');
 	remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+	remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
 }
-
-// Remove WordPress SVG filters from body
-remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
-
 
 // Add sidebar support
 // http://codex.wordpress.org/Function_Reference/register_sidebar
