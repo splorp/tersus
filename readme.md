@@ -19,7 +19,8 @@ Keep track of Tersus development on [Twitter](https://twitter.com/tersustheme).
 
 ## Requirements
 
-* WordPress 4.1 or later
+* WordPress 5.0 or later
+* PHP 7.0 or later
 
 
 ## Features
