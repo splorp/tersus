@@ -26,7 +26,7 @@
 	<?php } ?>
 
 	<?php while (have_posts()) : the_post(); ?>
-		
+
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
 		<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php if(the_title( '', '', false ) !='') the_title(); else echo 'Untitled';?></a></h3>
@@ -40,7 +40,7 @@
 	<?php if (show_posts_link_nav()): ?>
 		<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
 	<?php endif; ?>
-		
+
 	<?php else :
 		if ( is_category() ) {
 			printf("<h2>Sorry, but there aren’t any posts in the %s category yet.</h2>", single_cat_title('',false));

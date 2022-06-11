@@ -23,14 +23,14 @@
 		}
 	?>
 		<header>
-			<?php if (get_option('tersus_announcement_display') == "1"): ?>
+		<?php if (get_option('tersus_announcement_display') == "1"): ?>
 			<section id="announcement">
 			<?php
 				$tersus_announcement = get_option('tersus_announcement');
 				echo (stripslashes($tersus_announcement));
 			?>
 			</section>
-			<?php endif; ?>			
+		<?php endif; ?>
 		<?php if (!is_home()): ?>
 			<h1><a href="<?php echo esc_url(home_url()); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
 		<?php else : ?>
@@ -38,7 +38,7 @@
 		<?php endif; ?>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
-		
+
 		<?php if (get_option('tersus_navigation_display') == "1"): ?>
 		<nav role="navigation">
 			<?php

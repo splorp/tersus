@@ -48,7 +48,7 @@
 			</li>
 		<?php
 			}
-			
+
 			if ( is_home() || is_page() ) {
 				wp_list_bookmarks();
 		?>
@@ -64,14 +64,14 @@
 					<?php wp_meta(); ?>
 				</ul>
 			</li>
-	
+
 		<?php
 			}
 			endif;
 		?>
 	</ul>
 </aside>
-			
+
 <aside id="sidebar-2">
 	<ul>
 	<?php
@@ -80,7 +80,7 @@
 		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('Sidebar 2') ) :
 
 		// Otherwise insert default sidebar elements
-				
+
 		// Display a list of pages
 		if (get_option('tersus_page_depth') == "1") $depth = '0'; else $depth = '1';
 		wp_list_pages('depth=' . $depth . '&title_li=<h2>Pages</h2>' );

@@ -35,10 +35,10 @@ Template Name: Archives
 		</li>
 	<?php endforeach; ?>
 	</ul>
-	
+
 	<h2>Tags</h2>
 	<?php wp_tag_cloud(''); ?>
-	
+
 	<h2>Categories</h2>
 	<ul>
 		<?php wp_list_categories('style=list&title_li='); ?>
