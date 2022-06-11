@@ -31,7 +31,11 @@
 			?>
 			</section>
 			<?php endif; ?>			
+		<?php if (!is_home()): ?>
 			<h1><a href="<?php echo esc_url(home_url()); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
+		<?php else : ?>
+			<h1><?php bloginfo('name'); ?></h1>
+		<?php endif; ?>
 			<p><?php bloginfo('description'); ?></p>
 		</header>
 		
