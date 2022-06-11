@@ -6,6 +6,10 @@ An achingly simple WordPress theme without all the usual cruft.
 
 ## Version History
 
+### 0.4.1 — The “Seeing Things” Release
+
++ Removed link to home page when viewing the home page
+
 ### 0.4.0 — The “Burn It All Down” Release
 
 + Theme now requires WordPress 5.0 or later

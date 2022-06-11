@@ -68,7 +68,7 @@ being developed for Tersus.
 Version History
 ---------------
 
-See the version history document for a complete list of changes between releases.
+See the version history for a complete list of changes between releases.
 
 https://github.com/splorp/tersus/blob/master/history.md
 
@@ -98,13 +98,12 @@ Licensing
 
 The Tersus theme is absolutely free and conveniently licensed under
 GPLv3. You may use it for personal or commercial projects, as you see
-fit. Please refer to the license document included with the source for
-more information.
+fit. Please refer to the license included with the source for more
+information.
 
 https://github.com/splorp/tersus/blob/master/license.txt
 
-Copyright © 2010–2022 Chris Harrison, Grant Hutchinson, Dan Rubin, Andy
-van der Raadt
+Copyright © 2010–2022 Harrison, Hutchinson, Rubin, van der Raadt
 
 The Normalize.css stylesheet included with Tersus has been made
 available under an MIT License.
