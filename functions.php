@@ -652,8 +652,12 @@ if ( ! function_exists( 'tersus_excerpt_more' ) ) {
 	function tersus_excerpt_more($more) {
 		global $post;
 		$t = get_post($post->ID);
-		$title = $t->post_title;
-		return ' … <a href="' . get_permalink($post->ID) . '" title="Read the rest of “' . $title . '”">Read the rest of this item</a>';
+		if ($t->post_title != '') {
+			$title = '“' . $t->post_title . '”';
+		} else {
+			$title = 'this post.';
+		}
+		return ' … <a href="' . get_permalink($t) . '" title="Read the rest of ' .$title . '">More</a>';
 	}
 
 	add_filter('excerpt_more', 'tersus_excerpt_more');

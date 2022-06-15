@@ -16,7 +16,7 @@
 
 			<?php if(!has_post_format('aside') && !has_post_format('image')) { ?>
 				<p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
-				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to “<?php the_title_attribute(); ?>”"><?php the_title(); ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent link to <?php if(the_title( '', '', false ) !='') the_title_attribute(array('before' => '“','after' => '”')); else echo 'this post.';?>"><?php the_title(); ?></a></h2>
 
 			<?php }
 				the_content();
