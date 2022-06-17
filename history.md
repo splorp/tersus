@@ -9,7 +9,8 @@ An achingly simple WordPress theme without all the usual cruft.
 ### 0.4.1 — The “Seeing Things” Release
 
 + Removed link to home page when viewing the home page
-+ Links to untitled posts no longer show empty quotation marks for post titles
++ Links to untitled posts now display proper title attributes
++ Added character escaping to validator links in the default sidebar
 
 ### 0.4.0 — The “Burn It All Down” Release
 
