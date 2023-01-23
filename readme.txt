@@ -103,7 +103,7 @@ information.
 
 https://github.com/splorp/tersus/blob/master/license.txt
 
-Copyright © 2010–2022 Harrison, Hutchinson, Rubin, van der Raadt
+Copyright © 2010–2023 Harrison, Hutchinson, Rubin, van der Raadt
 
 The Normalize.css stylesheet included with Tersus has been made
 available under an MIT License.
