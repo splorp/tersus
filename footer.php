@@ -12,7 +12,7 @@
 			endif;
 			if (get_option('tersus_theme_information') == "1"): ?>
 			<ul>
-				<li>Powered by <a href="http://wordpress.org/" rel="external" title="Code is poetry.">WordPress <?php bloginfo('version'); ?></a></li>
+				<li>Powered by <a href="https://wordpress.org/" rel="external" title="Code is poetry.">WordPress <?php bloginfo('version'); ?></a></li>
 				<li>Themed by <a href="<?php echo THEME_URI; ?>" rel="external" title="<?php echo THEME_DESCRIPTION; ?>"><?php echo THEME_NAME; ?> <?php echo THEME_VERSION; ?></a></li>
 				<?php if (defined('CHILD_THEME_NAME')): ?>
 				<li>Styled by <a href="<?php echo CHILD_THEME_URI; ?>" rel="external" title="<?php echo CHILD_THEME_DESCRIPTION; ?>"><?php echo CHILD_THEME_NAME; ?> <?php echo CHILD_THEME_VERSION; ?></a></li>

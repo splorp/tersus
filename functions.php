@@ -173,7 +173,7 @@ if ( ! function_exists('theme_support_features') ) {
 		add_theme_support( 'automatic-feed-links' );
 
 		// Add theme support for post formats
-		// http://codex.wordpress.org/Post_Formats
+		// https://wordpress.org/documentation/article/post-formats/
 		add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
 
 		// Add theme support for HTML5 markup for various page elements
@@ -181,7 +181,7 @@ if ( ! function_exists('theme_support_features') ) {
 		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 
 		// Add theme support for featured images
-		// http://codex.wordpress.org/Post_Thumbnails
+		// https://codex.wordpress.org/Post_Thumbnails
 		add_theme_support( 'post-thumbnails' );
 
 		// Add theme support for document title tag
@@ -194,7 +194,7 @@ if ( ! function_exists('theme_support_features') ) {
 
 
 // Page menu support
-// http://codex.wordpress.org/Function_Reference/register_nav_menus
+// https://developer.wordpress.org/reference/functions/register_nav_menus/
 
 if ( ! function_exists('register_my_menus') ) {
 	function register_my_menus() {
@@ -229,7 +229,7 @@ if ( ! function_exists('tersus_gutenberg_cruft') ) {
 }
 
 // Add sidebar support
-// http://codex.wordpress.org/Function_Reference/register_sidebar
+// https://developer.wordpress.org/reference/functions/register_sidebar/
 
 register_sidebar( array (
 	'name'			=> 'Sidebar 1',
@@ -252,7 +252,7 @@ register_sidebar( array (
 
 // Add support for $content_width
 // Required by Theme Check Guidelines
-// http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
+// https://make.wordpress.org/themes/guidelines/guidelines-theme-check/
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 600;

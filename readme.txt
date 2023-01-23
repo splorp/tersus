@@ -108,6 +108,6 @@ Copyright © 2010–2022 Harrison, Hutchinson, Rubin, van der Raadt
 The Normalize.css stylesheet included with Tersus has been made
 available under an MIT License.
 
-http://necolas.github.io/normalize.css/
+https://necolas.github.io/normalize.css/
 
 Copyright © Nicolas Gallagher & Jonathan Neal

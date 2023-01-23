@@ -76,7 +76,7 @@ if ( have_comments() ) : ?>
 
 			'url' =>
 				'<p><label for="url">' . 'Website ' . '</label>' .
-				'<input id="url" name="url" type="url" placeholder="http://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				'<input id="url" name="url" type="url" placeholder="https://example.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
 				'" size="30" tabindex="3" /></p>'
 			)
 		),
