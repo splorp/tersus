@@ -8,17 +8,15 @@
 // Define theme constants
 
 $theme_name = 'tersus';
-$theme_data = wp_get_theme($theme_name);
 
-define('THEME_URI', $theme_data->get('ThemeURI'));
-define('THEME_NAME', $theme_data->get('Name'));
-define('THEME_VERSION', trim($theme_data->get('Version')));
-define('THEME_DESCRIPTION', trim($theme_data->get('Description')));
-
+define('THEME_URI', wp_get_theme($theme_name)->get('ThemeURI'));
+define('THEME_NAME', wp_get_theme($theme_name)->get('Name'));
+define('THEME_VERSION', trim(wp_get_theme($theme_name)->get('Version')));
+define('THEME_DESCRIPTION', trim(wp_get_theme($theme_name)->get('Description')));
 
 // Tersus theme options
 
-$theme_name_full = $theme_data->get('Name');
+$theme_name_full = wp_get_theme()->get('Name');
 $options = array (
 array( "name" => "Sidebar",
 	"desc" => "Show subpages in page list",
@@ -169,7 +167,7 @@ if ( ! function_exists('theme_support_features') ) {
 	function theme_support_features() {
 
 		// Add theme support for automatic feed links
-		// http://codex.wordpress.org/Automatic_Feed_Links
+		// https://codex.wordpress.org/Automatic_Feed_Links
 		add_theme_support( 'automatic-feed-links' );
 
 		// Add theme support for post formats
