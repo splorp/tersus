@@ -448,7 +448,7 @@ if ( ! function_exists( 'tersus_comment' ) ) {
 
 		<?php comment_text() ?>
 
-		<p><?php edit_comment_link('Edit Comment','',' | ') ?><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></p>
+		<p><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?> <?php edit_comment_link('Edit Comment','','') ?></p>
 	<?php
 	}
 }
