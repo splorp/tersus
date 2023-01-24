@@ -6,6 +6,13 @@ An achingly simple WordPress theme without all the usual cruft.
 
 ## Version History
 
+### 0.4.2 — The “Light Spackling” Release
+
++ Set default `<body>` background colour
++ Changed `<body>` margin values from `px` to `em`
++ Tidied up the appearance of the ‘reply’ and ‘edit comment’ links
++ Removed superfluous `update_option()` function causing ‘undefined array key’ errors
+
 ### 0.4.1 — The “Seeing Things” Release
 
 + Removed link to home page when viewing the home page
