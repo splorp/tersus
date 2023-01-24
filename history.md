@@ -9,7 +9,7 @@ An achingly simple WordPress theme without all the usual cruft.
 ### 0.4.1 — The “Seeing Things” Release
 
 + Removed link to home page when viewing the home page
-+ Links to untitled posts now display proper title attributes
++ Links to untitled posts now display proper `title` attributes
 + Added character escaping to validator links in the default sidebar
 + Improved access to `wp_get_theme()` data
 

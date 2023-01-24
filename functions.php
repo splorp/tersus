@@ -8,15 +8,16 @@
 // Define theme constants
 
 $theme_name = 'tersus';
+$theme_name_full = wp_get_theme()->get('Name');
 
 define('THEME_URI', wp_get_theme($theme_name)->get('ThemeURI'));
 define('THEME_NAME', wp_get_theme($theme_name)->get('Name'));
 define('THEME_VERSION', trim(wp_get_theme($theme_name)->get('Version')));
 define('THEME_DESCRIPTION', trim(wp_get_theme($theme_name)->get('Description')));
 
+
 // Tersus theme options
 
-$theme_name_full = wp_get_theme()->get('Name');
 $options = array (
 array( "name" => "Sidebar",
 	"desc" => "Show subpages in page list",

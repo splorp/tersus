@@ -8,10 +8,10 @@
 <aside id="sidebar-1">
 	<ul>
 	<?php
-		// Sidebar widgets only appear if the plugin is installed and widgets are active
+
+		// If no widgets are active, insert default sidebar elements
 		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('Sidebar 1') ) :
 
-		// Otherwise insert default sidebar elements
 	?>
 		<li>
 			<h2>Search</h2>
@@ -76,10 +76,8 @@
 	<ul>
 	<?php
 
-		// Sidebar widgets only appear if the plugin is installed and widgets are active
+		// If no widgets are active, insert default sidebar elements
 		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('Sidebar 2') ) :
-
-		// Otherwise insert default sidebar elements
 
 		// Display a list of pages
 		if (get_option('tersus_page_depth') == "1") $depth = '0'; else $depth = '1';
