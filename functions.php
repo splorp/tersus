@@ -71,9 +71,6 @@ if ( ! function_exists( 'tersus_add_admin' ) ) {
 		if ( isset($_GET['page']) && $_GET['page'] == basename(__FILE__) ) {
 			if ( !empty( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
 				foreach ($options as $value) {
-					update_option( $value['id'], $_REQUEST[ $value['id'] ] );
-				}
-				foreach ($options as $value) {
 					if( isset( $_REQUEST[ $value['id'] ] ) ) {
 						update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 					} else {
