@@ -36,12 +36,11 @@ if ( have_comments() ) : ?>
 		'id_form'			=> 'commentform',
 		'id_submit'			=> 'submit',
 		'title_reply'		=> 'Leave a comment.',
-		'title_reply_to'	=> 'Reply to %s.',
+		'title_reply_to'	=> 'Replying to %s.',
 		'cancel_reply_link'	=> 'Cancel Reply',
 		'label_submit'		=> 'Submit Comment',
 
-		'comment_field' => '<p><label for="comment">' . 'Comment' .
-			'</label></p>' . '<p><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" tabindex="4">' .
+		'comment_field' => '' . '<p><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" tabindex="4">' .
 			'</textarea></p>',
 
 		'must_log_in' => '<p>' .
@@ -58,8 +57,8 @@ if ( have_comments() ) : ?>
 
 		'comment_notes_before' => '',
 
-		'comment_notes_after' => '<p><strong>' .
-			sprintf( 'You may use the following <abbr title="HyperText Markup Language">HTML</abbr> elements and attributes to format your comment:</strong></p> %s' ,
+		'comment_notes_after' => '<p>' .
+			sprintf( 'Use these <abbr title="HyperText Markup Language">HTML</abbr> elements and attributes to format your comment:</p> %s' ,
 				'<p><code>' . allowed_tags() . '</code></p>' ),
 
 		'fields' => apply_filters( 'comment_form_default_fields', array(

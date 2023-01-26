@@ -415,12 +415,14 @@ if ( ! function_exists( 'tersus_decruft_avatar' ) ) {
 if ( ! function_exists( 'tersus_decruft_comment_form' ) ) {
 	function tersus_decruft_comment_form($c) {
 		$find = array(
+			'/h3/',							// Find <h3> tags
 			'/ class=[\"\'].+?[\"\']/', 	// Find class attributes
-			'/ id=\"reply-title\"/',		// Find id attribute
+			'/ id=\"reply-title\"/',		// Find selector and id attribute
 			'/<\/?small>/',					// Find <small> tags
 			'/type="submit"/'				// Find submit button
 			);
 		$replace = array(
+			'p',							// Replace with <p> tags
 			'',								// Declass entire comment form
 			'',								// Remove ID attribute from title_reply
 			'',								// Remove <small> tags from cancel_reply_link
