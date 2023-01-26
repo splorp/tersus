@@ -21,7 +21,7 @@ if ( have_comments() ) : ?>
 	</ol>
 
 <?php if (show_comments_link_nav()): ?>
-	<nav><?php previous_comments_link('Older'); delim_comment_link(); next_comments_link('Newer') ?></nav>
+	<nav><?php previous_comments_link('Older Comments'); delim_comment_link(); next_comments_link('Newer Comments') ?></nav>
 <?php endif; ?>
 
 <?php endif; ?>
