@@ -11,10 +11,6 @@
 	<?php if (have_posts()) : ?>
 		<h2><?php printf( 'Tag: %s' , '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h2>
 
-	<?php if (show_posts_link_nav()): ?>
-		<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
-	<?php endif; ?>
-
 	<?php
 		$tag_description = tag_description();
 		if ( ! empty( $tag_description ) )
