@@ -259,10 +259,10 @@ if ( ! isset( $content_width ) ) {
 if ( ! function_exists( 'tersus_body_class' ) ) {
 	function tersus_body_class($wp_class_list, $simple_class_list) {
 		// List allowed classes
-		$whitelist = array('home', 'page', 'single', 'attachment', 'archive', 'search', 'error404');
+		$allowed_class_list = array('home', 'page', 'single', 'attachment', 'archive', 'search', 'error404');
 
 		// Filter the unwanted classes
-		$wp_class_list = array_intersect($wp_class_list, $whitelist);
+		$wp_class_list = array_intersect($wp_class_list, $allowed_class_list);
 		$tersus_body_class = $wp_class_list;
 
 		// Output allowed classes
