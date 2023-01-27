@@ -56,7 +56,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Added plain text version of read me file to comply with theme requirements
 + Moved the version history from the read me file to its own document
 
-
 ### 0.3.1 — The “Missing, Inaction” Release
 
 + Theme now requires WordPress 4.1 or later
@@ -71,7 +70,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Embiggened theme screenshot, this time with feeling
 + Removed deprecated theme tags
 + Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.3
-
 
 ### 0.3.0 — The “Chk-Chk-Boom” Release
 
@@ -89,7 +87,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Namespaced all theme functions with the `tersus_` prefix
 + Custom theme functions are now pluggable by child themes
 + Updated to [HTML5 Shiv](https://github.com/afarkas/html5shiv) 3.7.2
-
 
 ### 0.2.2 — The “Pretty Pony” Release
 
@@ -120,7 +117,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Replaced the rather free spirited theme tags with official WordPress tags
 + Changed all raw high-ASCII characters to HTML entities
 
-
 ### 0.2.1 — The “Engorged” Release
 
 + Theme now requires WordPress 3.0 or later
@@ -140,7 +136,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Fixed ‘undefined variable’ debug error in `simple_post_class` function
 + Fixed ‘undefined variable’ debug error in `searchform.php`
 
-
 ### 0.2.0 - The “Flavourless” Release
 
 + Removed theme ‘flavours’ and the related switching option
@@ -159,7 +154,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Replaced the externally linked [HTML5 Shiv](https://github.com/afarkas/html5shiv) with a local, minified version
 + Embiggened theme screenshot
 
-
 ### 0.1.6 - The “Nice Consistency” Release
 
 + Added support for category archives
@@ -175,7 +169,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Replaced the default gallery with a decrufted version
 + Tidied up the display of attached images
 + Date stamps are now based on the WordPress Date Format setting
-
 
 ### 0.1.5 - The “Good, Bad & Less Ugly” Release
 
@@ -193,7 +186,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Fixed stylesheet parsing errors uncovered by CSS Lint
 + Tidied up the display of search results
 
-
 ### 0.1.4 — The “Wrap It!” Release
 
 + Updated markup to use `<section>` and `<article>` elements
@@ -208,38 +200,35 @@ An achingly simple WordPress theme without all the usual cruft.
 + Standardized stylesheet naming conventions
 + Lots of text consistency tweakage
 
-
 ### 0.1.3 - The “About Time This Thing Was Updated Again” Release
 
 + Added theme options for switching between stylesheets
-+ Added ‘Advanced’ and ‘Super Ginormous’ alternate stylesheets
++ Added “Advanced” and “Super Ginormous” alternate stylesheets
 + Added support for post formats
 + Added missing `get_sidebar()` function to applicable templates
 + Added fallback for `the_title` for untitled pages and posts
 + Changed base font stack to sans serif
 + Updated `simple_post_class` to support a `format-type` classname, if applicable
 + Replaced static class declarations with `post_class` function
-+ Standardized ‘not found’ messaging
++ Standardized “Not Found” messaging
 + Standardized and simplified header text and formatting
-+ Simplified ‘older’ and ‘newer’ link text
++ Simplified “Older” and “Newer” post navigation link text
 + Fixed invalid `<textarea>` attributes
 + Removed non-valid, IE-specific CSS selectors
 + Removed `get_search_form()` function from everywhere except the sidebar
 + Continued HTML5 conversion
 
-
 ### 0.1.2 — The “Dustbunnies” Release
 
 + Added theme information constants
 + Added contextual delimiters to next and previous links
-+ Updated sidebar formatting and default ‘meta’ links
++ Updated sidebar formatting and default “meta” links
 + Tags and categories are now formatted as unordered lists
 + Paging links are now consistent top and bottom of pages
 + Edit links are now consistent
 + Removed superfluous list formatting around search text
 + Removed duplicate search form from 404 page
 + Removed crufty classes from comment lists
-
 
 ### 0.1.1 — The “We Don’t Need No Stinkin’ Stylesheet” Release
 
@@ -248,7 +237,6 @@ An achingly simple WordPress theme without all the usual cruft.
 + Added artwork for the screenshot and favicon files
 + Updated `screenshot.png`
 + Updated `favicon.ico`
-
 
 ### 0.1.0 — The “Getting Our Feet Wet” Release
 
