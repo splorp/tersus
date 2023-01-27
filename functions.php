@@ -224,6 +224,10 @@ if ( ! function_exists('tersus_gutenberg_cruft') ) {
 	remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
 }
 
+
+// Remove WordPress gallery inline CSS
+add_filter( 'use_default_gallery_style', '__return_false' );
+
 // Add sidebar support
 // https://developer.wordpress.org/reference/functions/register_sidebar/
 

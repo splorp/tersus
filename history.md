@@ -17,6 +17,7 @@ An achingly simple WordPress theme without all the usual cruft.
 + Removed duplicate tag archive navigation
 + Fixed link to home page when viewing paginated home page posts
 + Added `home.php` template for consistent display of posts on home page
++ Removed inline CSS inserted by the `[gallery]` shortcode
 + Removed superfluous `update_option()` function causing ‘undefined array key’ errors
 + Renamed the `$whitelist` to `$allowed_class_list` in the `body_class` filter because inclusivity
 
