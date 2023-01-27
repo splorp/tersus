@@ -31,7 +31,7 @@
 			?>
 			</section>
 		<?php endif; ?>
-		<?php if (is_home() || is_front_page()) : ?>
+		<?php if ((is_home() || is_front_page()) && !is_paged()) : ?>
 			<h1><?php bloginfo('name'); ?></h1>
 		<?php else : ?>
 			<h1><a href="<?php echo esc_url(home_url()); ?>/" title="Back to the home page"><?php bloginfo('name'); ?></a></h1>
