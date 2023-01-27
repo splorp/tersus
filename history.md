@@ -6,12 +6,19 @@ An achingly simple WordPress theme without all the usual cruft.
 
 ## Version History
 
-### 0.4.2 — The “Light Spackling” Release
+### 0.4.2 — The “Skim Coat” Release
 
 + Set default `<body>` background colour
 + Changed `<body>` margin values from `px` to `em`
-+ Tidied up the appearance of the ‘reply’ and ‘edit comment’ links
++ Tidied up the appearance of the “Reply” and “Edit Comment” links
++ Simplified several labels and instructional text on the comment form
++ Changed post page navigation to “Newer Posts” and “Older Posts”
++ Changed comment page navigation to “Newer Comments” and “Older Comments”
++ Removed duplicate tag archive navigation
++ Fixed link to home page when viewing paginated home page posts
++ Added `home.php` template for consistent display of posts on home page
 + Removed superfluous `update_option()` function causing ‘undefined array key’ errors
++ Renamed the `$whitelist` to `$allowed_class_list` in the `body_class` filter because inclusivity
 
 ### 0.4.1 — The “Seeing Things” Release
 
