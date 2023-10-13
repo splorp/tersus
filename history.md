@@ -10,6 +10,7 @@ An achingly simple WordPress theme without all the usual cruft.
 
 + Set default `<body>` background colour
 + Changed `<body>` margin values from `px` to `em`
++ Reduced the amount of default indentation applied to `<ol>`, `<ul>`, and `<dl>` elements
 + Tidied up the appearance of the “Reply” and “Edit Comment” links
 + Simplified several labels and instructional text on the comment form
 + Changed post page navigation to “Newer Posts” and “Older Posts”
