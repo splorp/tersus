@@ -16,6 +16,7 @@ An achingly simple WordPress theme without all the usual cruft.
 + Changed post page navigation to “Newer Posts” and “Older Posts”
 + Changed comment page navigation to “Newer Comments” and “Older Comments”
 + Removed duplicate tag archive navigation
++ Added missing `meta` class to `image.php` and `single.php` templates
 + Fixed link to home page when viewing paginated home page posts
 + Added `home.php` template for consistent display of posts on home page
 + Removed inline CSS inserted by the `[gallery]` shortcode
